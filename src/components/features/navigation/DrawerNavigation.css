@@ -1,3 +1,116 @@
 .drawer-navigation {
-    background: ;
+    inset: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1000;
+}
+
+.drawer-navigation.is-open {
+    pointer-events: auto;
+}
+
+/* Blurred background */
+.drawer-navigation-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* TODO: use website's white color palette here*/
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+.drawer-navigation.is-open .drawer-navigation-overlay {
+    opacity: 1;
+}
+
+.drawer-navigation-panel {
+    background: var(--color-background-secondary);
+    border-left: var(--border-primary);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 30rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 250ms ease; /* TODO: add this variable to root */
+    width: 50%;
+}
+
+.drawer-navigation.is-open .drawer-navigation-panel {
+    transform: translateX(0);
+}
+
+.drawer-navigation-close-menu {
+    align-items: center;
+    display: flex;
+    height: 5rem;
+    justify-content: flex-end;
+    transition: var(--transition-background);
+    width: 100%;
+}
+
+.drawer-navigation-close-menu:hover {
+    background: var(--color-background-button-hover);
+    cursor: pointer;
+}
+
+.drawer-navigation-close-menu:active {
+    background: var(--color-background-button-active);
+}
+
+.drawer-navigation-close-menu-icon {
+    color: #3C414D; /*TODO: change this to variable value */
+}
+
+.drawer-navigation-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.drawer-navigation-list li {
+    display: flex;
+    height: 5rem;
+}
+
+.drawer-navigation-link {
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    height: 5rem;
+    justify-content: center;
+    padding: 0rem;
+    transition: var(--transition-background);
+    width: 100%;
+}
+
+.drawer-navigation-link a {
+    align-items: center;
+    color: var(--color-text-navbar-link);
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    width: 100%;
+}
+
+.drawer-navigation-link.current-page {
+    background: var(--color-background-navbar-current-page);
+}
+
+.drawer-navigation-link:hover {
+    background: var(--color-background-navbar-hover);
+}
+
+.drawer-navigation-link:active {
+    background: var(--color-background-navbar-active);
+}
+
+@media (min-width: 801px) {
+    .drawer-navigation {
+        display: none;
+    }
 }

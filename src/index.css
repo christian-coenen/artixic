@@ -1,25 +1,5 @@
 :root {
-    /* === Color palette ===  */
-    
-    /* ==  White colors ==  */
-    --steel-white-extra-bright: #FCFDFF;
-    --steel-white-bright: #F7F8FA;
-    --steel-white-medium: #F2F3F5;
-    --steel-white-dark: #EDEEF0;
-    --steel-white-extra-dark: #E8E9EB;
-
-    /* == Black colors == */
-    --steel-black-extra-light: #3C414D;
-    --steel-black-light: #30343D;
-    --steel-black-medium: #23272E;
-    --steel-black-dark: #1B1C1F;
-    --steel-black-extra-dark: #0D0E0F;
-
-    /* == Blue colors == */
-    --blue-sky: #73CCFF;
-    --blue-cornflower: #7386FF;
-
-    /* === Functional colors === */
+    /* === Colors === */
 
     /* == Global background colors == */
     --color-background-primary: #F7F8FA;
@@ -43,7 +23,7 @@
     /* == Component background colors == */
     /* = Navbar background colors = */
     --color-background-navbar: var(--color-background-secondary);
-    --color-background-navbar-is-active: var(--color-background-tertiary);
+    --color-background-navbar-current-page: var(--color-background-tertiary);
     --color-background-navbar-hover: var(--color-background-quaternary);
     --color-background-navbar-active: var(--color-background-quinary);
 
@@ -117,7 +97,8 @@
     --height-navbar: 5rem;
 
     /* == Width == */
-    --width-navbar-item: 8rem;
+    --width-navbar-item-primary: 8rem;
+    --width-navbar-item-primary-secondary: 5rem;
 
     /* === Borders == */
     --border-primary: 1px solid var(--color-border-primary);
@@ -134,6 +115,7 @@
 
     /* === Transitions === */
     --transition-background: background-color 0.2s ease-in-out;
+    --transition-background-secondary: background-color 0.1s ease-in-out;
     --transition-transform: transform 0.2s ease-in-out;
     --transition-opacity: opacity 0.2s ease-in-out;
 }
@@ -160,4 +142,8 @@ button {
     background: none;
     font-family: var(--font-family-primary);
     font-size: var(--font-size-base);
+}
+
+.lucide {
+    color: red; /* TODO: change this to variable value */
 }

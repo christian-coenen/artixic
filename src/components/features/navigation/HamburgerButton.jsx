@@ -1,17 +1,17 @@
 import { Menu } from 'lucide-react'
 import './HamburgerButton.css'
 
-const HamburgerButton = ({ isNavigationMenuOpen, onNavigationMenuToggle }) => {
+const HamburgerButton = ({ isOpen, onToggle }) => {
     return (
         <div className='hamburger-button'>
             <button
                 type='button'
                 className='hamburger-button-button'
-                onClick={onNavigationMenuToggle}
-                aria-expanded={isNavigationMenuOpen}
+                onClick={onToggle}
+                aria-expanded={isOpen}
                 aria-label='Toggle navigation'
             >
-                <Menu color='#3c414d' />
+                <Menu color='#3C414D' />
             </button>
         </div>
     )

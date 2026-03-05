@@ -29,7 +29,9 @@ const LanguageSwitcher = () => {
                 {/* Currently displays static text */}
                 {/* TODO: turn text below to dynamic: default is ENG (English) */}
                 ENG
-                <ChevronDown className='language-switcher-icon' />
+                <ChevronDown 
+                    className='language-switcher-icon' 
+                />
             </button>
 
 

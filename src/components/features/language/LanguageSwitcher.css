@@ -27,6 +27,7 @@
 }
 
 .language-switcher-icon {
+    color: #3C414D;
     transition: var(--transition-transform);
 }
 

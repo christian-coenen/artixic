@@ -1,4 +1,3 @@
-{/* CURRENTLY DESKTOP ONLY! */ }
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import LogoArtixic from '../../assets/icons/LogoArtixic'
@@ -8,7 +7,6 @@ import LanguageSwitcher from '../features/language/LanguageSwitcher'
 import './Navbar.css'
 
 const Navbar = () => {
-    {/* TODO: Insert logic for hamburger menu for screens less than [x] width */ }
     const [isDrawerNavigationOpen, setIsDrawerNavigationOpen] = useState(false)
 
     const toggleDrawerNavigation = () => {
@@ -38,21 +36,51 @@ const Navbar = () => {
                                     to='/home'
                                     className={({ isActive }) =>
                                         isActive
-                                            ? "navbar-navigation-link is-active"
+                                            ? "navbar-navigation-link current-page"
                                             : "navbar-navigation-link"
                                     }
                                 >
                                     Home
                                 </NavLink>
                             </li>
+
                             <li className='navbar-navigation-link'>
-                                <NavLink to='/art'>Art</NavLink>
+                                <NavLink
+                                    to='/art'
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "navbar-navigation-link current-page"
+                                            : "navbar-navigation-link"
+                                    }
+                                >
+                                    Art
+                                </NavLink>
                             </li>
+
                             <li className='navbar-navigation-link'>
-                                <NavLink to='/collections'>Collections</NavLink>
+                                <NavLink
+                                    to='/collections'
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "navbar-navigation-link current-page"
+                                            : "navbar-navigation-link"
+                                    }
+                                >
+                                    Collections
+                                </NavLink>
                             </li>
+
                             <li className='navbar-navigation-link'>
-                                <NavLink to='/about'>About</NavLink>
+                                <NavLink
+                                    to='/about'
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "navbar-navigation-link current-page"
+                                            : "navbar-navigation-link"
+                                    }
+                                >
+                                    About
+                                </NavLink>
                             </li>
                         </ul>
 
