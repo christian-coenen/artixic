@@ -24,7 +24,7 @@ const DrawerNavigation = ({ isOpen, onClose }) => {
                             to='/home'
                             className={({ isActive }) =>
                                 isActive
-                                    ? "drawer-navigation-link current-page"
+                                    ? "drawer-navigation-link current"
                                     : "drawer-navigation-link"
                             }
                             onClick={onClose}
@@ -38,7 +38,7 @@ const DrawerNavigation = ({ isOpen, onClose }) => {
                             to='/art'
                             className={({ isActive }) =>
                                 isActive
-                                    ? "drawer-navigation-link current-page"
+                                    ? "drawer-navigation-link current"
                                     : "drawer-navigation-link"
                             }
                             onClick={onClose}
@@ -52,7 +52,7 @@ const DrawerNavigation = ({ isOpen, onClose }) => {
                             to='/collections'
                             className={({ isActive }) =>
                                 isActive
-                                    ? "drawer-navigation-link current-page"
+                                    ? "drawer-navigation-link current"
                                     : "drawer-navigation-link"
                             }
                             onClick={onClose}
@@ -66,7 +66,7 @@ const DrawerNavigation = ({ isOpen, onClose }) => {
                             to='/about'
                             className={({ isActive }) =>
                                 isActive
-                                    ? "drawer-navigation-link current-page"
+                                    ? "drawer-navigation-link current"
                                     : "drawer-navigation-link"
                             }
                             onClick={onClose}

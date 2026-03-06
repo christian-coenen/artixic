@@ -36,7 +36,7 @@ const Navbar = () => {
                                     to='/home'
                                     className={({ isActive }) =>
                                         isActive
-                                            ? "navbar-navigation-link current-page"
+                                            ? "navbar-navigation-link current"
                                             : "navbar-navigation-link"
                                     }
                                 >
@@ -49,7 +49,7 @@ const Navbar = () => {
                                     to='/art'
                                     className={({ isActive }) =>
                                         isActive
-                                            ? "navbar-navigation-link current-page"
+                                            ? "navbar-navigation-link current"
                                             : "navbar-navigation-link"
                                     }
                                 >
@@ -62,7 +62,7 @@ const Navbar = () => {
                                     to='/collections'
                                     className={({ isActive }) =>
                                         isActive
-                                            ? "navbar-navigation-link current-page"
+                                            ? "navbar-navigation-link current"
                                             : "navbar-navigation-link"
                                     }
                                 >
@@ -75,7 +75,7 @@ const Navbar = () => {
                                     to='/about'
                                     className={({ isActive }) =>
                                         isActive
-                                            ? "navbar-navigation-link current-page"
+                                            ? "navbar-navigation-link current"
                                             : "navbar-navigation-link"
                                     }
                                 >

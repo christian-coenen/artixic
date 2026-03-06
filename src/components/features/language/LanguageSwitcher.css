@@ -4,7 +4,7 @@
 
 .language-switcher-button {
     align-items: center;
-    background: var(--color-background-language-switcher);
+    background: var(--color-background-control-default);
     border: none;
     border-radius: var(--border-radius-language-switcher);
     color: var(--color-text-language-switcher);
@@ -17,12 +17,12 @@
 }
 
 .language-switcher-button:hover {
-    background: var(--color-background-language-switcher-hover);
+    background: var(--color-background-control-hover);
     transition: var(--transition-background);
 }
 
 .language-switcher-button:active {
-    background: var(--color-background-language-switcher-active);
+    background: var(--color-background-control-active);
     transition: var(--transition-background);
 }
 
@@ -36,7 +36,7 @@
 }
 
 .language-switcher-dropdown {
-    background: var(--color-background-secondary);
+    background: var(--color-surface-1);
     border: var(--border-language-switcher-dropdown);
     border-radius: var(--border-radius-language-switcher);
     display: flex;
@@ -71,10 +71,16 @@
     transition: var(--transition-background);
 }
 
+/*
+.language-switcher-dropdown-option.current {
+
+}
+*/
+
 .language-switcher-dropdown-option:hover {
-    background: var(--color-background-language-switcher-dropdown-option-hover);
+    background: var(--color-background-control-hover);
 }
 
 .language-switcher-dropdown-option:active {
-    background: var(--color-background-language-switcher-dropdown-option-active);
+    background: var(--color-background-control-active);
 }

@@ -7,13 +7,14 @@
 }
 
 .hamburger-button:hover {
-    background: var(--color-background-navbar-hover);
+    background: var(--color-background-navigation-hover);
 }
 
 .hamburger-button:active {
-    background: var(--color-background-navbar-active);
+    background: var(--color-background-navigation-active);
 }
 
+/* TODO: rename variable below */
 .hamburger-button-button {
     align-items: center;
     background: none;

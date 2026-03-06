@@ -1,5 +1,5 @@
 .navbar {
-    background: var(--color-background-navbar);
+    background: var(--color-surface-1);
     border-bottom: var(--border-navbar);
     height: 5rem;
     padding: 0 1rem;
@@ -86,16 +86,16 @@
     width: 100%;
 }
 
-.navbar-navigation-link.current-page {
-    background: var(--color-background-navbar-current-page);
+.navbar-navigation-link.current {
+    background: var(--color-background-navigation-current);
 }
 
 .navbar-navigation-link:hover {
-    background: var(--color-background-navbar-hover);
+    background: var(--color-background-navigation-hover);
 }
 
 .navbar-navigation-link:active {
-    background: var(--color-background-navbar-active);
+    background: var(--color-background-navigation-active);
 }
 
 .navbar-hamburger-button {

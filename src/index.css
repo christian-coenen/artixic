@@ -1,12 +1,44 @@
 :root {
     /* === Colors === */
+    /* TODO: refactor color variables */
+    /* NEW color variables */
 
+    --color-brand-0: #73CCFF;
+    --color-brand-1: #7386FF;
+
+    --color-surface-0: #F7F8FA;
+    --color-surface-1: #FCFDFF;
+
+    --color-background-control-default: #F2F3F5;
+    --color-background-control-hover: #EDEEF0;
+    --color-background-control-active: #E8E9EB;
+
+    --color-background-navigation-current: #F2F3F5;
+    --color-background-navigation-hover: #EDEEF0;
+    --color-background-navigation-active: #E8E9EB;
+
+    --color-border-default: #DEE0E3;
+
+    --color-icon-default: #3C414D;
+
+    --color-text-0: #0D0E0F;
+    --color-text-1: #1B1C1F;
+    --color-text-2: #23272E;
+    --color-text-3: #30343D;
+    --color-text-4: #3C414D;
+
+    /* TODO: adjust variable names, ensure each name is applicable to the website */
+    /*
+    --color-text-title: var(--color-text-0);
+    --color-text-heading: var(--color-text-0);
+    --color-text-subheading: var(--color-text-1);
+    --color-text-body: var(--color-text-2);
+    --color-text-section: var(--color-text-3);
+    --color-text-muted: var(--color-text-4);
+    */
+
+    /* OUTDATED color variables */
     /* == Global background colors == */
-    --color-background-primary: #F7F8FA;
-    --color-background-secondary: #FCFDFF;
-    --color-background-tertiary: #F2F3F5;
-    --color-background-quaternary: #EDEEF0;
-    --color-background-quinary: #E8E9EB;
 
     /* == Global text colors == */
     --color-text-primary: #0D0E0F;
@@ -23,7 +55,7 @@
     /* == Component background colors == */
     /* = Navbar background colors = */
     --color-background-navbar: var(--color-background-secondary);
-    --color-background-navbar-current-page: var(--color-background-tertiary);
+    --color-background-navbar-current: var(--color-background-tertiary);
     --color-background-navbar-hover: var(--color-background-quaternary);
     --color-background-navbar-active: var(--color-background-quinary);
 
@@ -36,7 +68,7 @@
     --color-background-button: var(--color-background-tertiary);
     --color-background-button-hover: var(--color-background-quaternary);
     --color-background-button-active: var(--color-background-quinary);
-    
+
     --color-background-input: var(--color-background-secondary);
     --color-background-translation-button: var(--color-background-tertiary);
 
@@ -61,7 +93,7 @@
 
     /* = Buttons = */
     --color-text-button: var(--color-text-tertiary);
-    
+
     --color-text-input: var(--color-text-primary);
     --color-text-input-icon: var(--color-text-secondary);
     --color-text-translation-button: var(--color-text-secondary);
@@ -122,7 +154,7 @@
 
 html,
 body {
-    background-color: var(--color-background-primary);
+    background-color: var(--color-surface-0);
     color: var(--color-text-primary);
     font-family: var(--font-family-primary);
     font-size: var(--font-size-base);
@@ -145,5 +177,6 @@ button {
 }
 
 .lucide {
-    color: red; /* TODO: change this to variable value */
+    color: red;
+    /* TODO: change this to variable value */
 }

@@ -11,19 +11,19 @@
 
 /* Blurred background */
 .drawer-navigation-overlay {
-    position: absolute;
+    background: var(--color-surface-1); /* TODO: use website's white color palette here*/
     inset: 0;
-    background: rgba(0, 0, 0, 0.3); /* TODO: use website's white color palette here*/
     opacity: 0;
+    position: absolute;
     transition: opacity 200ms ease;
 }
 
 .drawer-navigation.is-open .drawer-navigation-overlay {
-    opacity: 1;
+    opacity: 0.6;
 }
 
 .drawer-navigation-panel {
-    background: var(--color-background-secondary);
+    background: var(--color-surface-1);
     border-left: var(--border-primary);
     display: flex;
     flex-direction: column;
@@ -51,16 +51,16 @@
 }
 
 .drawer-navigation-close-menu:hover {
-    background: var(--color-background-button-hover);
+    background: var(--color-background-control-hover);
     cursor: pointer;
 }
 
 .drawer-navigation-close-menu:active {
-    background: var(--color-background-button-active);
+    background: var(--color-background-control-active);
 }
 
 .drawer-navigation-close-menu-icon {
-    color: #3C414D; /*TODO: change this to variable value */
+    color: var(--color-icon-default);
 }
 
 .drawer-navigation-list {
@@ -97,16 +97,16 @@
     width: 100%;
 }
 
-.drawer-navigation-link.current-page {
-    background: var(--color-background-navbar-current-page);
+.drawer-navigation-link.current {
+    background: var(--color-background-navigation-current);
 }
 
 .drawer-navigation-link:hover {
-    background: var(--color-background-navbar-hover);
+    background: var(--color-background-navigation-hover);
 }
 
 .drawer-navigation-link:active {
-    background: var(--color-background-navbar-active);
+    background: var(--color-background-navigation-active);
 }
 
 @media (min-width: 801px) {
