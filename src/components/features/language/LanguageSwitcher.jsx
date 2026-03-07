@@ -73,7 +73,6 @@ const LanguageSwitcher = () => {
                 </button>
                 */}
             </div>
-
         </div>
     )
 }

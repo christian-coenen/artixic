@@ -1,7 +1,4 @@
 :root {
-    /* TODO: refactor color variables */
-    /* NEW color variables */
-
     --color-brand-0: #73CCFF;
     --color-brand-1: #7386FF;
 
@@ -18,7 +15,7 @@
 
     --color-border-default: #DEE0E3;
 
-    --color-icon-default: #3C414D;
+    --color-icon-default: #30343D;
 
     --color-text-0: #0D0E0F;
     --color-text-1: #1B1C1F;
@@ -33,81 +30,85 @@
     --color-text-body: var(--color-text-2);
     --color-text-ui: var(--color-text-3);
 
-    /* OUTDATED color variables */
+    --border-default: 1px solid var(--color-border-default);
 
-    /* == Global border colors == */
-    --color-border-primary: #ebeae8;
+    --border-radius-default: 5px;
 
-    /* === Typography === */
-
-    /* == Font families == */
-    --font-family-primary: 'Inter', sans-serif;
+    --font-family-default: 'Inter', sans-serif;
     --font-family-brand: 'Montserrat', sans-serif;
 
-    /* == Font sizes == */
+    --font-size-0: 1rem;
+    --font-size-1: 1.2rem;
+    /*
+    Add more font size variables later
+    --font-size-2: ;
+    --font-size-3: ;
+    */
 
-    /* = Base Font Size = */
-    --font-size-base: 1rem;
+    --font-size-logo: var(--font-size-1);
+    /*
+    Add more font size variables later
+    --font-size-title: var();
+    --font-size-heading: var();
+    --font-size-subheading: var();
+    */
+    --font-size-body: var(--font-size-0);
+    --font-size-ui: var(--font-size-0);
 
-    /* Add more font size variables for all pages, sections or other parts of the website (visitor and admin envorinments) */
+    --font-weight-default: 400;
+    --font-weight-logo: 700;
 
-    /* == Font weight == */
-    --font-weight-primary: 400;
-    --font-weight-brand: 700;
+    --line-height-default: 1.2;
 
-    /* == Line height == */
-    /* Add line heights here based on convention line-height-[usage] */
-
-    /* === Spacing & layout === */
-    /* == Height == */
     --height-navbar: 5rem;
+    --height-drawer-navigation-item: 5rem;
 
-    /* == Width == */
-    --width-navbar-item-primary: 8rem;
-    --width-navbar-item-primary-secondary: 5rem;
+    --width-navbar-item-default: 8rem;
+    --width-navbar-item-mobile: 5rem;
 
-    /* === Borders == */
-    --border-primary: 1px solid var(--color-border-primary);
-    --border-navbar: var(--border-primary);
-    --border-language-switcher-dropdown: var(--border-primary);
-    --border-card: var(--border-primary);
+    --spacing-0: 0.25rem;
+    --spacing-1: 0.5rem;
+    --spacing-2: 0.75rem;
+    --spacing-3: 1rem;
+    --spacing-4: 1.25rem;
+    --spacing-5: 1.5rem;
+    --spacing-6: 1.75rem;
+    --spacing-7: 2rem;
+    --spacing-8: 5rem;
+    /* Add more spacing (padding) variables later */
 
-    /* === Border radius === */
-    --border-radius-primary: 5px;
-    --border-radius-language-switcher: var(--border-radius-primary);
+    --spacing-control-vertical: var(--spacing-1);
+    --spacing-control-horizontal: var(--spacing-2);
+    --spacing-navbar-horizontal: var(--spacing-3);
+    --spacing-drawer-navigation-horizontal: var(--spacing-7);
 
-    /* === Filters === */
-    --filter-brightness: brightness(2.5);
-
-    /* === Transitions === */
     --transition-background: background-color 0.2s ease-in-out;
-    --transition-background-secondary: background-color 0.1s ease-in-out;
-    --transition-transform: transform 0.2s ease-in-out;
     --transition-opacity: opacity 0.2s ease-in-out;
+    --transition-transform: transform 0.2s ease-in-out;
 }
 
 html,
 body {
     background-color: var(--color-surface-0);
     color: var(--color-text-body);
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-primary);
-    line-height: var(--line-height-medium);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-default);
+    line-height: var(--line-height-default);
     margin: 0;
     padding: 0;
 }
 
 a {
     color: var(--color-text-ui);
-    font-size: var(--font-size-base);
-    text-decoration: none;
+    font-size: var(--font-size-0);
+    text-decoration: underline;
 }
 
 button {
     background: none;
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-base);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-0);
 }
 
 .lucide {
