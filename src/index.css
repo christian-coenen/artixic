@@ -87,6 +87,11 @@
     --transition-transform: transform 0.2s ease-in-out;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
 html,
 body {
     background-color: var(--color-surface-0);

@@ -3,6 +3,7 @@
     border-bottom: var(--border-default);
     height: var(--height-navbar);
     padding: 0 var(--spacing-navbar-horizontal);
+    position: sticky;
 }
 
 .navbar-inner {
@@ -85,7 +86,11 @@
 }
 
 .navbar-hamburger-button {
+    align-items: center;
     display: none;
+    height: 100%;
+    justify-content: center;
+    width: var(--width-navbar-item-mobile);
 }
 
 .navbar-language {
