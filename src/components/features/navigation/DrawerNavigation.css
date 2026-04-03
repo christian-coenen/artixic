@@ -23,7 +23,7 @@
 
 .drawer-navigation-panel {
     background: var(--color-surface-1);
-    border-left: var(--border-default);
+    border-left: var(--border-ui);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -56,7 +56,7 @@
 .drawer-navigation-close-button {
     align-items: center;
     border: none;
-    border-radius: var(--border-radius-default);
+    border-radius: var(--border-radius-ui);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -74,7 +74,7 @@
 }
 
 .drawer-navigation-close-button-icon {
-    color: var(--color-icon-default);
+    color: var(--color-icon-control);
 }
 
 .drawer-navigation-list {

@@ -1,0 +1,11 @@
+.visitor-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+}
+
+.visitor-layout-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}

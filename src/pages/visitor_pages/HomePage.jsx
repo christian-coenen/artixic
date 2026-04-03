@@ -1,11 +1,10 @@
 import VisitorLayout from '../../components/layout/VisitorLayout'
+import HeroSection from '../../components/page-sections/home/HeroSection'
 
 const HomePage = () => {
     return (
         <VisitorLayout>
-            <div>
-                Hello, world?
-            </div>
+            <HeroSection />
         </VisitorLayout>
     )
 }

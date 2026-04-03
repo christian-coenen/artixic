@@ -1,6 +1,6 @@
 .navbar {
     background: var(--color-surface-1);
-    border-bottom: var(--border-default);
+    border-bottom: var(--border-ui);
     height: var(--height-navbar);
     padding: 0 var(--spacing-navbar-horizontal);
     position: sticky;

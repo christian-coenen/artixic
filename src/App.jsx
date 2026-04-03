@@ -18,18 +18,18 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 {/* Visitor pages routes */}
-                <Route path='/' element={<Navigate to='home' replace />} />
-                <Route path='/home' element={<HomePage />} />
-                <Route path='/art' element={<ArtPage />} />
-                <Route path='/collections' element={<CollectionsPage />} />
-                <Route path='/about' element={<AboutPage />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/art" element={<ArtPage />} />
+                <Route path="/collections" element={<CollectionsPage />} />
+                <Route path="/about" element={<AboutPage />} />
 
                 {/* Admin pages routes */}
-                <Route path='/admin/login' element={<AdminLoginPage />} />
-                <Route path='/admin/art' element={<AdminArtPage />} />
-                <Route path='/admin/collections' element={<AdminCollectionsPage />} />
-                <Route path='/admin/media' element={<AdminMediaPage />} />
-                <Route path='/admin/users' element={<AdminUsersPage />} />
+                {/* Temporary /admin routes: update afterwards for security */}
+                <Route path="/admin/login" element={<AdminLoginPage />} />
+                <Route path="/admin/art" element={<AdminArtPage />} />
+                <Route path="/admin/collections" element={<AdminCollectionsPage />} />
+                <Route path="/admin/media" element={<AdminMediaPage />} />
+                <Route path="/admin/users" element={<AdminUsersPage />} />
             </Routes>
         </BrowserRouter>
   )

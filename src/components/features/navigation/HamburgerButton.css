@@ -1,7 +1,7 @@
 .hamburger-button {
     align-items: center;
     border: none;
-    border-radius: var(--border-radius-default);
+    border-radius: var(--border-radius-ui);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -18,5 +18,5 @@
 }
 
 .hamburger-button-icon {
-    color: var(--color-icon-default);
+    color: var(--color-icon-control);
 }
