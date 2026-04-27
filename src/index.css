@@ -31,9 +31,13 @@
     --color-text-body: var(--color-text-2);
     --color-text-ui: var(--color-text-3);
 
+    --color-text-link-default: var(--color-text-0);
+    --color-text-link-hover: var(--color-text-1);
+    --color-text-link-active: var(--color-text-2);
+
     --border-ui: 1px solid var(--color-border-ui);
 
-    --border-radius-ui: 12px;
+    --border-radius-ui: 10px;
 
     --font-family-default: 'Inter', sans-serif;
     --font-family-brand: 'Montserrat', sans-serif;
@@ -53,6 +57,20 @@
 
     --font-size-0: 1rem;
     --font-size-1: 1.2rem;
+
+    --font-weight-logo: 500;
+    --font-weight-title: 500;
+    --font-weight-subtitle: 400;
+    --font-weight-heading: 500;
+    --font-weight-subheading: 500;
+    --font-weight-section-title: 500;
+    --font-weight-body: 400;
+    --font-weight-quote: 400;
+    --font-weight-ui: 400;
+    --font-weight-link: 400;
+
+    --line-height-default: 2;
+    
     /*
     Add more font size variables later
     --font-size-2: ;
@@ -60,14 +78,22 @@
     */
 
     --font-size-logo: var(--font-size-1);
-    /*
-    Add more font size variables later
-    --font-size-title: var();
-    --font-size-heading: var();
-    --font-size-subheading: var();
-    */
-    --font-size-body: var(--font-size-0);
-    --font-size-ui: var(--font-size-0);
+
+    --font-size-logo: 1.25rem;
+    --font-size-title: 5rem;
+    --font-size-subtitle: 2rem;
+    --font-size-heading: 2rem;
+    --font-size-subheading: 1.5rem;
+    --font-size-section-title: 1.25rem;
+    --font-size-body: 1rem;
+    --font-size-quote: 1rem;
+    --font-size-ui: 1rem;
+    --font-size-link: 1rem;
+
+    --font-size-title-mobile: 4.75rem;
+    --font-size-heading-mobile: 1.75rem;
+    --font-size-subheading-mobile: 1.25rem;
+    --font-size-section-title-mobile: 1.125rem;
 
     --font-weight-body: 400;
     --font-weight-logo: 700;
@@ -90,7 +116,7 @@
     --spacing-7: 2rem;
     --spacing-8: 5rem;
     /* Add more spacing (padding) variables later */
-    --spacing-layout: 1rem;
+    --spacing-layout: 2rem;
     --spacing-heading-vertical: 2rem;
     --spacing-subheading-vertical: 1rem;
     --spacing-section-title-vertical: 1rem;
@@ -104,9 +130,9 @@
     --spacing-navbar-horizontal: var(--spacing-3);
     --spacing-drawer-navigation-horizontal: var(--spacing-7);
 
-    --transition-background: background-color 0.2s ease-in-out;
-    --transition-opacity: opacity 0.2s ease-in-out;
-    --transition-transform: transform 0.2s ease-in-out;
+    --transition-background: background-color 0.25s ease-in-out;
+    --transition-opacity: opacity 0.25s ease-in-out;
+    --transition-transform: transform 0.25s ease-in-out;
 }
 
 *,
