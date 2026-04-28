@@ -27,7 +27,7 @@
 .highlighted-artwork-card-text {
     display: grid;
     grid-template-rows: 1fr;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .highlighted-artwork-card-title {

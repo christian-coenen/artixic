@@ -6,12 +6,12 @@ const HightlightedArtworksSection = () => {
     return (
         <section className="highlighted-artworks-section">
             <div className="highlighted-artworks-inner">
-                <h1 className="highlighted-artworks-header">
+                <h2 className="highlighted-artworks-header">
                     Highlighted artworks
-                </h1>
+                </h2>
 
-                {/* Display hightlighted artworks stored in database */}
                 <ul className="highlighted-artworks-grid">
+                    {/* TODO: Display hightlighted artworks stored in database */}
                     {Object.entries(highlightedArtworks).map(([key, highlightedArtwork]) => (
                         <HighlightedArtworkCard
                             key={key}
