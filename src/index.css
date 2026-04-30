@@ -70,12 +70,6 @@
     --font-weight-link: 400;
 
     --line-height-default: 2;
-    
-    /*
-    Add more font size variables later
-    --font-size-2: ;
-    --font-size-3: ;
-    */
 
     --font-size-logo: var(--font-size-1);
 
@@ -106,16 +100,6 @@
     --width-navbar-item-default: 8rem;
     --width-navbar-item-mobile: 5rem;
 
-    --spacing-0: 0.25rem;
-    --spacing-1: 0.5rem;
-    --spacing-2: 0.75rem;
-    --spacing-3: 1rem;
-    --spacing-4: 1.25rem;
-    --spacing-5: 1.5rem;
-    --spacing-6: 1.75rem;
-    --spacing-7: 2rem;
-    --spacing-8: 5rem;
-    /* Add more spacing (padding) variables later */
     --spacing-layout: 2rem;
     --spacing-heading-vertical: 2rem;
     --spacing-subheading-vertical: 1rem;
@@ -125,10 +109,9 @@
     --spacing-link-vertical: 1rem;
     --spacing-control: 1rem;
 
-    --spacing-control-vertical: var(--spacing-1);
-    --spacing-control-horizontal: var(--spacing-2);
-    --spacing-navbar-horizontal: var(--spacing-3);
-    --spacing-drawer-navigation-horizontal: var(--spacing-7);
+    --spacing-control-vertical: 0.5rem;
+    --spacing-control-horizontal: 0.75rem;
+    --spacing-drawer-navigation-horizontal: 2rem;
 
     --transition-background: background-color 0.25s ease-in-out;
     --transition-opacity: opacity 0.25s ease-in-out;
@@ -177,7 +160,7 @@ h2,
 h3 {
     color: var(--color-text-heading);
     font-family: var(--font-family-default);
-    font-size: var(--font-size-subheading);
-    font-weight: var(--font-weight-subheading);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
     margin: 0;
 }
