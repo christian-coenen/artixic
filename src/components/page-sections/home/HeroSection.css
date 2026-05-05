@@ -18,7 +18,7 @@
 .hero-title {
     color: var(--color-text-title);
     display: inline-flex;
-    font-family: var(--font-family-default);
+    font-family: var(--font-family-brand);
     font-size: clamp(2.5rem, 15vw, var(--font-size-title));
     margin: 0;
     overflow-wrap: break-word;

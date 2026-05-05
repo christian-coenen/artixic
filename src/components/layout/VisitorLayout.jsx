@@ -3,9 +3,9 @@ import Footer from './Footer'
 
 const VisitorLayout = ({ children }) => {
     return (
-        <div className='visitor-layout'>
+        <div className="visitor-layout">
             <Navbar />
-            <main className='visitor-layout-content'>
+            <main className="visitor-layout-content">
                 { children }
             </main>
             <Footer />

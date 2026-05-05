@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import LogoArtixic from '../../assets/icons/LogoArtixic'
+import BrandLogo from '../ui/BrandLogo'
 import HamburgerButton from '../features/navigation/HamburgerButton'
 import DrawerNavigation from '../features/navigation/DrawerNavigation'
 import LanguageSwitcher from '../features/language/LanguageSwitcher'
@@ -18,62 +18,54 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='navbar'>
-            <div className='navbar-inner'>
-                <Link to='/home' className='navbar-logo'>
-                    <LogoArtixic />
-                    <span className='navbar-logo-text'>ARTIXIC</span>
+        <nav className="navbar">
+            <div className="navbar-inner">
+                <Link to="/" className="navbar-logo">
+                    <BrandLogo size={48} />
+                    <span className="navbar-logo-text">ARTIXIC</span>
                 </Link>
 
-                <div className='navbar-actions'>
-                    <div className='navbar-navigation'>
-                        <ul className='navbar-navigation-list'>
-                            <li className='navbar-navigation-link'>
+                <div className="navbar-actions">
+                    <div className="navbar-navigation">
+                        <ul className="navbar-navigation-list">
+                            <li className="navbar-navigation-link">
                                 <NavLink
-                                    to='/home'
+                                    to="/"
                                     className={({ isActive }) =>
-                                        isActive
-                                            ? "navbar-navigation-link current"
-                                            : "navbar-navigation-link"
+                                        `navbar-navigation-link ${isActive ? 'current' : ''}`
                                     }
                                 >
                                     Home
                                 </NavLink>
                             </li>
 
-                            <li className='navbar-navigation-link'>
+                            <li className="navbar-navigation-link">
                                 <NavLink
-                                    to='/art'
+                                    to="/art"
                                     className={({ isActive }) =>
-                                        isActive
-                                            ? "navbar-navigation-link current"
-                                            : "navbar-navigation-link"
+                                        `navbar-navigation-link ${isActive ? 'current' : ''}`
                                     }
                                 >
                                     Art
                                 </NavLink>
                             </li>
 
-                            <li className='navbar-navigation-link'>
+                            <li className="navbar-navigation-link">
                                 <NavLink
-                                    to='/collections'
+                                    to="/collections"
                                     className={({ isActive }) =>
-                                        isActive
-                                            ? "navbar-navigation-link current"
-                                            : "navbar-navigation-link"
+                                        `navbar-navigation-link ${isActive ? 'current' : ''}`
                                     }
                                 >
                                     Collections
                                 </NavLink>
                             </li>
 
-                            <li className='navbar-navigation-link'>
+                            <li className="navbar-navigation-link">
                                 <NavLink
-                                    to='/about'
+                                    to="/about"
                                     className={({ isActive }) =>
-                                        isActive
-                                            ? "navbar-navigation-link current"
-                                            : "navbar-navigation-link"
+                                        `navbar-navigation-link ${isActive ? 'current' : ''}`
                                     }
                                 >
                                     About
@@ -81,7 +73,7 @@ const Navbar = () => {
                             </li>
                         </ul>
 
-                        <div className='navbar-hamburger-button'>
+                        <div className="navbar-hamburger-button">
                             <HamburgerButton
                                 isOpen={isDrawerNavigationOpen}
                                 onToggle={toggleDrawerNavigation}
@@ -89,7 +81,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className='navbar-language'>
+                    <div className="navbar-language">
                         <LanguageSwitcher />
                     </div>
                 </div>

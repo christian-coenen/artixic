@@ -20,8 +20,12 @@
 }
 
 .highlighted-artwork-card:hover .highlighted-artwork-card-image img {
-    opacity: 0.5;
+    opacity: 0.75;
     transform: scale(1.125);
+}
+.highlighted-artwork-card:active .highlighted-artwork-card-image img {
+    opacity: 0.5;
+    transform: scale(1.25);
 }
 
 .highlighted-artwork-card-text {
