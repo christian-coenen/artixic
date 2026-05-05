@@ -39,8 +39,8 @@
 
     --border-radius-ui: 10px;
 
-    --font-family-default: 'Inter', sans-serif;
-    --font-family-brand: 'Montserrat', sans-serif;
+    --font-family-default: "Inter", sans-serif;
+    --font-family-brand: "Montserrat", sans-serif;
 
     --font-size-logo: 1.25rem;
     --font-size-title: 5rem;
@@ -67,7 +67,7 @@
     --font-weight-body: 400;
     --font-weight-quote: 400;
     --font-weight-ui: 400;
-    --font-weight-link: 400;
+    --font-weight-link: 500;
 
     --line-height-default: 2;
 
@@ -90,7 +90,7 @@
     --font-size-section-title-mobile: 1.125rem;
 
     --font-weight-body: 400;
-    --font-weight-logo: 700;
+    --font-weight-logo: 600;
 
     --line-height-default: 1.2;
 

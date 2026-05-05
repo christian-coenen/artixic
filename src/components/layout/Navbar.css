@@ -36,7 +36,7 @@
 
 .navbar-logo-text {
     color: var(--color-text-logo);
-    font-family: var(--font-family-logo);
+    font-family: var(--font-family-brand);
     font-size: var(--font-size-logo);
     font-weight: var(--font-weight-logo);
     padding: 1rem;

@@ -1,0 +1,32 @@
+.footer {
+    background: var(--color-surface-1);
+}
+
+.footer-inner {
+    padding: var(--spacing-layout);
+}
+
+.footer-text {
+    color: var(--color-text-ui);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-ui);
+    font-weight: var(--font-weight-ui);
+    line-height: var(--line-height-default);
+}
+
+.footer-link {
+    color: var(--color-text-body);
+    font-family: var(--font-size-default);
+    font-size: var(--font-size-link);
+    font-weight: var(--font-weight-link);
+    text-decoration: underline;
+    transition: var(--transition-opacity);
+}
+
+.footer-link:hover {
+    opacity: 0.75;
+}
+
+.footer-link:active {
+    opacity: 0.5;
+}
