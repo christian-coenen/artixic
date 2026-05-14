@@ -27,11 +27,11 @@
 }
 
 .navbar-logo:hover {
-    opacity: 0.75;
+    opacity: var(--opacity-hover);
 }
 
 .navbar-logo:active {
-    opacity: 0.5;
+    opacity: var(--opacity-active);
 }
 
 .navbar-logo-text {

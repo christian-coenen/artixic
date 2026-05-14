@@ -25,17 +25,44 @@
 }
 
 .latest-collection-card:hover .latest-collection-card-image img {
-    opacity: 0.75;
+    opacity: var(--opacity-hover);
     transform: scale(1.125);
 }
 
 .latest-collection-card:active .latest-collection-card-image img {
-    opacity: 0.5;
+    opacity: var(--opacity-active);
     transform: scale(1.25);
 }
 
 .latest-collection-card-text {
     padding: 2rem;
+    transition: var(--transition-opacity);
+}
+
+.latest-collection-card:hover .latest-collection-card-text {
+    opacity: var(--opacity-hover);
+}
+
+.latest-collection-card:active .latest-collection-card-text {
+    opacity: var(--opacity-active);
+}
+
+.latest-collection-card-title {
+    color: var(--color-text-subheading);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-subheading);
+    font-weight: var(--font-weight-subheading);
+    margin: 0;
+    padding: var(--spacing-subheading-vertical) 0;
+}
+
+.latest-collection-card-subtitle {
+    color: var(--color-text-body);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 480px) {

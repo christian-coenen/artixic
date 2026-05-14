@@ -20,24 +20,44 @@
 }
 
 .highlighted-artwork-card:hover .highlighted-artwork-card-image img {
-    opacity: 0.75;
+    opacity: var(--opacity-hover);
     transform: scale(1.125);
 }
+
 .highlighted-artwork-card:active .highlighted-artwork-card-image img {
-    opacity: 0.5;
+    opacity: var(--opacity-active);
     transform: scale(1.25);
 }
 
 .highlighted-artwork-card-text {
     display: grid;
     grid-template-rows: 1fr;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    transition: var(--transition-opacity);
+}
+
+.highlighted-artwork-card:hover .highlighted-artwork-card-text {
+    opacity: var(--opacity-hover);
+}
+
+.highlighted-artwork-card:active .highlighted-artwork-card-text {
+    opacity: var(--opacity-active);
 }
 
 .highlighted-artwork-card-title {
-    padding: 0;
+    color: var(--color-text-subheading);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-subheading);
+    font-weight: var(--font-weight-subheading);
+    margin: 0;
+    padding: var(--spacing-subheading-vertical) 0;
 }
 
 .highlighted-artwork-card-subtitle {
+    color: var(--color-text-body);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    margin: 0;
     padding: 0;
 }
