@@ -24,9 +24,9 @@
 }
 
 .footer-link:hover {
-    opacity: 0.75;
+    opacity: var(--opacity-hover);
 }
 
 .footer-link:active {
-    opacity: 0.5;
+    opacity: var(--opacity-active);
 }
