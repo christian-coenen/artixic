@@ -1,6 +1,6 @@
 .latest-collection-card {
     background: var(--color-surface-1);
-    border-radius: var(--border-radius-ui);
+    border-radius: var(--border-radius-2);
     overflow: hidden;
 }
 

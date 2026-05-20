@@ -43,7 +43,7 @@
 .hero-cta-link {
     background: var(--color-surface-1);
     border: var(--border-ui);
-    border-radius: var(--border-radius-ui);
+    border-radius: var(--border-radius-1);
     color: var(--color-text-ui);
     font-family: var(--font-family-default);
     padding: 1rem;
