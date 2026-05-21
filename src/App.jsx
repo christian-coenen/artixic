@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 {/* Visitor pages imports */}
 import HomePage from './pages/visitor-pages/HomePage'
-import ArtPage from './pages/visitor-pages/ArtPage'
+import ArtworksPage from './pages/visitor-pages/ArtworksPage'
 import CollectionsPage from './pages/visitor-pages/CollectionsPage'
 import AboutPage from './pages/visitor-pages/AboutPage'
 
@@ -19,7 +19,7 @@ const App = () => {
             <Routes>
                 {/* Visitor pages routes */}
                 <Route path="/" element={<HomePage />} />
-                <Route path="/art" element={<ArtPage />} />
+                <Route path="/artworks" element={<ArtworksPage />} />
                 <Route path="/collections" element={<CollectionsPage />} />
                 <Route path="/about" element={<AboutPage />} />
 

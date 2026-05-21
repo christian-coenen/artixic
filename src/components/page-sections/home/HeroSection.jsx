@@ -14,7 +14,12 @@ const HeroSection = () => {
                 </span>
 
                 <div className="hero-cta">
-                    <NavLink className="hero-cta-link">Explore artworks</NavLink>
+                    <NavLink 
+                        to="/artworks"
+                        className="hero-cta-link"
+                    >
+                        Explore artworks
+                    </NavLink>
                 </div>
 
             </div>

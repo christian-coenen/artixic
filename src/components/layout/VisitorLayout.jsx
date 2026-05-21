@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
+import './VisitorLayout.css'
 
 const VisitorLayout = ({ children }) => {
     return (
