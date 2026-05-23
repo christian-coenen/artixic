@@ -1,0 +1,29 @@
+.artworks-grid-section {
+    background: var(--color-surface-1);
+    flex: 1;
+}
+
+.artworks-grid-inner {
+    padding: var(--spacing-layout);
+}
+
+.artworks-grid-list {
+    display: grid;
+    gap: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 880px) {
+    .artworks-grid-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .artworks-grid-list {
+        grid-template-columns: 1fr;
+    }
+}

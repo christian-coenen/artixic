@@ -34,9 +34,8 @@
 
     --border-ui: 1px solid var(--color-border-ui);
 
-    --border-radius-0: 5px;
-    --border-radius-1: 10px;
-    --border-radius-2: 50px;
+    --border-radius-0: 10px;
+    --border-radius-1: 50px;
 
     --font-family-default: "Inter", sans-serif;
     --font-family-brand: "Montserrat", sans-serif;

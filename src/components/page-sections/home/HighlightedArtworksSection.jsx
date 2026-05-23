@@ -1,4 +1,4 @@
-import { highlightedArtworks } from '../../../data/highlightedArtworks'
+import { artworks } from '../../../data/artworks'
 import HighlightedArtworkCard from '../../ui/cards/HighlightedArtworkCard'
 import './HighlightedArtworksSection.css'
 
@@ -12,12 +12,12 @@ const HightlightedArtworksSection = () => {
 
                 <ul className="highlighted-artworks-grid">
                     {/* TODO: Display hightlighted artworks stored in database */}
-                    {Object.entries(highlightedArtworks).map(([key, highlightedArtwork]) => (
+                    {Object.entries(artworks).filter(([, artwork]) => artwork.highlighted).map(([key, artwork]) => (
                         <HighlightedArtworkCard
                             key={key}
-                            title={highlightedArtwork.title}
-                            subtitle={highlightedArtwork.subtitle}
-                            image={highlightedArtwork.image}
+                            title={artwork.title}
+                            subtitle={artwork.subtitle}
+                            image={artwork.image}
                             link={`/artworks/${key}`}
                         />
                     ))}

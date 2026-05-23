@@ -1,4 +1,4 @@
-import './ArtworkIntroSection.css'
+import './ArtworksIntroSection.css'
 
 const ArtworksIntroSection = () => {
     return (
