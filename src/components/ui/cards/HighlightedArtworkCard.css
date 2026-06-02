@@ -7,8 +7,8 @@
 }
 
 .highlighted-artwork-card-image {
-    aspect-ratio: 4 / 3;
-    border-radius: var(--border-radius-ui);
+    aspect-ratio: 3 / 2;
+    border-radius: var(--border-radius-1);
     overflow: hidden;
 }
 

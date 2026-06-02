@@ -56,7 +56,7 @@
 .drawer-navigation-close-button {
     align-items: center;
     border: none;
-    border-radius: var(--border-radius-ui);
+    border-radius: var(--border-radius-0);
     cursor: pointer;
     display: flex;
     justify-content: center;

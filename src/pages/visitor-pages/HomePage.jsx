@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { highlightedArtworks } from '../../data/highlightedArtworks'
+import { artworks } from '../../data/artworks'
 import { collections } from '../../data/collections'
 import VisitorLayout from '../../components/layout/VisitorLayout'
 import HeroSection from '../../components/page-sections/home/HeroSection'
@@ -10,7 +10,7 @@ const HomePage = () => {
     return (
         <VisitorLayout>
             <HeroSection />
-            <HightlightedArtworksSection highlightedArtworks={highlightedArtworks} />
+            <HightlightedArtworksSection artworks={artworks} />
             <LatestCollectionSection collections={collections} />
         </VisitorLayout>
     )

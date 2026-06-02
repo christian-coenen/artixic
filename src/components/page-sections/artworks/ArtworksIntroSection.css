@@ -1,0 +1,32 @@
+.artworks-intro-section {
+    background: var(--color-surface-0);
+}
+
+.artworks-intro-inner {
+    padding: var(--spacing-layout);
+}
+
+.artworks-intro-header {
+    color: var(--color-text-heading);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+    margin: 0;
+    padding: var(--spacing-heading-vertical) 0;
+}
+
+.artworks-intro-paragraph {
+    color: var(--color-text-body);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    line-height: var(--line-height-default);
+    margin: 0;
+    padding: var(--spacing-paragraph-vertical) 0;
+}
+
+@media (max-width: 400px) {
+    .artworks-intro-header {
+        font-size: var(--font-size-heading-mobile);
+    }
+}

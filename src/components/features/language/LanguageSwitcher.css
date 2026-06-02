@@ -6,7 +6,7 @@
     align-items: center;
     background: var(--color-background-control-default);
     border: none;
-    border-radius: var(--border-radius-ui);
+    border-radius: var(--border-radius-0);
     color: var(--color-text-ui);
     cursor: pointer;
     display: flex;
@@ -37,7 +37,7 @@
 .language-switcher-dropdown {
     background: var(--color-surface-1);
     border: var(--border-ui);
-    border-radius: var(--border-radius-ui);
+    border-radius: var(--border-radius-0);
     display: flex;
     flex-direction: column;
     min-width: 10rem;

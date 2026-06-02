@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import './HighlightedArtworkCard.css'
 
-const HighlightedArtworkCard = ({ link, image, title, subtitle }) => {
+const HighlightedArtworkCard = ({ link, image, title, subtitle, highlighted }) => {
     return (
         <li className="highlighted-artwork-card">
             <NavLink

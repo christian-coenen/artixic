@@ -58,13 +58,13 @@ const DrawerNavigation = ({ isOpen, onClose }) => {
 
                     <li className="drawer-navigation-link">
                         <NavLink
-                            to="/art"
+                            to="/artworks"
                             className={({ isActive }) =>
                                 `drawer-navigation-link ${isActive ? 'current' : ''}`
                             }
                             onClick={onClose}
                         >
-                            Art
+                            Artworks
                         </NavLink>
                     </li>
 

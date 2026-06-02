@@ -41,12 +41,12 @@ const Navbar = () => {
 
                             <li className="navbar-navigation-link">
                                 <NavLink
-                                    to="/art"
+                                    to="/artworks"
                                     className={({ isActive }) =>
                                         `navbar-navigation-link ${isActive ? 'current' : ''}`
                                     }
                                 >
-                                    Art
+                                    Artworks
                                 </NavLink>
                             </li>
 

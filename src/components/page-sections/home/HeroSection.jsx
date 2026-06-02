@@ -10,11 +10,16 @@ const HeroSection = () => {
                 </h1>
 
                 <span className="hero-subtitle">
-                    Museum of various digital artworks
+                    Curated contemporary artworks
                 </span>
 
                 <div className="hero-cta">
-                    <NavLink className="hero-cta-link">Explore artworks</NavLink>
+                    <NavLink 
+                        to="/artworks"
+                        className="hero-cta-link"
+                    >
+                        Explore artworks
+                    </NavLink>
                 </div>
 
             </div>
