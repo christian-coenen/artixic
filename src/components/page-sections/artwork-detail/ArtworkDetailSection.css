@@ -1,0 +1,67 @@
+.artwork-detail-section {
+    background: var(--color-surface-0);
+    flex: 1;
+}
+
+.artwork-detail-inner {
+    padding: var(--spacing-layout);
+}
+
+.artwork-detail-layout {
+    display: grid;
+    gap: 10rem;
+    grid-template-columns: 1fr 2fr;
+}
+
+.artwork-detail-eyebrow {
+    /* TODO: add new eyebrow style */
+}
+
+.artwork-detail-title {
+    color: var(--color-text-heading);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+    margin: 0;
+    padding: var(--spacing-heading-vertical) 0;
+}
+
+.artwork-detail-description {
+    color: var(--color-text-body);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    line-height: var(--line-height-default);
+    margin: 0;
+    padding: var(--spacing-paragraph-vertical) 0;
+}
+
+.artwork-detail-collection a {
+    color: var(--color-text-body);
+    font-family: var(--font-size-default);
+    font-size: var(--font-size-link);
+    font-weight: var(--font-weight-link);
+    text-decoration: underline;
+    transition: var(--transition-opacity);
+}
+
+.artwork-detail-collection a:hover {
+    opacity: var(--opacity-hover);
+}
+
+.artwork-detail-collection a:active {
+    opacity: var(--opacity-active);
+}
+
+@media (max-width: 1000px) {
+    .artwork-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .artwork-detail-title {
+        font-size: var(--font-size-heading-mobile);
+    }
+}
