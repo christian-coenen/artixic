@@ -13,6 +13,7 @@ const ArtworksGridSection = () => {
                             key={key}
                             image={artwork.image}
                             link={`/artworks/${key}`}
+                            aspectRatio='fixed'
                         />
                     ))}
                 </ul>
