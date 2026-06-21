@@ -6,17 +6,34 @@
     cursor: pointer;
 }
 
-.artwork-card-image {
+.artwork-card-inner--fixed {
     aspect-ratio: 5 / 4;
-    border-radius: var(--border-radius-0);
-    overflow: hidden;
 }
 
-.artwork-card-image img {
+.artwork-card-image {
+    border-radius: var(--border-radius-0);
+    height: 100%;
+    overflow: hidden;
     width: 100%;
+}
+
+.artwork-card-inner--fixed .artwork-card-image img {
     height: 100%;
     object-fit: cover;
     transition: var(--transition-opacity), var(--transition-transform);
+    width: 100%;
+}
+
+.artwork-card-inner--original .artwork-card-image {
+    height: auto;
+}
+
+.artwork-card-inner--original .artwork-card-image img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    transition: var(--transition-opacity), var(--transition-transform);
+    width: 100%;
 }
 
 .artwork-card:hover .artwork-card-image img {
