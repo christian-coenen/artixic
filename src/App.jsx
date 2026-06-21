@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 {/* Visitor pages imports */}
 import HomePage from './pages/visitor-pages/HomePage'
 import ArtworksPage from './pages/visitor-pages/ArtworksPage'
+import ArtworkDetailPage from './pages/visitor-pages/ArtworkDetailPage'
 import CollectionsPage from './pages/visitor-pages/CollectionsPage'
 import AboutPage from './pages/visitor-pages/AboutPage'
 
@@ -20,6 +21,7 @@ const App = () => {
                 {/* Visitor pages routes */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/artworks" element={<ArtworksPage />} />
+                <Route path="/artworks/:artworkId" element={<ArtworkDetailPage />} />
                 <Route path="/collections" element={<CollectionsPage />} />
                 <Route path="/about" element={<AboutPage />} />
 
