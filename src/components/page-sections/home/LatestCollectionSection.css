@@ -3,10 +3,10 @@
 }
 
 .latest-collection-header {
-    color: var(--color-text-heading);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-heading);
-    font-weight: var(--font-weight-heading);
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-medium);
     margin: 0;
     padding: var(--spacing-heading-vertical) 0;
 }
@@ -17,6 +17,6 @@
 
 @media (max-width: 400px) {
     .latest-collection-header {
-        font-size: var(--font-size-heading-mobile);
+        font-size: var(--font-size-1-mobile);
     }
 }

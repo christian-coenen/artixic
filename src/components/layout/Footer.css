@@ -7,18 +7,18 @@
 }
 
 .footer-text {
-    color: var(--color-text-ui);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-ui);
-    font-weight: var(--font-weight-ui);
-    line-height: var(--line-height-default);
+    color: var(--color-text-base-2);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
 }
 
 .footer-link {
-    color: var(--color-text-body);
+    color: var(--color-text-base-1);
     font-family: var(--font-size-default);
-    font-size: var(--font-size-link);
-    font-weight: var(--font-weight-link);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-medium);
     text-decoration: underline;
     transition: var(--transition-opacity);
 }

@@ -6,7 +6,7 @@ const ArtworksIntroSection = () => {
             <div className="artworks-intro-inner">
                 <h2 className="artworks-intro-header">Artworks</h2>
 
-                <p className="artworks-intro-paragraph">Discover the full catalog of contemporary artworks.</p>
+                <p className="artworks-intro-body">Discover the full catalog of contemporary artworks.</p>
             </div>
         </section>
     )

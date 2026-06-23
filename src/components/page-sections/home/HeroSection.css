@@ -16,10 +16,11 @@
 }
 
 .hero-title {
-    color: var(--color-text-title);
+    color: var(--color-text-base-0);
     display: inline-flex;
     font-family: var(--font-family-brand);
-    font-size: clamp(2.5rem, 7.5vw, var(--font-size-title));
+    font-size: clamp(2.5rem, 7.5vw, var(--font-size-0));
+    font-weight: var(--font-weight-medium);
     margin: 0;
     overflow-wrap: break-word;
     padding: 1rem;
@@ -27,10 +28,11 @@
 }
 
 .hero-subtitle {
-    color: var(--color-text-subtitle);
-    font-family: var(--font-family-default);
-    font-size: clamp(1rem, 5vw, var(--font-size-subtitle));
-    font-weight: var(--font-weight-subtitle);
+.hero-body {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: clamp(1rem, 5vw, var(--font-size-1));
+    font-weight: var(--font-weight-regular);
     overflow-wrap: break-word;
     padding: 1rem;
     text-align: center;
@@ -42,10 +44,10 @@
 
 .hero-cta-link {
     background: var(--color-surface-1);
-    border: var(--border-ui);
+    border: var(--border);
     border-radius: var(--border-radius-0);
-    color: var(--color-text-ui);
-    font-family: var(--font-family-default);
+    color: var(--color-text-base-2);
+    font-family: var(--font-family-base);
     padding: 1rem;
     text-decoration: none;
     transition: var(--transition-background);

@@ -23,7 +23,7 @@
 
 .drawer-navigation-panel {
     background: var(--color-surface-1);
-    border-left: var(--border-ui);
+    border-left: var(--border);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -100,11 +100,11 @@
 
 .drawer-navigation-link a {
     align-items: center;
-    color: var(--color-text-ui);
+    color: var(--color-text-base-2);
     display: flex;
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-ui);
-    font-weight: var(--font-weight-ui);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
     height: 100%;
     justify-content: flex-start;
     padding-left: 1.5rem;
