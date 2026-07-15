@@ -6,6 +6,15 @@
     padding: var(--spacing-layout);
 }
 
+.highlighted-artworks-eyebrow {
+    color: var(--color-text-accent-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-0);
+    text-transform: uppercase;
+}
+
 .highlighted-artworks-header {
     color: var(--color-text-base-0);
     font-family: var(--font-family-base);
