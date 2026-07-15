@@ -126,7 +126,7 @@ button {
 
 h1 {
     color: var(--color-text-base-0);
-    font-family: var(--font-family-brand);
+    font-family: var(--font-family-base);
     font-size: var(--font-size-1);
     font-weight: var(--font-weight-medium);
     margin: 0;
@@ -139,7 +139,7 @@ h2 {
     font-size: var(--font-size-1);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: var(--spacing-heading-vertical) 0;
+    padding: 0;
 }
 
 h3 {
@@ -148,9 +148,14 @@ h3 {
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: var(--spacing-subheading-vertical) 0;
+    padding: 0;
 }
 
 p {
-
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+    padding: 0;
 }
