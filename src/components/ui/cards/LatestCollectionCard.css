@@ -1,9 +1,3 @@
-.latest-collection-card {
-    background: var(--color-surface-1);
-    border-radius: var(--border-radius-1);
-    overflow: hidden;
-}
-
 .latest-collection-card a {
     text-decoration: none;
 }
@@ -14,6 +8,7 @@
 
 .latest-collection-card-image {
     aspect-ratio: 18 / 6;
+    border-radius: var(--border-radius-1);
     overflow: hidden;
 }
 
@@ -35,7 +30,7 @@
 }
 
 .latest-collection-card-text {
-    padding: 2rem;
+    padding: 1rem 0;
     transition: var(--transition-opacity);
 }
 
@@ -53,7 +48,7 @@
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: var(--spacing-subheading-vertical) 0;
+    padding: 0;
 }
 
 .latest-collection-card-subtitle {
