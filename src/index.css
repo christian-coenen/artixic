@@ -97,7 +97,7 @@
 html,
 body {
     -webkit-text-size-adjust: 100%;
-    background-color: var(--color-surface-0);
+    background-color: var(--color-surface-1);
     color: var(--color-text-base-1);
     font-family: var(--font-family-base);
     font-size: var(--font-size-4);
