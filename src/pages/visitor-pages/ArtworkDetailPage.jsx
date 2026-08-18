@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { artworks } from '../../data/artworks.js' // Temporary data
 import VisitorLayout from '../../components/layout/VisitorLayout.jsx'
-import ArtworkDetaiSection from '../../components/page-sections/artwork-detail/ArtworkDetailSection.jsx'
+import ArtworkDetailArtworkSection from '../../components/page-sections/artwork-detail/ArtworkDetailArtworkSection.jsx'
+import ArtworkDetailInformationSection from '../../components/page-sections/artwork-detail/ArtworkDetailInformationSection.jsx'
 
 const ArtworkDetailPage = () => {
     const { artworkId } = useParams()
@@ -10,7 +11,8 @@ const ArtworkDetailPage = () => {
 
     return (
         <VisitorLayout>
-            <ArtworkDetaiSection />
+            <ArtworkDetailArtworkSection />
+            <ArtworkDetailInformationSection />
         </VisitorLayout>
     )
 }
