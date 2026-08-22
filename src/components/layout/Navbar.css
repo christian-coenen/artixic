@@ -2,7 +2,6 @@
     background: var(--color-surface-1);
     border-bottom: var(--border);
     height: var(--height-navbar);
-    padding: 0 var(--spacing-layout);
     position: sticky;
     top: 0;
     width: 100%;
@@ -15,6 +14,10 @@
     height: 100%;
     justify-content: space-between;
     margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: 0 var(--spacing-layout);
+    position: relative;
+    width: 100%;
 }
 
 .navbar-logo {

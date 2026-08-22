@@ -23,7 +23,10 @@
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    margin: 0 auto;
+    max-width: var(--max-width-content);
     padding: var(--spacing-layout);
+    width: 100%;
     z-index: 20;
 }
 

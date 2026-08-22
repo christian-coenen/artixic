@@ -3,7 +3,11 @@
 }
 
 .highlighted-artworks-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
     padding: var(--spacing-layout);
+    position: relative;
+    width: 100%;
 }
 
 .highlighted-artworks-eyebrow {

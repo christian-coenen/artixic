@@ -14,8 +14,11 @@
 }
 
 .latest-collection-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
     padding: var(--spacing-layout);
-    position: relative; /* temporary until sections get centered layouts */
+    position: relative;
+    width: 100%;
     z-index: 20;
 }
 
