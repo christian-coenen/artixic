@@ -6,8 +6,12 @@ const HightlightedArtworksSection = () => {
     return (
         <section className="highlighted-artworks-section">
             <div className="highlighted-artworks-inner">
-                <h2 className="highlighted-artworks-header">
+                <p className="highlighted-artworks-eyebrow">
                     Highlighted artworks
+                </p>
+
+                <h2 className="highlighted-artworks-header">
+                    Works of focus
                 </h2>
 
                 <ul className="highlighted-artworks-grid">

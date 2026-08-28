@@ -45,19 +45,19 @@
 }
 
 .highlighted-artwork-card-title {
-    color: var(--color-text-subheading);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-subheading);
-    font-weight: var(--font-weight-subheading);
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-medium);
     margin: 0;
     padding: var(--spacing-subheading-vertical) 0;
 }
 
 .highlighted-artwork-card-subtitle {
-    color: var(--color-text-body);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-body);
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
     margin: 0;
     padding: 0;
 }

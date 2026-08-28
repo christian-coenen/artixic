@@ -13,70 +13,57 @@
     --color-background-navigation-hover: #EDEEF0;
     --color-background-navigation-active: #E8E9EB;
 
-    --color-border-ui: #DEE0E3;
+    --color-border: #DEE0E3;
 
     --color-icon-control: #30343D;
 
-    --color-text-0: #0D0E0F;
-    --color-text-1: #1B1C1F;
-    --color-text-2: #23272E;
-    --color-text-3: #30343D;
-    --color-text-4: #3C414D;
+    --color-text-base-0: #0D0E0F;
+    --color-text-base-1: #1B1C1F;
+    --color-text-base-2: #23272E;
+    --color-text-base-3: #30343D;
+    --color-text-base-4: #3C414D;
 
-    --color-text-logo: var(--color-text-0);
-    --color-text-title: var(--color-text-0);
-    --color-text-subtitle: var(--color-text-1);
-    --color-text-heading: var(--color-text-0);
-    --color-text-subheading: var(--color-text-0);
-    --color-text-body: var(--color-text-1);
-    --color-text-link: var(--color-text-0);
-    --color-text-ui: var(--color-text-2);
+    --color-text-accent-0: #73CCFF;
 
-    --border-ui: 1px solid var(--color-border-ui);
+    --color-text-link: var(--color-text-base-0);
+
+    --border: 1px solid var(--color-border);
 
     --border-radius-0: 10px;
     --border-radius-1: 50px;
 
-    --font-family-default: "Inter", sans-serif;
+    --font-family-base: "Inter", sans-serif;
     --font-family-brand: "Montserrat", sans-serif;
 
-    --font-size-logo: 1.25rem;
-    --font-size-title: 5rem;
-    --font-size-subtitle: 2rem;
-    --font-size-heading: 2rem;
-    --font-size-subheading: 1.5rem;
-    --font-size-body: 1rem;
-    --font-size-link: 1rem;
-    --font-size-ui: 1rem;
+    --font-size-0: 5rem;
+    --font-size-1: 2rem;
+    --font-size-2: 1.5rem;
+    --font-size-3: 1.25rem;
+    --font-size-4: 1rem;
+    --font-size-5: 0.875rem;
 
     /* Media query-based font sizes */
-    --font-size-title-mobile: 4.75rem;
-    --font-size-heading-mobile: 1.75rem;
-    --font-size-subheading-mobile: 1.25rem;
+    --font-size-0-mobile: 4.75rem;
+    --font-size-1-mobile: 1.75rem;
+    --font-size-2-mobile: 1.25rem;
 
-    --font-weight-logo: 600;
-    --font-weight-title: 500;
-    --font-weight-subtitle: 400;
-    --font-weight-heading: 500;
-    --font-weight-subheading: 500;
-    --font-weight-body: 400;
-    --font-weight-link: 500;
-    --font-weight-ui: 400;
+    --font-weight-semibold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
 
-    --line-height-default: 2;
+    --letter-spacing-0: 0.25rem;
+
+    --line-height-base: 2;
 
     --height-navbar: 5rem;
     --height-drawer-navigation-item: 5rem;
 
     --width-navbar-item-default: 8rem;
     --width-navbar-item-mobile: 5rem;
+    
+    --max-width-content: 1440px;
 
     --spacing-layout: 2rem;
-    --spacing-heading-vertical: 2rem;
-    --spacing-subheading-vertical: 0.5rem;
-    --spacing-paragraph-vertical: 2rem;
-    --spacing-quote: 2rem;
-    --spacing-link-vertical: 1rem;
     --spacing-control: 1rem;
 
     --spacing-control-vertical: 0.5rem;
@@ -86,10 +73,10 @@
     --opacity-hover: 0.75;
     --opacity-active: 0.5;
 
-    --transition-duration-time: 0.25s; 
-    --transition-background: background-color var(--transition-duration-time) ease-in-out;
-    --transition-opacity: opacity var(--transition-duration-time) ease-in-out;
-    --transition-transform: transform var(--transition-duration-time) ease-in-out;
+    --transition-duration: 0.25s;
+    --transition-background: background-color var(--transition-duration) ease-in-out;
+    --transition-opacity: opacity var(--transition-duration) ease-in-out;
+    --transition-transform: transform var(--transition-duration) ease-in-out;
 }
 
 *,
@@ -103,24 +90,29 @@
     color: var(--color-icon-control);
 }
 
+::selection {
+    color: #FCFDFF;
+    background: var(--color-brand-1);
+}
+
 html,
 body {
     -webkit-text-size-adjust: 100%;
-    background-color: var(--color-surface-0);
-    color: var(--color-text-body);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-body);
-    line-height: var(--line-height-default);
+    background-color: var(--color-surface-1);
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
     margin: 0;
     padding: 0;
 }
 
 a {
     color: var(--color-text-link);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-link);
-    font-weight: var(--font-weight-link);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-medium);
     margin: 0;
     padding: 0;
     text-decoration: underline;
@@ -128,34 +120,43 @@ a {
 
 button {
     background: none;
-    color: var(--color-text-ui);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-ui);
+    color: var(--color-text-base-2);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
 }
 
 h1 {
-    color: var(--color-text-title);
-    font-family: var(--font-family-brand);
-    font-size: var(--font-size-heading);
-    font-weight: var(--font-weight-heading);
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-medium);
     margin: 0;
     padding: 0;
 }
 
 h2 {
-    color: var(--color-text-heading);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-heading);
-    font-weight: var(--font-weight-heading);
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: var(--spacing-heading-vertical) 0;
+    padding: 0;
 }
 
 h3 {
-    color: var(--color-text-subheading);
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-subheading);
-    font-weight: var(--font-weight-subheading);
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: var(--spacing-subheading-vertical) 0;
+    padding: 0;
+}
+
+p {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+    padding: 0;
 }

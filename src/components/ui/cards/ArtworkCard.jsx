@@ -1,19 +1,25 @@
 import { NavLink } from 'react-router-dom'
 import './ArtworkCard.css'
 
-const ArtworkCard = ({ link, image }) => {
+const ArtworkCard = ({ link, image, title, as: Wrapper = 'li', aspectRatio = 'fixed' }) => {
+    const content = (
+        <div className={`artwork-card-inner artwork-card-inner--${aspectRatio}`}>
+            <div className="artwork-card-image">
+                <img src={image} alt={title} draggable={false} />
+            </div>
+        </div>
+    )
+
     return (
-        <li className="artwork-card">
-            <NavLink
-                to={link}
-            >
-                <div className="artwork-card-inner">
-                    <div className="artwork-card-image">
-                        <img src={image} />
-                    </div>
-                </div>
-            </NavLink>
-        </li>
+        <Wrapper className="artwork-card">
+            {link ? (
+                <NavLink to={link}>
+                    {content}
+                </NavLink>
+            ) : (
+                content
+            )}
+        </Wrapper>
     )
 }
 
