@@ -2,7 +2,7 @@
     text-decoration: none;
 }
 
-.artwork-card:hover {
+.artwork-card--interactive:hover {
     cursor: pointer;
 }
 
@@ -36,12 +36,12 @@
     width: 100%;
 }
 
-.artwork-card:hover .artwork-card-image img {
+.artwork-card--interactive:hover .artwork-card-image img {
     opacity: var(--opacity-hover);
     transform: scale(1.125);
 }
 
-.artwork-card:active .artwork-card-image img {
+.artwork-card--interactive:active .artwork-card-image img {
     opacity: var(--opacity-active);
     transform: scale(1.25);
 }
