@@ -11,9 +11,15 @@ const LatestCollectionSection = () => {
 
     return (
         <section className="latest-collection-section">
+            <div className="latest-collection-section-background" />
+
             <div className="latest-collection-inner">
-                <h2 className="latest-collection-header">
+                <p className="latest-collection-eyebrow">
                     Latest collection
+                </p>
+
+                <h2 className="latest-collection-header">
+                    Discover what's new
                 </h2>
 
                 <div className="latest-collection-feature">

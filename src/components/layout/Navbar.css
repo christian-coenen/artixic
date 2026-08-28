@@ -1,8 +1,7 @@
 .navbar {
     background: var(--color-surface-1);
-    border-bottom: var(--border-ui);
+    border-bottom: var(--border);
     height: var(--height-navbar);
-    padding: 0 var(--spacing-layout);
     position: sticky;
     top: 0;
     width: 100%;
@@ -15,6 +14,10 @@
     height: 100%;
     justify-content: space-between;
     margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: 0 var(--spacing-layout);
+    position: relative;
+    width: 100%;
 }
 
 .navbar-logo {
@@ -35,10 +38,10 @@
 }
 
 .navbar-logo-text {
-    color: var(--color-text-logo);
+    color: var(--color-text-base-0);
     font-family: var(--font-family-brand);
-    font-size: var(--font-size-logo);
-    font-weight: var(--font-weight-logo);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-semibold);
     padding: 1rem;
 }
 
@@ -75,11 +78,11 @@
 
 .navbar-navigation-link a {
     align-items: center;
-    color: var(--color-text-ui);
+    color: var(--color-text-base-2);
     display: flex;
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-ui);
-    font-weight: var(--font-weight-ui);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
     height: 100%;
     justify-content: center;
     padding: 2rem;
