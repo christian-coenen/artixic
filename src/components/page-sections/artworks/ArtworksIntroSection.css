@@ -19,6 +19,7 @@
     padding: var(--spacing-layout);
     position: relative;
     width: 100%;
+    z-index: 20;
 }
 
 .artworks-intro-eyebrow {
