@@ -1,5 +1,5 @@
 import { artworks } from '../../../data/artworks'
-import ArtworkCard from '../../ui/cards/ArtworkCard'
+import MediaCard from '../../ui/cards/MediaCard'
 import './ArtworksGridSection.css'
 
 const ArtworksGridSection = () => {
@@ -9,11 +9,11 @@ const ArtworksGridSection = () => {
                 <ul className="artworks-grid-list">
                     {/* TODO: Display artworks stored in database */}
                     {Object.entries(artworks).reverse().map(([key, artwork]) => (
-                        <ArtworkCard
+                        <MediaCard
                             key={key}
                             image={artwork.image}
                             link={`/artworks/${key}`}
-                            aspectRatio='fixed'
+                            aspectRatio="5 / 4"
                         />
                     ))}
                 </ul>

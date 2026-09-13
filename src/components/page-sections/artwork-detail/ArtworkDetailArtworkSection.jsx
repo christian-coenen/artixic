@@ -24,6 +24,7 @@ const ArtworkDetailArtworkSection = () => {
                 <MediaCard
                     as="div"
                     image={artwork.image}
+                    aspectRatio="original"
                 />
             </div>
         </section>
