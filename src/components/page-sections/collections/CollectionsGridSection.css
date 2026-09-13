@@ -1,0 +1,33 @@
+.collections-grid-section {
+    background: var(--color-surface-1);
+    flex: 1;
+}
+
+.collections-grid-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: var(--spacing-layout);
+    position: relative;
+    width: 100%;
+}
+
+.collections-grid-list {
+    display: grid;
+    gap: 3rem;
+    grid-template-rows: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 880px) {
+    .collections-grid-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .collections-grid-list {
+        grid-template-columns: 1fr;
+    }
+}
