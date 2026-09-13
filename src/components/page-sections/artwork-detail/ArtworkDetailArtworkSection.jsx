@@ -1,7 +1,7 @@
 import { NavLink, useParams } from 'react-router-dom'
 import { artworks } from '../../../data/artworks'
 import { collections } from '../../../data/collections'
-import ArtworkCard from '../../ui/cards/ArtworkCard'
+import MediaCard from '../../ui/cards/MediaCard'
 import './ArtworkDetailArtworkSection.css'
 
 const ArtworkDetailArtworkSection = () => {
@@ -21,7 +21,10 @@ const ArtworkDetailArtworkSection = () => {
             <div className="artwork-detail-artwork-section-background" />
 
             <div className="artwork-detail-artwork-inner">
-                    <ArtworkCard image={artwork.image} title={artwork.title} as="div" aspectRatio="original" />
+                <MediaCard
+                    as="div"
+                    image={artwork.image}
+                />
             </div>
         </section>
     )

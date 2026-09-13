@@ -1,5 +1,5 @@
 import { collections } from '../../../data/collections'
-import LatestCollectionCard from '../../ui/cards/LatestCollectionCard'
+import MediaCard from '../../ui/cards/MediaCard'
 import './LatestCollectionSection.css'
 
 const LatestCollectionSection = () => {
@@ -24,12 +24,14 @@ const LatestCollectionSection = () => {
 
                 <div className="latest-collection-feature">
                     {/* TODO: Display latest collection stored in the database */}
-                    <LatestCollectionCard
-                        key={key}
-                        title={collection.title}
-                        subtitle={collection.subtitle}
+                    <MediaCard
+                        as="div"
+                        aspectRatio="18 / 6"
                         image={collection.image}
                         link={`/collections/${key}`}
+                        radius="1"
+                        subtitle={collection.subtitle}
+                        title={collection.title}
                     />
                 </div>
             </div>

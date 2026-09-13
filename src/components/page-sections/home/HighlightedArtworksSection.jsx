@@ -1,5 +1,5 @@
 import { artworks } from '../../../data/artworks'
-import HighlightedArtworkCard from '../../ui/cards/HighlightedArtworkCard'
+import MediaCard from '../../ui/cards/MediaCard'
 import './HighlightedArtworksSection.css'
 
 const HightlightedArtworksSection = () => {
@@ -17,12 +17,14 @@ const HightlightedArtworksSection = () => {
                 <ul className="highlighted-artworks-grid">
                     {/* TODO: Display hightlighted artworks stored in database */}
                     {Object.entries(artworks).filter(([, artwork]) => artwork.highlighted).map(([key, artwork]) => (
-                        <HighlightedArtworkCard
-                            key={key}
-                            title={artwork.title}
-                            subtitle={artwork.subtitle}
+                        <MediaCard
+                            as="li"
+                            aspectRatio="3 / 2"
                             image={artwork.image}
                             link={`/artworks/${key}`}
+                            radius="1"
+                            subtitle={artwork.subtitle}
+                            title={artwork.title}
                         />
                     ))}
                 </ul>

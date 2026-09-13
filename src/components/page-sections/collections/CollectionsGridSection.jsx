@@ -1,5 +1,5 @@
 import { collections } from '../../../data/collections'
-import LatestCollectionCard from '../../ui/cards/LatestCollectionCard'
+import MediaCard from '../../ui/cards/MediaCard'
 import './CollectionsGridSection.css'
 
 const CollectionsGridSection = () => {
@@ -9,12 +9,15 @@ const CollectionsGridSection = () => {
                 <ul className="collections-grid-list">
                     {/* TODO: Display collections stored in database */}
                     {Object.entries(collections).reverse().map(([key, collection]) => (
-                        <LatestCollectionCard
+                        <MediaCard
                             key={key}
-                            title={collection.title}
-                            subtitle={collection.subtitle}
+                            as="li"
+                            aspectRatio="18 / 6"
                             image={collection.image}
                             link={`/collections/${key}`}
+                            radius="0"
+                            title={collection.title}
+                            subtitle={collection.subtitle}
                         />
                     ))}
                 </ul>
