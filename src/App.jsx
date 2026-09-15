@@ -6,6 +6,7 @@ import HomePage from './pages/visitor-pages/HomePage'
 import ArtworksPage from './pages/visitor-pages/ArtworksPage'
 import ArtworkDetailPage from './pages/visitor-pages/ArtworkDetailPage'
 import CollectionsPage from './pages/visitor-pages/CollectionsPage'
+import CollectionDetailPage from './pages/visitor-pages/CollectionDetailPage'
 import AboutPage from './pages/visitor-pages/AboutPage'
 
 {/* Admin pages imports */ }
@@ -26,6 +27,7 @@ const App = () => {
                 <Route path="/artworks" element={<ArtworksPage />} />
                 <Route path="/artworks/:artworkId" element={<ArtworkDetailPage />} />
                 <Route path="/collections" element={<CollectionsPage />} />
+                <Route path="/collections/:collectionId" element={<CollectionDetailPage/>} />
                 <Route path="/about" element={<AboutPage />} />
 
                 {/* Admin pages routes */}
