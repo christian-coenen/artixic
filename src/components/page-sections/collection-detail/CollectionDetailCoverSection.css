@@ -1,0 +1,48 @@
+.collection-detail-cover-image-container {
+    aspect-ratio: 18 / 6;
+    display: flex;
+    width: 100%
+}
+
+.collection-detail-cover-image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.collection-detail-cover-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: var(--spacing-layout);
+    position: relative;
+    width: 100%;
+}
+
+.collection-detail-cover-eyebrow {
+    color: var(--color-text-accent-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-0);
+    text-transform: uppercase;
+}
+
+.collection-detail-cover-title {
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+    padding: 0;
+}
+
+.collection-detail-information-description {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    margin: 0;
+    padding: var(--spacing-body-vertical) 0;
+}
