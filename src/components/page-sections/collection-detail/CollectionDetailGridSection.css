@@ -1,0 +1,33 @@
+.collection-detail-grid-section {
+    background: var(--color-surface-1);
+    flex: 1;
+}
+
+.collection-detail-grid-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: var(--spacing-layout);
+    position: relative;
+    width: 100%;
+}
+
+.collection-detail-grid-list {
+    display: grid;
+    gap: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 880px) {
+    .collection-detail-grid-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .collection-detail-grid-list {
+        grid-template-columns: 1fr;
+    }
+}
