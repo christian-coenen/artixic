@@ -1,0 +1,39 @@
+.about-exhibition-section {
+    background: var(--color-surface-1);
+}
+
+.about-exhibition-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: var(--spacing-layout);
+    position: relative;
+    width: 100%;
+}
+
+.about-exhibition-eyebrow {
+    color: var(--color-text-accent-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-0);
+    text-transform: uppercase;
+}
+
+.about-exhibition-heading {
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+    padding: 0;
+}
+
+.about-exhibition-body {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    margin: 0;
+    padding: var(--spacing-body-vertical) 0;
+}
