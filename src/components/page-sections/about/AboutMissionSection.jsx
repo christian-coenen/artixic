@@ -31,8 +31,8 @@ const AboutMissionSection = () => {
                     />
                     <FeatureCard
                         icon={<Wind size={100} strokeWidth={1.25} />}
-                        title="Discovery"
-                        description="Explore works from artists around the world."
+                        title="Tranquility"
+                        description="A quiet space for exploration."
                     />
                 </ul>
             </div>
