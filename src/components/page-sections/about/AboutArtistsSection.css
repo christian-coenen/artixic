@@ -1,0 +1,55 @@
+.about-artists-section {
+    background: var(--color-surface-1);
+}
+
+.about-artists-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: var(--spacing-layout);
+    position: relative;
+    width: 100%;
+}
+
+.about-artists-eyebrow {
+    color: var(--color-text-accent-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-0);
+    text-transform: uppercase;
+}
+
+.about-artists-heading {
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+    padding: 0;
+}
+
+.about-artists-body {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    margin: 0;
+    padding: var(--spacing-body-vertical) 0;
+}
+
+.about-artists-list {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    margin: 3rem 0 0;
+    padding: 0;
+}
+
+@media (max-width: 660px)
+{
+    .about-artists-list {
+        grid-template-columns: 1fr;
+    }
+}
