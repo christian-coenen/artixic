@@ -15,9 +15,9 @@ const AboutIntroSection = () => {
                 </h3>
 
                 <p className="about-intro-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    ARTIXIC connects artworks, artists, and collections in an evolving digital exhibition.
                 </p>
-            </div>            
+            </div>
         </section>
     )
 }
