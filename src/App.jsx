@@ -25,7 +25,7 @@ const App = () => {
                 {/* Visitor pages routes */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/artworks" element={<ArtworksPage />} />
-                <Route path="/artworks/:artworkId" element={<ArtworkDetailPage />} />
+                <Route path="/artworks/:slug" element={<ArtworkDetailPage />} />
                 <Route path="/collections" element={<CollectionsPage />} />
                 <Route path="/collections/:collectionId" element={<CollectionDetailPage/>} />
                 <Route path="/about" element={<AboutPage />} />

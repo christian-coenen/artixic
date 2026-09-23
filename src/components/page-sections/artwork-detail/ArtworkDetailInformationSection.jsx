@@ -1,26 +1,15 @@
-import { NavLink, useParams } from 'react-router-dom'
-import { artworks } from '../../../data/artworks'
-import { collections } from '../../../data/collections'
+import { NavLink } from 'react-router-dom'
 import './ArtworkDetailInformationSection.css'
 
-const ArtworkDetailInformationSection = () => {
-    const { artworkId } = useParams()
-    const artwork = artworks[artworkId]
-
-    const collection = artwork.collection
-        ? collections[artwork.collection]
-        : null
-
-    if (!artwork) {
-        return <p>Artwork not found.</p>
-    }
+const ArtworkDetailInformationSection = ({ artwork }) => {
+    const meta = `${artwork.authors.join(' \u00B7 ')} \u00B7 ${artwork.year}`
 
     return (
         <section className="artwork-detail-information-section">
             <div className="artwork-detail-information-inner">
 
                 <p className="artwork-detail-information-eyebrow">
-                    {artwork.subtitle} {/* TODO: rename subtitle to meta */}
+                    {meta}
                 </p>
 
                 <h3 className="artwork-detail-information-title">
