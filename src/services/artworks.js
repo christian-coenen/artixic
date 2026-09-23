@@ -12,3 +12,17 @@ export const getArtworks = async () => {
 
     return data
 }
+
+export const getArtworksBySlug = async (slug) => {
+    const { data, error } = await supabase
+        .from('table_artworks')
+        .select('*')
+        .eq('slug', slug)
+        .single()
+    
+    if (error) {
+        throw error
+    }
+
+    return data
+}
