@@ -59,7 +59,7 @@
     padding: 0;
 }
 
-.media-card-subtitle {
+.media-card-meta {
     color: var(--color-text-base-1);
     font-family: var(--font-family-base);
     font-size: var(--font-size-4);
