@@ -26,3 +26,17 @@ export const getArtworksBySlug = async (slug) => {
 
     return data
 }
+
+export const getFeaturedArtworks = async () => {
+    const { data, error } = await supabase
+        .from('table_artworks')
+        .select('*')
+        .eq('is_featured', true)
+        .order('published_at', { ascending: false })
+
+    if (error) {
+        throw error
+    }
+
+    return data
+}

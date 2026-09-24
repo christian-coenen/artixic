@@ -5,7 +5,7 @@ const MediaCard = ({
     link,
     image,
     title,
-    subtitle,
+    meta,
     as: Wrapper = "li",
     aspectRatio = "5 / 4",
     radius = "0"
@@ -31,7 +31,7 @@ const MediaCard = ({
                 />
             </div>
 
-            {(title || subtitle) && (
+            {(title || meta) && (
                 <div className="media-card-text">
                     {title && (
                         <h3 className="media-card-title">
@@ -39,9 +39,9 @@ const MediaCard = ({
                         </h3>
                     )}
 
-                    {subtitle && (
-                        <p className="media-card-subtitle">
-                            {subtitle}
+                    {meta && (
+                        <p className="media-card-meta">
+                            {meta}
                         </p>
                     )}
                 </div>

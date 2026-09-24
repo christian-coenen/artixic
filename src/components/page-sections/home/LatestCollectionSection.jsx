@@ -30,7 +30,7 @@ const LatestCollectionSection = () => {
                         image={collection.image}
                         link={`/collections/${key}`}
                         radius="1"
-                        subtitle={collection.subtitle}
+                        meta={collection.meta}
                         title={collection.title}
                     />
                 </div>

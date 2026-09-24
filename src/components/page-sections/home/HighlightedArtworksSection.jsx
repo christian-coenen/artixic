@@ -1,8 +1,7 @@
-import { artworks } from '../../../data/artworks'
 import MediaCard from '../../ui/cards/MediaCard'
 import './HighlightedArtworksSection.css'
 
-const HightlightedArtworksSection = () => {
+const HighlightedArtworksSection = ({ artworks, error }) => {
     return (
         <section className="highlighted-artworks-section">
             <div className="highlighted-artworks-inner">
@@ -14,24 +13,31 @@ const HightlightedArtworksSection = () => {
                     Works of focus
                 </h2>
 
-                <ul className="highlighted-artworks-grid">
-                    {/* TODO: Display hightlighted artworks stored in database */}
-                    {Object.entries(artworks).filter(([, artwork]) => artwork.highlighted).map(([key, artwork]) => (
-                        <MediaCard
-                            as="li"
-                            aspectRatio="3 / 2"
-                            image={artwork.image}
-                            link={`/artworks/${key}`}
-                            radius="1"
-                            subtitle={artwork.subtitle}
-                            title={artwork.title}
-                        />
-                    ))}
-                </ul>
-            </div>
+                {error ? (
+                    <p>Unable to load artworks.</p>
+                ) : (
+                    <ul className="highlighted-artworks-grid">
+                        {artworks.map((artwork) => {
+                            const meta = `${artwork.authors.join(' \u00B7 ')} \u00B7 ${artwork.year}`
 
+                            return (
+                                <MediaCard
+                                    as="li"
+                                    aspectRatio="3 / 2"
+                                    key={artwork.artwork_id}
+                                    image={artwork.image_path}
+                                    link={`/artworks/${artwork.slug}`}
+                                    radius="1"
+                                    meta={meta}
+                                    title={artwork.title}
+                                />
+                            )
+                        })}
+                    </ul>
+                )}
+            </div>
         </section>
     )
 }
 
-export default HightlightedArtworksSection
+export default HighlightedArtworksSection

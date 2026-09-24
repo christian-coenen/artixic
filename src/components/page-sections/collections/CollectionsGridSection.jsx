@@ -17,7 +17,7 @@ const CollectionsGridSection = () => {
                             link={`/collections/${key}`}
                             radius="0"
                             title={collection.title}
-                            subtitle={collection.subtitle}
+                            meta={collection.meta}
                         />
                     ))}
                 </ul>
