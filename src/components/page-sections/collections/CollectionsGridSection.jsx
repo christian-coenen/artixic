@@ -1,25 +1,35 @@
-import { collections } from '../../../data/collections'
 import MediaCard from '../../ui/cards/MediaCard'
+import CollectionPreview from '../../ui/CollectionPreview'
 import './CollectionsGridSection.css'
 
-const CollectionsGridSection = () => {
+const CollectionsGridSection = ({ collections, error, getImageUrl }) => {
+    if (error) return <p>Failed to load collections.</p>
+
     return (
         <section className="collections-grid-section">
             <div className="collections-grid-inner">
                 <ul className="collections-grid-list">
-                    {/* TODO: Display collections stored in database */}
-                    {Object.entries(collections).reverse().map(([key, collection]) => (
-                        <MediaCard
-                            key={key}
-                            as="li"
-                            aspectRatio="18 / 6"
-                            image={collection.image}
-                            link={`/collections/${key}`}
-                            radius="0"
-                            title={collection.title}
-                            meta={collection.meta}
-                        />
-                    ))}
+                    {collections.map((collection) => {
+                        const meta = `${collection.authors.join(' \u00B7 ')} \u00B7 ${collection.year}`
+
+                        return (
+                            <MediaCard
+                                key={collection.collection_id}
+                                as="li"
+                                aspectRatio="18 / 6"
+                                media={
+                                    <CollectionPreview
+                                        artworks={collection.artworks}
+                                        getImageUrl={getImageUrl}
+                                    />
+                                }
+                                link={`/collections/${collection.slug}`}
+                                radius="0"
+                                title={collection.title}
+                                meta={meta}
+                            />
+                        )
+                    })}
                 </ul>
             </div>
         </section>
