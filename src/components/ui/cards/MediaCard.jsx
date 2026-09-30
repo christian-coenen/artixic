@@ -4,16 +4,16 @@ import './MediaCard.css'
 const MediaCard = ({
     link,
     image,
+    media,
     title,
     meta,
     as: Wrapper = "li",
     aspectRatio = "5 / 4",
-    radius = "0"
+    fit = "cover"
 }) => {
     const cardClassName = [
         "media-card",
-        link && "media-card--interactive",
-        `media-card--radius-${radius}`
+        link && "media-card--interactive"
     ]
         .filter(Boolean)
         .join(" ")
@@ -21,14 +21,18 @@ const MediaCard = ({
     const content = (
         <div className="media-card-inner">
             <div
-                className="media-card-image"
+                className="media-card-media"
                 style={{ aspectRatio }}
             >
-                <img
-                    src={image}
-                    alt={title}
-                    draggable={false}
-                />
+                {media ?? (
+                    <img
+                        className="media-card-image"
+                        src={image}
+                        alt={title}
+                        draggable={false}
+                        style={{ objectFit: fit }}
+                    />
+                )}
             </div>
 
             {(title || meta) && (

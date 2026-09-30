@@ -6,33 +6,25 @@
     cursor: pointer;
 }
 
-.media-card-image {
-    overflow: hidden;
-    width: 100%;
-}
-
-.media-card--radius-0 .media-card-image {
-    border-radius: var(--border-radius-0);
-}
-
-.media-card--radius-1 .media-card-image {
+.media-card-media {
     border-radius: var(--border-radius-1);
+    overflow: hidden;
 }
 
-.media-card-image img {
+.media-card-media > * {
     display: block;
     height: 100%;
-    object-fit: cover;
+    overflow: hidden;
     transition: var(--transition-opacity), var(--transition-transform);
     width: 100%;
 }
 
-.media-card--interactive:hover .media-card-image img {
+.media-card--interactive:hover .media-card-media > * {
     opacity: var(--opacity-hover);
     transform: scale(1.125);
 }
 
-.media-card--interactive:active .media-card-image img {
+.media-card--interactive:active .media-card-media > * {
     opacity: var(--opacity-active);
     transform: scale(1.25);
 }

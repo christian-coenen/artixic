@@ -1,0 +1,36 @@
+.collection-preview {
+    display: grid;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.collection-preview[data-count="1"] {
+    grid-template-columns: 1fr;
+}
+
+.collection-preview[data-count="2"] {
+    grid-template-columns: 1fr 1fr;
+}
+
+.collection-preview[data-count="3"] {
+    grid-template-columns: 45fr 55fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.collection-preview[data-count="3"] .collection-preview-cell:first-child {
+    grid-row: 1 / 3;
+}
+
+.collection-preview-cell {
+    min-height: 0;
+    min-width: 0;
+}
+
+.collection-preview-image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
