@@ -40,3 +40,20 @@ export const getFeaturedArtworks = async () => {
 
     return data
 }
+
+export const getArtworksByCollectionId = async (collectionId, limit = 5) => {
+    const { data, error } = await supabase
+        .from('table_artworks')
+        .select('*')
+        .eq('collection_id', collectionId)
+        .order('published_at', { ascending: false })
+        .limit(limit)
+
+    if (error) {
+        throw error
+    }
+
+    return data
+}
+
+export const getArtworkImageUrl = (imagePath) => imagePath
