@@ -1,13 +1,13 @@
-import { collections } from '../../../data/collections'
 import MediaCard from '../../ui/cards/MediaCard'
+import CollectionPreview from '../../ui/CollectionPreview'
 import './LatestCollectionSection.css'
 
-const LatestCollectionSection = () => {
-    const latestCollection = Object.entries(collections).sort(([, a], [, b]) => new Date(b.created_at) - new Date(a.created_at))[0]
+const LatestCollectionSection = ({ collections, getImageUrl }) => {
+    const latestCollection = collections[0]
 
     if (!latestCollection) return null
 
-    const [key, collection] = latestCollection
+    const meta = `${latestCollection.authors.join(' \u00B7 ')} \u00B7 ${latestCollection.year}`
 
     return (
         <section className="latest-collection-section">
@@ -23,15 +23,19 @@ const LatestCollectionSection = () => {
                 </h2>
 
                 <div className="latest-collection-feature">
-                    {/* TODO: Display latest collection stored in the database */}
                     <MediaCard
                         as="div"
                         aspectRatio="18 / 6"
-                        image={collection.image}
-                        link={`/collections/${key}`}
+                        media={
+                            <CollectionPreview
+                                artworks={latestCollection.artworks}
+                                getImageUrl={getImageUrl}
+                            />
+                        }
+                        link={`/collections/${latestCollection.slug}`}
                         radius="1"
-                        meta={collection.meta}
-                        title={collection.title}
+                        meta={meta}
+                        title={latestCollection.title}
                     />
                 </div>
             </div>
