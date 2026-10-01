@@ -1,27 +1,19 @@
-import { useParams } from 'react-router-dom'
-import { artworks } from '../../../data/artworks'
 import MediaCard from '../../ui/cards/MediaCard'
 import './CollectionDetailGridSection.css'
 
-const CollectionDetailGridSection = () => {
-    const { collectionId } = useParams()
-
+const CollectionDetailGridSection = ({ artworks }) => {
     return (
         <section className="artworks-grid-section">
             <div className="artworks-grid-inner">
                 <ul className="artworks-grid-list">
-                    {/* TODO: Display artworks stored in database */}
-                    {Object.entries(artworks)
-                        .filter(([, artwork]) => artwork.collection === collectionId)
-                        .reverse()
-                        .map(([key, artwork]) => (
-                            <MediaCard
-                                key={key}
-                                image={artwork.image}
-                                link={`/artworks/${key}`}
-                                aspectRatio="5 / 4"
-                            />
-                        ))}
+                    {artworks.map((artwork) => (
+                        <MediaCard
+                            key={artwork.artwork_id}
+                            image={artwork.image_path}
+                            link={`/artworks/${artwork.slug}`}
+                            aspectRatio="5 / 4"
+                        />
+                    ))}
                 </ul>
             </div>
         </section>

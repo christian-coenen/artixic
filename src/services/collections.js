@@ -14,7 +14,7 @@ export const getCollections = async () => {
     return data
 }
 
-export const getcollectionBySlug = async (slug) => {
+export const getCollectionBySlug = async (slug) => {
     const { data, error } = await supabase
         .from('table_collections')
         .select('*')

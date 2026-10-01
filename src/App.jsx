@@ -27,7 +27,7 @@ const App = () => {
                 <Route path="/artworks" element={<ArtworksPage />} />
                 <Route path="/artworks/:slug" element={<ArtworkDetailPage />} />
                 <Route path="/collections" element={<CollectionsPage />} />
-                <Route path="/collections/:collectionId" element={<CollectionDetailPage/>} />
+                <Route path="/collections/:slug" element={<CollectionDetailPage/>} />
                 <Route path="/about" element={<AboutPage />} />
 
                 {/* Admin pages routes */}
