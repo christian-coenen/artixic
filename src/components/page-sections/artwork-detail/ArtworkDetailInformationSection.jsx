@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import './ArtworkDetailInformationSection.css'
 
-const ArtworkDetailInformationSection = ({ artwork }) => {
+const ArtworkDetailInformationSection = ({ artwork, collection }) => {
     const meta = `${artwork.authors.join(' \u00B7 ')} \u00B7 ${artwork.year}`
 
     return (
@@ -23,9 +23,9 @@ const ArtworkDetailInformationSection = ({ artwork }) => {
                         </p>
                     )}
 
-                    {artwork.collection && (
+                    {collection && (
                         <p className="artwork-detail-information-collection">
-                            Featured in{""} <NavLink to={`/collections/${artwork.collection}`}>{collection.title}</NavLink>.
+                            Featured in{""} <NavLink to={`/collections/${collection.slug}`}>{collection.title}</NavLink>.
                         </p>
                     )}
                 </div>
