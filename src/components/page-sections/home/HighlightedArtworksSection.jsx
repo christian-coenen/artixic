@@ -1,3 +1,4 @@
+import Masonry from 'react-layout-masonry'
 import MediaCard from '../../ui/cards/MediaCard'
 import './HighlightedArtworksSection.css'
 
@@ -16,24 +17,32 @@ const HighlightedArtworksSection = ({ artworks, error }) => {
                 {error ? (
                     <p>Unable to load artworks.</p>
                 ) : (
-                    <ul className="highlighted-artworks-grid">
-                        {artworks.map((artwork) => {
-                            const meta = `${artwork.authors.join(' \u00B7 ')} \u00B7 ${artwork.year}`
+                    <div className="highlighted-artworks-list">
+                        <Masonry
+                            columns={{
+                                0: 1,
+                                480: 2,
+                                880: 3,
+                            }}
+                            gap={32}
+                        >
+                            {artworks.map((artwork) => {
+                                const meta = `${artwork.authors.join(' \u00B7 ')} \u00B7 ${artwork.year}`
 
-                            return (
-                                <MediaCard
-                                    as="li"
-                                    aspectRatio="3 / 2"
-                                    key={artwork.artwork_id}
-                                    image={artwork.image_path}
-                                    link={`/artworks/${artwork.slug}`}
-                                    radius="1"
-                                    meta={meta}
-                                    title={artwork.title}
-                                />
-                            )
-                        })}
-                    </ul>
+                                return (
+                                    <MediaCard
+                                        as="li"
+                                        key={artwork.artwork_id}
+                                        image={artwork.image_path}
+                                        link={`/artworks/${artwork.slug}`}
+                                        radius="1"
+                                        meta={meta}
+                                        title={artwork.title}
+                                    />
+                                )
+                            })}
+                        </Masonry>
+                    </div>
                 )}
             </div>
         </section>

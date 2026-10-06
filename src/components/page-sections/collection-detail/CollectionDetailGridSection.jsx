@@ -1,19 +1,30 @@
+import Masonry from 'react-layout-masonry'
 import MediaCard from '../../ui/cards/MediaCard'
 import './CollectionDetailGridSection.css'
 
 const CollectionDetailGridSection = ({ artworks }) => {
     return (
-        <section className="artworks-grid-section">
-            <div className="artworks-grid-inner">
-                <ul className="artworks-grid-list">
-                    {artworks.map((artwork) => (
-                        <MediaCard
-                            key={artwork.artwork_id}
-                            image={artwork.image_path}
-                            link={`/artworks/${artwork.slug}`}
-                            aspectRatio="5 / 4"
-                        />
-                    ))}
+        <section className="collection-detail-grid-section">
+            <div className="collection-detail-grid-inner">
+                <ul className="collection-detail-grid-list">
+                    <Masonry
+                        columns={{
+                            0: 1,
+                            480: 2,
+                            880: 3,
+                        }}
+                        gap={32}
+                    >
+
+                        {artworks.map((artwork) => (
+                            <MediaCard
+                                key={artwork.artwork_id}
+                                image={artwork.image_path}
+                                link={`/artworks/${artwork.slug}`}
+                            />
+                        ))}
+
+                    </Masonry>
                 </ul>
             </div>
         </section>
