@@ -64,6 +64,7 @@
     --max-width-content: 1440px;
 
     --spacing-layout: 2rem;
+    --spacing-intro-vertical: clamp(2rem, 6.6667vw, 6rem);
     --spacing-control: 1rem;
 
     --spacing-control-vertical: 0.5rem;

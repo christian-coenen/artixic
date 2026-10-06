@@ -14,9 +14,13 @@
 }
 
 .collections-intro-inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
     max-width: var(--max-width-content);
-    padding: var(--spacing-layout);
+    padding: var(--spacing-intro-vertical) var(--spacing-layout);
     position: relative;
     width: 100%;
     z-index: 20;
@@ -33,25 +37,23 @@
 
 .collections-intro-header {
     color: var(--color-text-base-0);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-1);
+    font-family: var(--font-family-brand);
+    font-size: clamp(2.5rem, 7.5vw, var(--font-size-0));
     font-weight: var(--font-weight-medium);
     margin: 0;
+    overflow-wrap: break-word;
     padding: 0;
+    text-align: center;
 }
 
 .collections-intro-body {
     color: var(--color-text-base-1);
     font-family: var(--font-family-base);
-    font-size: var(--font-size-4);
+    font-size: clamp(1rem, 5vw, var(--font-size-1));
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
-    margin: 0;
+    margin: 2rem 0;
+    overflow-wrap: break-word;
     padding: var(--spacing-body-vertical) 0;
-}
-
-@media (max-width: 400px) {
-    .collections-intro-header {
-        font-size: var(--font-size-1-mobile);
-    }
+    text-align: center;
 }

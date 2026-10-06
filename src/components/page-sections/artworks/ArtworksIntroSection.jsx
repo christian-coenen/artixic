@@ -10,9 +10,9 @@ const ArtworksIntroSection = () => {
                     Artworks
                 </p>
 
-                <h2 className="artworks-intro-header">
+                <h1 className="artworks-intro-header">
                     Explore new perspectives
-                </h2>
+                </h1>
 
                 <p className="artworks-intro-body">
                     Discover the full catalog of contemporary artworks.
