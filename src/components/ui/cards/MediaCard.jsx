@@ -8,7 +8,7 @@ const MediaCard = ({
     title,
     meta,
     as: Wrapper = "li",
-    aspectRatio = "5 / 4",
+    aspectRatio,
     fit = "cover"
 }) => {
     const cardClassName = [
@@ -22,7 +22,7 @@ const MediaCard = ({
         <div className="media-card-inner">
             <div
                 className="media-card-media"
-                style={{ aspectRatio }}
+                style={aspectRatio ? { aspectRatio } : undefined}
             >
                 {media ?? (
                     <img
