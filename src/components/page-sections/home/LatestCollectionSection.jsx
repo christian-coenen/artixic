@@ -25,7 +25,6 @@ const LatestCollectionSection = ({ collections, getImageUrl }) => {
                 <div className="latest-collection-feature">
                     <MediaCard
                         as="div"
-                        aspectRatio="18 / 6"
                         media={
                             <CollectionPreview
                                 artworks={latestCollection.artworks}

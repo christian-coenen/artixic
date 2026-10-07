@@ -16,7 +16,6 @@ const CollectionsGridSection = ({ collections, error, getImageUrl }) => {
                             <MediaCard
                                 key={collection.collection_id}
                                 as="li"
-                                aspectRatio="18 / 6"
                                 media={
                                     <CollectionPreview
                                         artworks={collection.artworks}

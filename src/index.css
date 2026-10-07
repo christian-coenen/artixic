@@ -75,6 +75,7 @@
     --opacity-active: 0.5;
 
     --transition-duration: 0.25s;
+    --transition-aspect-ratio: aspect-ratio var(--transition-duration) ease-in-out;
     --transition-background: background-color var(--transition-duration) ease-in-out;
     --transition-opacity: opacity var(--transition-duration) ease-in-out;
     --transition-transform: transform var(--transition-duration) ease-in-out;

@@ -44,6 +44,17 @@
     padding: 2rem 0;
 }
 
+.latest-collection-feature .media-card-media {
+    aspect-ratio: 18 / 6;
+    transition: var(--transition-aspect-ratio);
+}
+
+@media (max-width: 880px) {
+    .latest-collection-feature .media-card-media {
+        aspect-ratio: 5 / 4;
+    }
+}
+
 @media (max-width: 400px) {
     .latest-collection-header {
         font-size: var(--font-size-1-mobile);
