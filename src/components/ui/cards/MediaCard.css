@@ -52,10 +52,12 @@
 }
 
 .media-card-meta {
-    color: var(--color-text-base-1);
+    color: var(--color-text-base-3);
     font-family: var(--font-family-base);
-    font-size: var(--font-size-4);
-    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-0);
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
 }
