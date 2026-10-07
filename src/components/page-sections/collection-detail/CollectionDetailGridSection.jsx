@@ -15,15 +15,21 @@ const CollectionDetailGridSection = ({ artworks }) => {
                         }}
                         gap={32}
                     >
+                        {artworks.map((artwork) => {
+                            const meta = `${artwork.authors.join(' \u00B7 ')}`
 
-                        {artworks.map((artwork) => (
-                            <MediaCard
-                                key={artwork.artwork_id}
-                                image={artwork.image_path}
-                                link={`/artworks/${artwork.slug}`}
-                            />
-                        ))}
-
+                            return (
+                                <MediaCard
+                                    as="li"
+                                    key={artwork.artwork_id}
+                                    image={artwork.image_path}
+                                    link={`/artworks/${artwork.slug}`}
+                                    radius="1"
+                                    meta={meta}
+                                    title={artwork.title}
+                                />
+                            )
+                        })}
                     </Masonry>
                 </ul>
             </div>

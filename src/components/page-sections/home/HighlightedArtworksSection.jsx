@@ -27,7 +27,7 @@ const HighlightedArtworksSection = ({ artworks, error }) => {
                             gap={32}
                         >
                             {artworks.map((artwork) => {
-                                const meta = `${artwork.authors.join(' \u00B7 ')} \u00B7 ${artwork.year}`
+                                const meta = `${artwork.authors.join(' \u00B7 ')}`
 
                                 return (
                                     <MediaCard

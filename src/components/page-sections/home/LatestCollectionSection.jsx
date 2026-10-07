@@ -7,7 +7,7 @@ const LatestCollectionSection = ({ collections, getImageUrl }) => {
 
     if (!latestCollection) return null
 
-    const meta = `${latestCollection.authors.join(' \u00B7 ')} \u00B7 ${latestCollection.year}`
+    const meta = `${latestCollection.authors.join(' \u00B7 ')}`
 
     return (
         <section className="latest-collection-section">
