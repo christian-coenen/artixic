@@ -9,13 +9,17 @@ const ArtworkDetailInformationSection = ({ artwork, collection }) => {
         <section className="artwork-detail-information-section">
             <div className="artwork-detail-information-inner">
 
-                <p className="artwork-detail-information-eyebrow">
-                    {meta}
-                </p>
+                <Badge>
+                    {artwork.year}
+                </Badge>
 
                 <h3 className="artwork-detail-information-title">
                     {artwork.title}
                 </h3>
+
+                <p className="artwork-detail-information-meta">
+                    {meta}
+                </p>
 
                 <div className="artwork-detail-information-body">
                     {artwork.description && (

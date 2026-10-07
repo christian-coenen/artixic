@@ -1,0 +1,16 @@
+.badge {
+    align-items: center;
+    background: #73CCFF;
+    border-radius: 80px;
+    color: #FCFDFF;
+    display: flex;
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-5);
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 15%;
+    padding: 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: max-content;
+}

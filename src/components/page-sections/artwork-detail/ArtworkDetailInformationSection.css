@@ -26,7 +26,19 @@
     font-size: var(--font-size-1);
     font-weight: var(--font-weight-medium);
     margin: 0;
+    margin-top: 0.5rem;
     padding: 0;
+}
+
+.artwork-detail-information-meta {
+    color: var(--color-text-base-3);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-0);
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
 }
 
 .artwork-detail-information-description {
@@ -36,6 +48,18 @@
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
     margin: 0;
+    margin-top: 1rem;
+    padding: var(--spacing-body-vertical) 0;
+}
+
+.artwork-detail-information-collection {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    margin: 0;
+    margin-top: 0.5rem;
     padding: var(--spacing-body-vertical) 0;
 }
 

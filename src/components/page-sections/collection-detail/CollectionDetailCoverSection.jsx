@@ -1,8 +1,9 @@
 import CollectionPreview from '../../ui/CollectionPreview'
+import Badge from '../../ui/Badge'
 import './CollectionDetailCoverSection.css'
 
 const CollectionDetailCoverSection = ({ collection, artworks, getImageUrl }) => {
-    const authors = collection.authors.join(' \u00B7 ')
+    const meta = collection.authors.join(' \u00B7 ')
 
     return (
         <section className="collection-detail-cover-section">
@@ -14,13 +15,17 @@ const CollectionDetailCoverSection = ({ collection, artworks, getImageUrl }) => 
             </div>
 
             <div className="collection-detail-cover-inner">
-                <p className="collection-detail-cover-eyebrow">
-                    {authors}
-                </p>
+                <Badge>
+                    {collection.year}
+                </Badge>
 
                 <h3 className="collection-detail-cover-title">
                     {collection.title}
                 </h3>
+
+                <p className="collection-detail-cover-meta">
+                    {meta}
+                </p>
 
                 <div className="collection-detail-cover-body">
                     {collection.description && (
