@@ -2,7 +2,7 @@ import CollectionPreview from '../../ui/CollectionPreview'
 import './CollectionDetailCoverSection.css'
 
 const CollectionDetailCoverSection = ({ collection, artworks, getImageUrl }) => {
-    const authors = collection.authors.join(' · ')
+    const authors = collection.authors.join(' \u00B7 ')
 
     return (
         <section className="collection-detail-cover-section">

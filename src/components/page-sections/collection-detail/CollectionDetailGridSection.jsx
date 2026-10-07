@@ -16,7 +16,7 @@ const CollectionDetailGridSection = ({ artworks }) => {
                         gap={32}
                     >
                         {artworks.map((artwork) => {
-                            const meta = `${artwork.authors.join(' \u00B7 ')}`
+                            const meta = artwork.authors.join(' \u00B7 ')
 
                             return (
                                 <MediaCard

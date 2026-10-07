@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom'
+import Badge from '../../ui/Badge'
 import './ArtworkDetailInformationSection.css'
 
 const ArtworkDetailInformationSection = ({ artwork, collection }) => {
-    const meta = `${artwork.authors.join(' \u00B7 ')} \u00B7 ${artwork.year}`
+    const meta = artwork.authors.join(' \u00B7 ')
 
     return (
         <section className="artwork-detail-information-section">
