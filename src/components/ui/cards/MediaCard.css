@@ -15,18 +15,16 @@
     display: block;
     height: 100%;
     overflow: hidden;
-    transition: var(--transition-opacity), var(--transition-transform);
+    transition: var(--transition-opacity);
     width: 100%;
 }
 
 .media-card--interactive:hover .media-card-media > * {
     opacity: var(--opacity-hover);
-    transform: scale(1.125);
 }
 
 .media-card--interactive:active .media-card-media > * {
     opacity: var(--opacity-active);
-    transform: scale(1.25);
 }
 
 .media-card-text {
