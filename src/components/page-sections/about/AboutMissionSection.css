@@ -35,7 +35,8 @@
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
     margin: 0;
-    padding: var(--spacing-body-vertical) 0;
+    margin-top: 0.5rem;
+    padding: 0;
 }
 
 .about-mission-list {

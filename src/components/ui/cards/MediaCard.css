@@ -50,7 +50,7 @@
 }
 
 .media-card-meta {
-    color: var(--color-text-base-3);
+    color: var(--color-text-base-2);
     font-family: var(--font-family-base);
     font-size: var(--font-size-5);
     font-weight: var(--font-weight-semibold);

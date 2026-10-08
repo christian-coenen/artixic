@@ -33,17 +33,12 @@
     --font-family-base: "Inter", sans-serif;
     --font-family-brand: "Montserrat", sans-serif;
 
-    --font-size-0: 5rem;
-    --font-size-1: 2rem;
-    --font-size-2: 1.5rem;
+    --font-size-0: clamp(2rem, 1.4286rem + 2.8571vw, 4rem);
+    --font-size-1: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+    --font-size-2: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);
     --font-size-3: 1.25rem;
     --font-size-4: 1rem;
-    --font-size-5: 0.875rem;
-
-    /* Media query-based font sizes */
-    --font-size-0-mobile: 4.75rem;
-    --font-size-1-mobile: 1.75rem;
-    --font-size-2-mobile: 1.25rem;
+    --font-size-5: 0.75rem;
 
     --font-weight-semibold: 600;
     --font-weight-medium: 500;
@@ -128,10 +123,9 @@ button {
 h1 {
     color: var(--color-text-base-0);
     font-family: var(--font-family-base);
-    font-size: var(--font-size-1);
+    font-size: var(--font-size-0);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
 }
 
 h2 {
@@ -140,7 +134,6 @@ h2 {
     font-size: var(--font-size-1);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
 }
 
 h3 {
@@ -149,7 +142,6 @@ h3 {
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
 }
 
 p {
@@ -158,5 +150,4 @@ p {
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-regular);
     margin: 0;
-    padding: 0;
 }

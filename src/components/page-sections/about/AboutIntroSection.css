@@ -38,7 +38,7 @@
 .about-intro-header {
     color: var(--color-text-base-0);
     font-family: var(--font-family-brand);
-    font-size: clamp(2.5rem, 7.5vw, var(--font-size-0));
+    font-size: var(--font-size-0);
     font-weight: var(--font-weight-medium);
     margin: 0;
     overflow-wrap: break-word;
@@ -49,11 +49,12 @@
 .about-intro-body {
     color: var(--color-text-base-1);
     font-family: var(--font-family-base);
-    font-size: clamp(1rem, 5vw, var(--font-size-1));
+    font-size: var(--font-size-4);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
-    margin: 2rem 0;
+    margin: 0;
+    margin-top: 0.5rem;
     overflow-wrap: break-word;
-    padding: var(--spacing-body-vertical) 0;
+    padding: 0;
     text-align: center;
 }
