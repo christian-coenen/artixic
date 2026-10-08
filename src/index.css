@@ -5,23 +5,21 @@
     --color-surface-0: #F7F8FA;
     --color-surface-1: #FCFDFF;
 
-    --color-background-control-default: #F2F3F5;
-    --color-background-control-hover: #EDEEF0;
-    --color-background-control-active: #E8E9EB;
+    --color-background-control-default-0: #FCFDFF;
+    --color-background-control-hover-0: #F7F8FA;
+    --color-background-control-active-0: #F2F3F5;
 
-    --color-background-navigation-current: #F2F3F5;
-    --color-background-navigation-hover: #EDEEF0;
-    --color-background-navigation-active: #E8E9EB;
+    --color-background-control-default-1: #F2F3F5;
+    --color-background-control-hover-1: #EDEEF0;
+    --color-background-control-active-1: #E8E9EB;
 
     --color-border: #DEE0E3;
 
-    --color-icon-control: #30343D;
+    --color-icon-control: #1E2631;
 
-    --color-text-base-0: #0D0E0F;
-    --color-text-base-1: #1B1C1F;
-    --color-text-base-2: #23272E;
-    --color-text-base-3: #30343D;
-    --color-text-base-4: #3C414D;
+    --color-text-base-0: #0A131C;
+    --color-text-base-1: #1E2631;
+    --color-text-base-2: #4E525D;
 
     --color-text-accent-0: #73CCFF;
 

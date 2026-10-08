@@ -10,11 +10,11 @@
 }
 
 .hamburger-button:hover {
-    background: var(--color-background-navigation-hover);
+    background: var(--color-background-control-hover-1);
 }
 
 .hamburger-button:active {
-    background: var(--color-background-navigation-active);
+    background: var(--color-background-control-active-1);
 }
 
 .hamburger-button-icon {

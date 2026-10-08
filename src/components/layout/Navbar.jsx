@@ -28,18 +28,21 @@ const Navbar = () => {
                 <div className="navbar-actions">
                     <div className="navbar-navigation">
                         <ul className="navbar-navigation-list">
-                            <li className="navbar-navigation-link">
+                            <li className="navbar-navigation-list-item">
                                 <NavLink
                                     to="/"
+                                    end
                                     className={({ isActive }) =>
                                         `navbar-navigation-link ${isActive ? 'current' : ''}`
                                     }
                                 >
                                     Home
                                 </NavLink>
+
+                                <span className="navbar-navigation-indicator" />
                             </li>
 
-                            <li className="navbar-navigation-link">
+                            <li className="navbar-navigation-list-item">
                                 <NavLink
                                     to="/artworks"
                                     className={({ isActive }) =>
@@ -48,9 +51,11 @@ const Navbar = () => {
                                 >
                                     Artworks
                                 </NavLink>
+
+                                <span className="navbar-navigation-indicator" />
                             </li>
 
-                            <li className="navbar-navigation-link">
+                            <li className="navbar-navigation-list-item">
                                 <NavLink
                                     to="/collections"
                                     className={({ isActive }) =>
@@ -59,9 +64,11 @@ const Navbar = () => {
                                 >
                                     Collections
                                 </NavLink>
+
+                                <span className="navbar-navigation-indicator" />
                             </li>
 
-                            <li className="navbar-navigation-link">
+                            <li className="navbar-navigation-list-item">
                                 <NavLink
                                     to="/about"
                                     className={({ isActive }) =>
@@ -70,6 +77,8 @@ const Navbar = () => {
                                 >
                                     About
                                 </NavLink>
+
+                                <span className="navbar-navigation-indicator" />
                             </li>
                         </ul>
 

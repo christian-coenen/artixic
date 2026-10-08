@@ -65,12 +65,12 @@
 }
 
 .drawer-navigation-close-button:hover {
-    background: var(--color-background-control-hover);
+    background: var(--color-background-control-hover-1);
     cursor: pointer;
 }
 
 .drawer-navigation-close-button:active {
-    background: var(--color-background-control-active);
+    background: var(--color-background-control-active-1);
 }
 
 .drawer-navigation-close-button-icon {
@@ -78,6 +78,7 @@
 }
 
 .drawer-navigation-list {
+    align-items: flex-start;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -87,41 +88,44 @@
     padding: 0;
 }
 
-.drawer-navigation-link {
+.drawer-navigation-list-item {
     align-items: center;
     display: flex;
     height: var(--height-drawer-navigation-item);
-    justify-content: center;
     min-height: var(--height-drawer-navigation-item);
-    padding: 0;
-    transition: var(--transition-background);
-    width: 100%;
+    padding-left: 1.5rem;
+    position: relative;
+    width: max-content;
 }
 
-.drawer-navigation-link a {
+.drawer-navigation-link {
     align-items: center;
-    color: var(--color-text-base-2);
+    color: var(--color-text-base-1);
     display: flex;
     font-family: var(--font-family-base);
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-regular);
-    height: 100%;
-    justify-content: flex-start;
-    padding-left: 1.5rem;
+    height: max-content;
     text-decoration: none;
-    width: 100%;
-}
-
-.drawer-navigation-link.current {
-    background: var(--color-background-navigation-current);
+    transition: var(--transition-opacity);
 }
 
 .drawer-navigation-link:hover {
-    background: var(--color-background-navigation-hover);
+    opacity: var(--opacity-hover);
 }
 
 .drawer-navigation-link:active {
-    background: var(--color-background-navigation-active);
+    opacity: var(--opacity-active);
+}
+
+.drawer-navigation-list-item:has(.drawer-navigation-link.current) .drawer-navigation-indicator {
+    background: #73CCFF;
+    border-radius: 50px;
+    bottom: 1rem;
+    height: 3px;
+    left: 1.5rem;
+    position: absolute;
+    right: 0;
 }
 
 @media (min-width: 881px) {
