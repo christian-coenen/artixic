@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { X } from 'lucide-react'
+import navigationLinks from '../../../data/navigationLinks'
 import './DrawerNavigation.css'
 
 const DrawerNavigation = ({ isOpen, onClose }) => {
@@ -42,62 +43,25 @@ const DrawerNavigation = ({ isOpen, onClose }) => {
                 </div>
 
                 <ul className="drawer-navigation-list">
-                    <li className="drawer-navigation-list-item">
-                        <NavLink
-                            to="/"
-                            end
-                            className={({ isActive }) =>
-                                `drawer-navigation-link ${isActive ? 'current' : ''}`
-                            }
-                            onClick={onClose}
+                    {navigationLinks.map(({ label, to, end }) => (
+                        <li
+                            key={to}
+                            className="drawer-navigation-list-item"
                         >
-                            Home
-                        </NavLink>
+                            <NavLink
+                                to={to}
+                                end={end}
+                                className={({ isActive }) =>
+                                    `drawer-navigation-link ${isActive ? 'current' : ''}`
+                                }
+                                onClick={onClose}
+                            >
+                                {label}
+                            </NavLink>
 
-                        <span className="drawer-navigation-indicator" />
-                    </li>
-
-                    <li className="drawer-navigation-list-item">
-                        <NavLink
-                            to="/artworks"
-                            className={({ isActive }) =>
-                                `drawer-navigation-link ${isActive ? 'current' : ''}`
-                            }
-                            onClick={onClose}
-                        >
-                            Artworks
-                        </NavLink>
-
-                        <span className="drawer-navigation-indicator" />
-                    </li>
-
-                    <li className="drawer-navigation-list-item">
-                        <NavLink
-                            to="/collections"
-                            className={({ isActive }) =>
-                                `drawer-navigation-link ${isActive ? 'current' : ''}`
-                            }
-                            onClick={onClose}
-                        >
-                            Collections
-                        </NavLink>
-
-                        <span className="drawer-navigation-indicator" />
-                    </li>
-
-                    <li className="drawer-navigation-list-item">
-                        <NavLink
-                            to="/about"
-                            className={({ isActive }) =>
-                                `drawer-navigation-link ${isActive ? 'current' : ''}`
-                            }
-                            onClick={onClose}
-                        >
-                            About
-                        </NavLink>
-
-                        <span className="drawer-navigation-indicator" />
-                    </li>
+                            <span className="drawer-navigation-indicator" />
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>

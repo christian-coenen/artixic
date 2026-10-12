@@ -4,6 +4,7 @@ import BrandLogo from '../ui/BrandLogo'
 import HamburgerButton from '../features/navigation/HamburgerButton'
 import DrawerNavigation from '../features/navigation/DrawerNavigation'
 import LanguageSwitcher from '../features/language/LanguageSwitcher'
+import navigationLinks from '../../data/navigationLinks'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -28,58 +29,24 @@ const Navbar = () => {
                 <div className="navbar-actions">
                     <div className="navbar-navigation">
                         <ul className="navbar-navigation-list">
-                            <li className="navbar-navigation-list-item">
-                                <NavLink
-                                    to="/"
-                                    end
-                                    className={({ isActive }) =>
-                                        `navbar-navigation-link ${isActive ? 'current' : ''}`
-                                    }
+                            {navigationLinks.map(({ label, to, end }) => (
+                                <li
+                                    key={to}
+                                    className="navbar-navigation-list-item"
                                 >
-                                    Home
-                                </NavLink>
+                                    <NavLink
+                                        to={to}
+                                        end={end}
+                                        className={({ isActive }) =>
+                                            `navbar-navigation-link ${isActive ? 'current' : ''}`
+                                        }
+                                    >
+                                        {label}
+                                    </NavLink>
 
-                                <span className="navbar-navigation-indicator" />
-                            </li>
-
-                            <li className="navbar-navigation-list-item">
-                                <NavLink
-                                    to="/artworks"
-                                    className={({ isActive }) =>
-                                        `navbar-navigation-link ${isActive ? 'current' : ''}`
-                                    }
-                                >
-                                    Artworks
-                                </NavLink>
-
-                                <span className="navbar-navigation-indicator" />
-                            </li>
-
-                            <li className="navbar-navigation-list-item">
-                                <NavLink
-                                    to="/collections"
-                                    className={({ isActive }) =>
-                                        `navbar-navigation-link ${isActive ? 'current' : ''}`
-                                    }
-                                >
-                                    Collections
-                                </NavLink>
-
-                                <span className="navbar-navigation-indicator" />
-                            </li>
-
-                            <li className="navbar-navigation-list-item">
-                                <NavLink
-                                    to="/about"
-                                    className={({ isActive }) =>
-                                        `navbar-navigation-link ${isActive ? 'current' : ''}`
-                                    }
-                                >
-                                    About
-                                </NavLink>
-
-                                <span className="navbar-navigation-indicator" />
-                            </li>
+                                    <span className="navbar-navigation-indicator" />
+                                </li>
+                            ))}
                         </ul>
 
                         <div className="navbar-hamburger-button">
