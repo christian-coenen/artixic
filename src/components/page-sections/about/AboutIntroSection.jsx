@@ -10,9 +10,9 @@ const AboutIntroSection = () => {
                     About
                 </p>
 
-                <h3 className="about-intro-header">
+                <h1 className="about-intro-header">
                     A digital space for contemporary art
-                </h3>
+                </h1>
 
                 <p className="about-intro-body">
                     ARTIXIC connects artworks, artists, and collections in an evolving digital exhibition.

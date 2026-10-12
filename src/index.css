@@ -5,23 +5,21 @@
     --color-surface-0: #F7F8FA;
     --color-surface-1: #FCFDFF;
 
-    --color-background-control-default: #F2F3F5;
-    --color-background-control-hover: #EDEEF0;
-    --color-background-control-active: #E8E9EB;
+    --color-background-control-default-0: #FCFDFF;
+    --color-background-control-hover-0: #F7F8FA;
+    --color-background-control-active-0: #F2F3F5;
 
-    --color-background-navigation-current: #F2F3F5;
-    --color-background-navigation-hover: #EDEEF0;
-    --color-background-navigation-active: #E8E9EB;
+    --color-background-control-default-1: #F2F3F5;
+    --color-background-control-hover-1: #EDEEF0;
+    --color-background-control-active-1: #E8E9EB;
 
     --color-border: #DEE0E3;
 
-    --color-icon-control: #30343D;
+    --color-icon-control: #1E2631;
 
-    --color-text-base-0: #0D0E0F;
-    --color-text-base-1: #1B1C1F;
-    --color-text-base-2: #23272E;
-    --color-text-base-3: #30343D;
-    --color-text-base-4: #3C414D;
+    --color-text-base-0: #0A131C;
+    --color-text-base-1: #1E2631;
+    --color-text-base-2: #4E525D;
 
     --color-text-accent-0: #73CCFF;
 
@@ -35,17 +33,12 @@
     --font-family-base: "Inter", sans-serif;
     --font-family-brand: "Montserrat", sans-serif;
 
-    --font-size-0: 5rem;
-    --font-size-1: 2rem;
-    --font-size-2: 1.5rem;
+    --font-size-0: clamp(2rem, 1.4286rem + 2.8571vw, 4rem);
+    --font-size-1: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+    --font-size-2: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);
     --font-size-3: 1.25rem;
     --font-size-4: 1rem;
-    --font-size-5: 0.875rem;
-
-    /* Media query-based font sizes */
-    --font-size-0-mobile: 4.75rem;
-    --font-size-1-mobile: 1.75rem;
-    --font-size-2-mobile: 1.25rem;
+    --font-size-5: 0.75rem;
 
     --font-weight-semibold: 600;
     --font-weight-medium: 500;
@@ -57,23 +50,18 @@
 
     --height-navbar: 5rem;
     --height-drawer-navigation-item: 5rem;
-
-    --width-navbar-item-default: 8rem;
-    --width-navbar-item-mobile: 5rem;
-    
+ 
     --max-width-content: 1440px;
 
     --spacing-layout: 2rem;
+    --spacing-intro-vertical: clamp(3rem, 2.1429rem + 4.2857vw, 6rem);
     --spacing-control: 1rem;
-
-    --spacing-control-vertical: 0.5rem;
-    --spacing-control-horizontal: 0.75rem;
-    --spacing-drawer-navigation-horizontal: 2rem;
 
     --opacity-hover: 0.75;
     --opacity-active: 0.5;
 
     --transition-duration: 0.25s;
+    --transition-aspect-ratio: aspect-ratio var(--transition-duration) ease-in-out;
     --transition-background: background-color var(--transition-duration) ease-in-out;
     --transition-opacity: opacity var(--transition-duration) ease-in-out;
     --transition-transform: transform var(--transition-duration) ease-in-out;
@@ -114,7 +102,6 @@ a {
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
     text-decoration: underline;
 }
 
@@ -128,10 +115,9 @@ button {
 h1 {
     color: var(--color-text-base-0);
     font-family: var(--font-family-base);
-    font-size: var(--font-size-1);
+    font-size: var(--font-size-0);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
 }
 
 h2 {
@@ -140,7 +126,6 @@ h2 {
     font-size: var(--font-size-1);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
 }
 
 h3 {
@@ -149,7 +134,6 @@ h3 {
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
 }
 
 p {
@@ -158,5 +142,4 @@ p {
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-regular);
     margin: 0;
-    padding: 0;
 }

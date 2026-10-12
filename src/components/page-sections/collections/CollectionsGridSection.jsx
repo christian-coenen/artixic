@@ -10,13 +10,12 @@ const CollectionsGridSection = ({ collections, error, getImageUrl }) => {
             <div className="collections-grid-inner">
                 <ul className="collections-grid-list">
                     {collections.map((collection) => {
-                        const meta = `${collection.authors.join(' \u00B7 ')} \u00B7 ${collection.year}`
+                        const meta = collection.authors.join(' \u00B7 ')
 
                         return (
                             <MediaCard
                                 key={collection.collection_id}
                                 as="li"
-                                aspectRatio="18 / 6"
                                 media={
                                     <CollectionPreview
                                         artworks={collection.artworks}
