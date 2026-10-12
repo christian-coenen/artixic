@@ -1,66 +1,72 @@
 export const artworks = {
-    "artwork-1": {
-        title: "Heavenly Meadows",
-        meta: "Elena Voss, 2024",
-        description: "A quiet exploration of light and open fields, where structure dissolves into atmospheric space.",
-        image: "/artworks/placeholder-landscape3.png",
-        highlighted: true
+    'artwork-1': {
+        title: 'Heavenly Meadows',
+        meta: 'Elena Voss, 2024',
+        description:
+            'A quiet exploration of light and open fields, where structure dissolves into atmospheric space.',
+        image: '/artworks/placeholder-landscape3.png',
+        highlighted: true,
     },
-    "artwork-2": {
-        title: "Steel Horizon",
-        meta: "Marcus Lee, 2025",
-        description: "An industrial composition studying tension between geometry and erosion over time.",
-        image: "/artworks/placeholder-portrait3.png",
-        collection: "collection-1",
-        highlighted: true
+    'artwork-2': {
+        title: 'Steel Horizon',
+        meta: 'Marcus Lee, 2025',
+        description:
+            'An industrial composition studying tension between geometry and erosion over time.',
+        image: '/artworks/placeholder-portrait3.png',
+        collection: 'collection-1',
+        highlighted: true,
     },
-    "artwork-3": {
-        title: "Falling Silence",
-        meta: "Aiko Tanaka, 2023",
-        image: "/artworks/placeholder-square3.png",
-        highlighted: true
+    'artwork-3': {
+        title: 'Falling Silence',
+        meta: 'Aiko Tanaka, 2023',
+        image: '/artworks/placeholder-square3.png',
+        highlighted: true,
     },
-    "artwork-4": {
-        title: "Muted Structures",
-        meta: "Jonas Krüger, 2022",
-        description: "Architectural fragments reduced to rhythm, repetition, and negative space.",
-        image: "/artworks/placeholder-square2.png",
-        highlighted: false
+    'artwork-4': {
+        title: 'Muted Structures',
+        meta: 'Jonas Krüger, 2022',
+        description:
+            'Architectural fragments reduced to rhythm, repetition, and negative space.',
+        image: '/artworks/placeholder-square2.png',
+        highlighted: false,
     },
-    "artwork-5": {
-        title: "River Afterlight",
-        meta: "Sofia Delgado, 2024",
-        image: "/artworks/placeholder-landscape2.png",
-        collection: "collection-2",
-        highlighted: false
+    'artwork-5': {
+        title: 'River Afterlight',
+        meta: 'Sofia Delgado, 2024',
+        image: '/artworks/placeholder-landscape2.png',
+        collection: 'collection-2',
+        highlighted: false,
     },
-    "artwork-6": {
-        title: "Silent Terrain",
-        meta: "Liam Carter, 2021",
-        description: "Minimal landscape study focusing on tonal transitions and spatial ambiguity.",
-        image: "/artworks/placeholder-portrait2.png",
-        highlighted: false
+    'artwork-6': {
+        title: 'Silent Terrain',
+        meta: 'Liam Carter, 2021',
+        description:
+            'Minimal landscape study focusing on tonal transitions and spatial ambiguity.',
+        image: '/artworks/placeholder-portrait2.png',
+        highlighted: false,
     },
-        "artwork-7": {
-        title: "Muted Structures",
-        meta: "Jonas Krüger, 2022",
-        description: "Architectural fragments reduced to rhythm, repetition, and negative space.",
-        image: "/artworks/placeholder-square.png",
-        highlighted: false
+    'artwork-7': {
+        title: 'Muted Structures',
+        meta: 'Jonas Krüger, 2022',
+        description:
+            'Architectural fragments reduced to rhythm, repetition, and negative space.',
+        image: '/artworks/placeholder-square.png',
+        highlighted: false,
     },
-    "artwork-8": {
-        title: "Lake Sunlight",
-        meta: "Jaiden Johnston, 2024",
-        description: "An exploration of ambient, cloudy lighting.",
-        image: "/artworks/placeholder-landscape.png",
-        collection: "collection-2",
-        highlighted: false
+    'artwork-8': {
+        title: 'Lake Sunlight',
+        meta: 'Jaiden Johnston, 2024',
+        description: 'An exploration of ambient, cloudy lighting.',
+        image: '/artworks/placeholder-landscape.png',
+        collection: 'collection-2',
+        highlighted: false,
     },
-    "artwork-9": {
-        title: "Silent Terrain",
-        meta: "Liam Carter, 2021",
-        description: "Minimal landscape study focusing on tonal transitions and spatial ambiguity.",
-        image: "/artworks/placeholder-portrait.png",
-        highlighted: false
+    'artwork-9': {
+        title: 'Silent Terrain',
+        meta: 'Liam Carter, 2021',
+        description:
+            'Minimal landscape study focusing on tonal transitions and spatial ambiguity.',
+        image: '/artworks/placeholder-portrait.png',
+        highlighted: false,
     },
 }

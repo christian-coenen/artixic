@@ -1,9 +1,5 @@
 const AdminLoginPage = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+    return <div></div>
 }
 
 export default AdminLoginPage

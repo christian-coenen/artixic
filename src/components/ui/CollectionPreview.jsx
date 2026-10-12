@@ -3,11 +3,18 @@ import './CollectionPreview.css'
 
 const MAX_ARTWORKS = 3
 
-const CollectionPreview = ({ artworks = [], getImageUrl, variant = 'card' }) => {
+const CollectionPreview = ({
+    artworks = [],
+    getImageUrl,
+    variant = 'card',
+}) => {
     const [failedIds, setFailedIds] = useState(() => new Set())
 
     const selected = artworks
-        .filter((artworks) => artworks.image_path && !failedIds.has(artworks.artwork_id))
+        .filter(
+            (artworks) =>
+                artworks.image_path && !failedIds.has(artworks.artwork_id),
+        )
         .slice(0, MAX_ARTWORKS)
 
     const handleError = (artworkId) =>
@@ -19,7 +26,10 @@ const CollectionPreview = ({ artworks = [], getImageUrl, variant = 'card' }) => 
             data-count={selected.length}
         >
             {selected.map((artworks) => (
-                <div key={artworks.artwork_id} className="collection-preview-cell">
+                <div
+                    key={artworks.artwork_id}
+                    className="collection-preview-cell"
+                >
                     <img
                         className="collection-preview-image"
                         src={getImageUrl(artworks.image_path, variant)}

@@ -118,8 +118,9 @@
     opacity: var(--opacity-active);
 }
 
-.drawer-navigation-list-item:has(.drawer-navigation-link.current) .drawer-navigation-indicator {
-    background: #73CCFF;
+.drawer-navigation-list-item:has(.drawer-navigation-link.current)
+    .drawer-navigation-indicator {
+    background: #73ccff;
     border-radius: 50px;
     bottom: 1rem;
     height: 3px;

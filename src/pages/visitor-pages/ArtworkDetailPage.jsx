@@ -20,8 +20,9 @@ const ArtworkDetailPage = () => {
                 setArtwork(data)
 
                 if (data.collection_id) {
-                    const collectionData = 
-                        await getCollectionById(data.collection_id)
+                    const collectionData = await getCollectionById(
+                        data.collection_id,
+                    )
 
                     setCollection(collectionData)
                 }
@@ -44,7 +45,7 @@ const ArtworkDetailPage = () => {
     return (
         <VisitorLayout>
             <ArtworkDetailArtworkSection artwork={artwork} />
-            <ArtworkDetailInformationSection 
+            <ArtworkDetailInformationSection
                 artwork={artwork}
                 collection={collection}
             />

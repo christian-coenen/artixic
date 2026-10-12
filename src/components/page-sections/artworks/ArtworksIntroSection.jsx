@@ -6,9 +6,7 @@ const ArtworksIntroSection = () => {
             <div className="artworks-intro-section-background" />
 
             <div className="artworks-intro-inner">
-                <p className="artworks-intro-eyebrow">
-                    Artworks
-                </p>
+                <p className="artworks-intro-eyebrow">Artworks</p>
 
                 <h1 className="artworks-intro-header">
                     Explore new perspectives

@@ -46,8 +46,7 @@
     padding: 0;
 }
 
-@media (max-width: 660px)
-{
+@media (max-width: 660px) {
     .about-mission-list {
         grid-template-columns: 1fr;
     }

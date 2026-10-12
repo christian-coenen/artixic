@@ -14,9 +14,7 @@ const LatestCollectionSection = ({ collections, getImageUrl }) => {
             <div className="latest-collection-section-background" />
 
             <div className="latest-collection-inner">
-                <p className="latest-collection-eyebrow">
-                    Latest collection
-                </p>
+                <p className="latest-collection-eyebrow">Latest collection</p>
 
                 <h2 className="latest-collection-header">
                     Discover what's new

@@ -5,20 +5,20 @@
     width: 100%;
 }
 
-.collection-preview[data-count="1"] {
+.collection-preview[data-count='1'] {
     grid-template-columns: 1fr;
 }
 
-.collection-preview[data-count="2"] {
+.collection-preview[data-count='2'] {
     grid-template-columns: 1fr 1fr;
 }
 
-.collection-preview[data-count="3"] {
+.collection-preview[data-count='3'] {
     grid-template-columns: 45fr 55fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.collection-preview[data-count="3"] .collection-preview-cell:first-child {
+.collection-preview[data-count='3'] .collection-preview-cell:first-child {
     grid-row: 1 / 3;
 }
 

@@ -24,10 +24,7 @@ const ArtworksPage = () => {
     return (
         <VisitorLayout>
             <ArtworksIntroSection />
-            <ArtworksGridSection 
-                artworks={artworks}
-                error={error}
-            />
+            <ArtworksGridSection artworks={artworks} error={error} />
         </VisitorLayout>
     )
 }

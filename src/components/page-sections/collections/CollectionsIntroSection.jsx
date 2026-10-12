@@ -6,9 +6,7 @@ const CollectionsIntroSection = () => {
             <div className="collections-intro-section-background" />
 
             <div className="collections-intro-inner">
-                <p className="collections-intro-eyebrow">
-                    Collections
-                </p>
+                <p className="collections-intro-eyebrow">Collections</p>
 
                 <h1 className="collections-intro-header">
                     Explore curated perspectives

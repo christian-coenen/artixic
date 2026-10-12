@@ -5,7 +5,7 @@ const FeatureCard = ({
     image,
     title,
     description,
-    as: Wrapper = 'li'
+    as: Wrapper = 'li',
 }) => {
     return (
         <Wrapper className="feature-card">
@@ -15,21 +15,13 @@ const FeatureCard = ({
                         {icon ? (
                             icon
                         ) : (
-                            <img
-                                src={image}
-                                alt=""
-                                draggable={false}
-                            />
+                            <img src={image} alt="" draggable={false} />
                         )}
                     </div>
                 )}
 
                 <div className="feature-card-text">
-                    {title && (
-                        <h3 className="feature-card-title">
-                            {title}
-                        </h3>
-                    )}
+                    {title && <h3 className="feature-card-title">{title}</h3>}
 
                     {description && (
                         <p className="feature-card-description">

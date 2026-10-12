@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
-import { getFeaturedArtworks, getArtworkImageUrl } from '../../services/artworks'
+import {
+    getFeaturedArtworks,
+    getArtworkImageUrl,
+} from '../../services/artworks'
 import { getCollectionsWithPreviewArtworks } from '../../services/collections'
 import VisitorLayout from '../../components/layout/VisitorLayout'
 import HeroSection from '../../components/page-sections/home/HeroSection'
@@ -14,12 +17,13 @@ const HomePage = () => {
     useEffect(() => {
         const loadHomeData = async () => {
             try {
-                const [featuredArtworks, latestCollections] =
-                    await Promise.all([
+                const [featuredArtworks, latestCollections] = await Promise.all(
+                    [
                         getFeaturedArtworks(),
                         getCollectionsWithPreviewArtworks(),
-                    ])
-                
+                    ],
+                )
+
                 setArtworks(featuredArtworks)
                 setCollections(latestCollections)
             } catch (error) {
@@ -33,11 +37,8 @@ const HomePage = () => {
     return (
         <VisitorLayout>
             <HeroSection />
-            <HightlightedArtworksSection
-                artworks={artworks}
-                error={error}
-            />
-            <LatestCollectionSection 
+            <HightlightedArtworksSection artworks={artworks} error={error} />
+            <LatestCollectionSection
                 artworks={artworks}
                 collections={collections}
                 getImageUrl={getArtworkImageUrl}

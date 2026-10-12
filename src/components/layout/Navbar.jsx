@@ -10,7 +10,7 @@ const Navbar = () => {
     const [isDrawerNavigationOpen, setIsDrawerNavigationOpen] = useState(false)
 
     const toggleDrawerNavigation = () => {
-        setIsDrawerNavigationOpen(prev => !prev)
+        setIsDrawerNavigationOpen((prev) => !prev)
     }
 
     const closeDrawerNavigation = () => {

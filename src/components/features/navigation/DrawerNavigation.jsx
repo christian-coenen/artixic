@@ -26,13 +26,11 @@ const DrawerNavigation = ({ isOpen, onClose }) => {
     }, [isOpen, onClose])
 
     return (
-        <div className={`drawer-navigation ${isOpen ? "is-open" : ""}`}>
+        <div className={`drawer-navigation ${isOpen ? 'is-open' : ''}`}>
             <div className="drawer-navigation-overlay" onClick={onClose} />
 
             <div className="drawer-navigation-panel">
-                <div
-                    className="drawer-navigation-close-panel"
-                >
+                <div className="drawer-navigation-close-panel">
                     <button
                         type="button"
                         className="drawer-navigation-close-button"
