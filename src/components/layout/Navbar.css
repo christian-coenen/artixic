@@ -99,7 +99,7 @@
 }
 
 .navbar-navigation-indicator {
-    background: #73CCFF;
+    background: #73ccff;
     border-radius: 50px;
     bottom: 1rem;
     height: 3px;
@@ -110,7 +110,8 @@
     transform-origin: left;
 }
 
-.navbar-navigation-list-item:has(.navbar-navigation-link.current) .navbar-navigation-indicator {
+.navbar-navigation-list-item:has(.navbar-navigation-link.current)
+    .navbar-navigation-indicator {
     animation: navbar-navigation-indicator-in 0.25s ease-out forwards;
 }
 
@@ -143,7 +144,7 @@
     .navbar-logo-text {
         display: none;
     }
-    
+
     .navbar-actions {
         gap: 1rem;
     }

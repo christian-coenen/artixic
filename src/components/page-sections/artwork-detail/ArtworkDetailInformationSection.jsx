@@ -8,18 +8,13 @@ const ArtworkDetailInformationSection = ({ artwork, collection }) => {
     return (
         <section className="artwork-detail-information-section">
             <div className="artwork-detail-information-inner">
-
-                <Badge>
-                    {artwork.year}
-                </Badge>
+                <Badge>{artwork.year}</Badge>
 
                 <h1 className="artwork-detail-information-title">
                     {artwork.title}
                 </h1>
 
-                <p className="artwork-detail-information-meta">
-                    {meta}
-                </p>
+                <p className="artwork-detail-information-meta">{meta}</p>
 
                 <div className="artwork-detail-information-body">
                     {artwork.description && (
@@ -30,7 +25,11 @@ const ArtworkDetailInformationSection = ({ artwork, collection }) => {
 
                     {collection && (
                         <p className="artwork-detail-information-collection">
-                            Featured in{""} <NavLink to={`/collections/${collection.slug}`}>{collection.title}</NavLink>.
+                            Featured in{''}{' '}
+                            <NavLink to={`/collections/${collection.slug}`}>
+                                {collection.title}
+                            </NavLink>
+                            .
                         </p>
                     )}
                 </div>

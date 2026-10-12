@@ -10,9 +10,7 @@ const HighlightedArtworksSection = ({ artworks, error }) => {
                     Highlighted artworks
                 </p>
 
-                <h2 className="highlighted-artworks-header">
-                    Works of focus
-                </h2>
+                <h2 className="highlighted-artworks-header">Works of focus</h2>
 
                 {error ? (
                     <p>Unable to load artworks.</p>

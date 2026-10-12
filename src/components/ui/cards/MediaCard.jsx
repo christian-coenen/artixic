@@ -7,16 +7,13 @@ const MediaCard = ({
     media,
     title,
     meta,
-    as: Wrapper = "li",
+    as: Wrapper = 'li',
     aspectRatio,
-    fit = "cover"
+    fit = 'cover',
 }) => {
-    const cardClassName = [
-        "media-card",
-        link && "media-card--interactive"
-    ]
+    const cardClassName = ['media-card', link && 'media-card--interactive']
         .filter(Boolean)
-        .join(" ")
+        .join(' ')
 
     const content = (
         <div className="media-card-inner">
@@ -37,17 +34,9 @@ const MediaCard = ({
 
             {(title || meta) && (
                 <div className="media-card-text">
-                    {title && (
-                        <h3 className="media-card-title">
-                            {title}
-                        </h3>
-                    )}
+                    {title && <h3 className="media-card-title">{title}</h3>}
 
-                    {meta && (
-                        <p className="media-card-meta">
-                            {meta}
-                        </p>
-                    )}
+                    {meta && <p className="media-card-meta">{meta}</p>}
                 </div>
             )}
         </div>
@@ -55,13 +44,7 @@ const MediaCard = ({
 
     return (
         <Wrapper className={cardClassName}>
-            {link ? (
-                <NavLink to={link}>
-                    {content}
-                </NavLink>
-            ) : (
-                content
-            )}
+            {link ? <NavLink to={link}>{content}</NavLink> : content}
         </Wrapper>
     )
 }

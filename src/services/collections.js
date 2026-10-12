@@ -20,7 +20,7 @@ export const getCollectionById = async (collectionId) => {
         .select('*')
         .eq('collection_id', collectionId)
         .single()
-    
+
     if (error) {
         throw error
     }
@@ -49,6 +49,6 @@ export const getCollectionsWithPreviewArtworks = async () => {
         collections.map(async (collection) => ({
             ...collection,
             artworks: await getArtworksByCollectionId(collection.collection_id),
-        }))
+        })),
     )
 }

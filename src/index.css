@@ -1,27 +1,27 @@
 :root {
-    --color-brand-0: #73CCFF;
-    --color-brand-1: #7386FF;
+    --color-brand-0: #73ccff;
+    --color-brand-1: #7386ff;
 
-    --color-surface-0: #F7F8FA;
-    --color-surface-1: #FCFDFF;
+    --color-surface-0: #f7f8fa;
+    --color-surface-1: #fcfdff;
 
-    --color-background-control-default-0: #FCFDFF;
-    --color-background-control-hover-0: #F7F8FA;
-    --color-background-control-active-0: #F2F3F5;
+    --color-background-control-default-0: #fcfdff;
+    --color-background-control-hover-0: #f7f8fa;
+    --color-background-control-active-0: #f2f3f5;
 
-    --color-background-control-default-1: #F2F3F5;
-    --color-background-control-hover-1: #EDEEF0;
-    --color-background-control-active-1: #E8E9EB;
+    --color-background-control-default-1: #f2f3f5;
+    --color-background-control-hover-1: #edeef0;
+    --color-background-control-active-1: #e8e9eb;
 
-    --color-border: #DEE0E3;
+    --color-border: #dee0e3;
 
-    --color-icon-control: #1E2631;
+    --color-icon-control: #1e2631;
 
-    --color-text-base-0: #0A131C;
-    --color-text-base-1: #1E2631;
-    --color-text-base-2: #4E525D;
+    --color-text-base-0: #0a131c;
+    --color-text-base-1: #1e2631;
+    --color-text-base-2: #4e525d;
 
-    --color-text-accent-0: #73CCFF;
+    --color-text-accent-0: #73ccff;
 
     --color-text-link: var(--color-text-base-0);
 
@@ -30,8 +30,8 @@
     --border-radius-0: 10px;
     --border-radius-1: 50px;
 
-    --font-family-base: "Inter", sans-serif;
-    --font-family-brand: "Montserrat", sans-serif;
+    --font-family-base: 'Inter', sans-serif;
+    --font-family-brand: 'Montserrat', sans-serif;
 
     --font-size-0: clamp(2rem, 1.4286rem + 2.8571vw, 4rem);
     --font-size-1: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
@@ -50,7 +50,7 @@
 
     --height-navbar: 5rem;
     --height-drawer-navigation-item: 5rem;
- 
+
     --max-width-content: 1440px;
 
     --spacing-layout: 2rem;
@@ -61,8 +61,10 @@
     --opacity-active: 0.5;
 
     --transition-duration: 0.25s;
-    --transition-aspect-ratio: aspect-ratio var(--transition-duration) ease-in-out;
-    --transition-background: background-color var(--transition-duration) ease-in-out;
+    --transition-aspect-ratio: aspect-ratio var(--transition-duration)
+        ease-in-out;
+    --transition-background: background-color var(--transition-duration)
+        ease-in-out;
     --transition-opacity: opacity var(--transition-duration) ease-in-out;
     --transition-transform: transform var(--transition-duration) ease-in-out;
 }
@@ -79,7 +81,7 @@
 }
 
 ::selection {
-    color: #FCFDFF;
+    color: #fcfdff;
     background: var(--color-brand-1);
 }
 

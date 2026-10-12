@@ -1,9 +1,5 @@
 const AdminMediaPage = () => {
-    return (
-        <div>
-
-        </div>
-    )
+    return <div></div>
 }
 
 export default AdminMediaPage

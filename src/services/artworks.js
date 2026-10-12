@@ -5,7 +5,7 @@ export const getArtworks = async () => {
         .from('table_artworks')
         .select('*')
         .order('published_at', { ascending: false })
-    
+
     if (error) {
         throw error
     }
@@ -19,7 +19,7 @@ export const getArtworksBySlug = async (slug) => {
         .select('*')
         .eq('slug', slug)
         .single()
-    
+
     if (error) {
         throw error
     }

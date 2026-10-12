@@ -6,16 +6,18 @@ const AboutMissionSection = () => {
     return (
         <section className="about-mission-section">
             <div className="about-mission-inner">
-                <p className="about-mission-eyebrow">
-                    Mission
-                </p>
+                <p className="about-mission-eyebrow">Mission</p>
 
                 <h2 className="about-mission-header">
                     Easier to discover and experience
                 </h2>
 
                 <p className="about-mission-body">
-                    ARTIXIC brings artworks and collections together in a digital exhibition space where artists can present their work and visitors can explore it without barriers. We aim to create a platform where discovery, context, and curation come together.
+                    ARTIXIC brings artworks and collections together in a
+                    digital exhibition space where artists can present their
+                    work and visitors can explore it without barriers. We aim to
+                    create a platform where discovery, context, and curation
+                    come together.
                 </p>
 
                 <ul className="about-mission-list">
