@@ -13,9 +13,9 @@ const ArtworkDetailInformationSection = ({ artwork, collection }) => {
                     {artwork.year}
                 </Badge>
 
-                <h3 className="artwork-detail-information-title">
+                <h1 className="artwork-detail-information-title">
                     {artwork.title}
-                </h3>
+                </h1>
 
                 <p className="artwork-detail-information-meta">
                     {meta}

@@ -19,9 +19,9 @@ const CollectionDetailCoverSection = ({ collection, artworks, getImageUrl }) => 
                     {collection.year}
                 </Badge>
 
-                <h3 className="collection-detail-cover-title">
+                <h1 className="collection-detail-cover-title">
                     {collection.title}
-                </h3>
+                </h1>
 
                 <p className="collection-detail-cover-meta">
                     {meta}

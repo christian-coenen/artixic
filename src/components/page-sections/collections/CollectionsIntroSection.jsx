@@ -10,9 +10,9 @@ const CollectionsIntroSection = () => {
                     Collections
                 </p>
 
-                <h2 className="collections-intro-header">
+                <h1 className="collections-intro-header">
                     Explore curated perspectives
-                </h2>
+                </h1>
 
                 <p className="collections-intro-body">
                     Discover the full catalog of contemporary collections.
