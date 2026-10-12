@@ -37,11 +37,10 @@
     font-size: var(--font-size-1);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
 }
 
 .latest-collection-feature {
-    padding: 2rem 0;
+    margin: 2rem 0;
 }
 
 .latest-collection-feature .media-card-media {
@@ -52,11 +51,5 @@
 @media (max-width: 880px) {
     .latest-collection-feature .media-card-media {
         aspect-ratio: 5 / 4;
-    }
-}
-
-@media (max-width: 400px) {
-    .latest-collection-header {
-        font-size: var(--font-size-1-mobile);
     }
 }

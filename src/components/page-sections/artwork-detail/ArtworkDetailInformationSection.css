@@ -27,7 +27,6 @@
     font-weight: var(--font-weight-medium);
     margin: 0;
     margin-top: 0.5rem;
-    padding: 0;
 }
 
 .artwork-detail-information-meta {
@@ -37,7 +36,6 @@
     font-weight: var(--font-weight-semibold);
     letter-spacing: var(--letter-spacing-0);
     margin: 0;
-    padding: 0;
     text-transform: uppercase;
 }
 
@@ -49,7 +47,6 @@
     line-height: var(--line-height-base);
     margin: 0;
     margin-top: 1rem;
-    padding: 0;
 }
 
 .artwork-detail-information-collection {
@@ -60,7 +57,6 @@
     line-height: var(--line-height-base);
     margin: 0;
     margin-top: 0.5rem;
-    padding: 0;
 }
 
 .artwork-detail-information-collection a {
@@ -78,17 +74,4 @@
 
 .artwork-detail-information-collection a:active {
     opacity: var(--opacity-active);
-}
-
-@media (max-width: 1000px) {
-    .artwork-detail-information-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .artwork-detail-information-title {
-        font-size: var(--font-size-1-mobile);
-    }
 }

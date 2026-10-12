@@ -47,7 +47,6 @@
     font-weight: var(--font-weight-medium);
     margin: 0;
     overflow-wrap: break-word;
-    padding: 0;
     text-align: center;
 }
 
@@ -59,12 +58,11 @@
     margin: 0;
     margin-top: 0.5rem;
     overflow-wrap: break-word;
-    padding: 0;
     text-align: center;
 }
 
 .hero-cta {
-    padding: 3rem 0;
+    margin-top: 3rem;
 }
 
 .hero-cta-link {

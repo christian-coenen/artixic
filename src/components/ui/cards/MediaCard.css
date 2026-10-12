@@ -28,7 +28,7 @@
 }
 
 .media-card-text {
-    padding: 1rem 0;
+    margin-top: 1rem;
     transition: var(--transition-opacity);
 }
 
@@ -46,7 +46,6 @@
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
 }
 
 .media-card-meta {
@@ -56,6 +55,5 @@
     font-weight: var(--font-weight-semibold);
     letter-spacing: var(--letter-spacing-0);
     margin: 0;
-    padding: 0;
     text-transform: uppercase;
 }

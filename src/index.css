@@ -50,19 +50,12 @@
 
     --height-navbar: 5rem;
     --height-drawer-navigation-item: 5rem;
-
-    --width-navbar-item-default: 8rem;
-    --width-navbar-item-mobile: 5rem;
-    
+ 
     --max-width-content: 1440px;
 
     --spacing-layout: 2rem;
-    --spacing-intro-vertical: clamp(2rem, 6.6667vw, 6rem);
+    --spacing-intro-vertical: clamp(3rem, 2.1429rem + 4.2857vw, 6rem);
     --spacing-control: 1rem;
-
-    --spacing-control-vertical: 0.5rem;
-    --spacing-control-horizontal: 0.75rem;
-    --spacing-drawer-navigation-horizontal: 2rem;
 
     --opacity-hover: 0.75;
     --opacity-active: 0.5;
@@ -109,7 +102,6 @@ a {
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-medium);
     margin: 0;
-    padding: 0;
     text-decoration: underline;
 }
 
