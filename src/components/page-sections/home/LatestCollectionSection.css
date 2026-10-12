@@ -45,7 +45,6 @@
 
 .latest-collection-feature .media-card-media {
     aspect-ratio: 18 / 6;
-    transition: var(--transition-aspect-ratio);
 }
 
 @media (max-width: 880px) {
