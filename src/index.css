@@ -13,6 +13,10 @@
     --color-background-control-hover-1: #edeef0;
     --color-background-control-active-1: #e8e9eb;
 
+    --color-background-control-default-2: #73ccff;
+    --color-background-control-hover-2: #57befa;
+    --color-background-control-active-2: #44b3f3;
+
     --color-border: #dee0e3;
 
     --color-icon-control: #1e2631;
@@ -96,6 +100,13 @@ body {
     padding: 0;
 }
 
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
 a {
     color: var(--color-text-link);
     font-family: var(--font-family-base);
@@ -103,13 +114,6 @@ a {
     font-weight: var(--font-weight-medium);
     margin: 0;
     text-decoration: underline;
-}
-
-button {
-    background: none;
-    color: var(--color-text-base-2);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-4);
 }
 
 h1 {

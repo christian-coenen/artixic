@@ -1,0 +1,38 @@
+.submissions-intro-section {
+    background: var(--color-surface-1);
+}
+
+.submissions-intro-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: var(--spacing-layout) var(--spacing-layout) 0;
+    position: relative;
+    width: 100%;
+}
+
+.submissions-intro-eyebrow {
+    color: var(--color-text-accent-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-0);
+    text-transform: uppercase;
+}
+
+.submissions-intro-header {
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+}
+
+.submissions-intro-body {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    margin: 0;
+    margin-top: 0.5rem;
+}

@@ -10,6 +10,7 @@ import ArtworkDetailPage from './pages/visitor-pages/ArtworkDetailPage'
 import CollectionsPage from './pages/visitor-pages/CollectionsPage'
 import CollectionDetailPage from './pages/visitor-pages/CollectionDetailPage'
 import AboutPage from './pages/visitor-pages/AboutPage'
+import SubmissionsPage from './pages/visitor-pages/SubmissionsPage'
 
 {
     /* Admin pages imports */
@@ -36,6 +37,7 @@ const App = () => {
                     element={<CollectionDetailPage />}
                 />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/submissions" element={<SubmissionsPage />} />
 
                 {/* Admin pages routes */}
                 {/* Temporary /admin routes: update afterwards for security */}
