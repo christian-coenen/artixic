@@ -5,7 +5,6 @@ const SubmissionsFormsSection = () => {
     return (
         <section className="submissions-forms-section">
             <div className="submissions-forms-inner">
-                {/* Refactor to use button component (yet to be made) */}
                 <div className="submissions-forms-options">
                     <Button
                         variant='filled'
