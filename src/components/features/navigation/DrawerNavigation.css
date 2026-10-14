@@ -130,7 +130,7 @@
     right: 0;
 }
 
-@media (min-width: 881px) {
+@media (min-width: 1041px) {
     .drawer-navigation {
         display: none;
     }
