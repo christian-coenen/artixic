@@ -4,17 +4,51 @@
     border-radius: var(--border-radius-0);
     cursor: pointer;
     display: inline-flex;
-    gap: 0.25rem;
-    font-weight: var(--font-weight-medium);
     font-size: var(--font-size-4);
-    padding: 0.5rem 1.25rem;
+    font-weight: var(--font-weight-medium);
+    gap: 0.25rem;
+    justify-content: center;
     transition: var(--transition-background);
 }
 
+.button-icon {
+    align-items: center;
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.button-label {
+    color: var(--color-text-base-1);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+}
+
+.button-description {
+    color: var(--color-text-base-2);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+}
+
+.button-icon-center {
+    flex-direction: column;
+}
+
+.button-layout-stacked {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.button-full-width {
+    width: 100%;
+}
+
 .button-bordered {
-    background: #fcfdff;
+    background: var(--color-background-control-default-0);
     border: var(--border);
-    color: var(--color-text-1);
+    color: var(--color-text-base-1);
 }
 
 .button-bordered:hover {
@@ -37,10 +71,4 @@
 
 .button-filled:active {
     background: var(--color-background-control-active-2);
-}
-
-.button-icon {
-    align-items: center;
-    display: inline-flex;
-    flex-shrink: 0;
 }
