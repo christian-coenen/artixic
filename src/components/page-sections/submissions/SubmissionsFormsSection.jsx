@@ -36,6 +36,26 @@ const SubmissionsFormsSection = () => {
                             Upload artwork
                         </h2>
 
+                        <div className="submissions-forms-upload">
+                            <Button
+                                layout="stacked"
+                                icon={<Upload size={100} strokeWidth={1.5} />}
+                                iconPosition="center"
+                                size="large"
+                                description={"JPEG, PNG or WebP \u00B7 Maximum 20 MB"}
+                                fullWidth
+                                padding="2.5rem"
+                            >
+                                Choose an image
+                            </Button>
+                        </div>
+                    </section>
+
+                    <section className="submissions-forms-subsection">
+                        <h2 className="submissions-forms-header">
+                            Title
+                        </h2>
+
                         <div>
 
                         </div>
