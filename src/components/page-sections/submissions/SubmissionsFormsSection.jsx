@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { Upload, Plus } from 'lucide-react'
 import SegmentedControl from '../../ui/SegmentedControl'
+import Button from '../../ui/Button'
 import './SubmissionsFormsSection.css'
 
 const SUBMISSION_OPTIONS = [
@@ -14,7 +16,7 @@ const SubmissionsFormsSection = () => {
         <section className="submissions-forms-section">
             <div className="submissions-forms-inner">
                 <form className="submissions-forms-form">
-                    <div className="submissions-forms-area">
+                    <section className="submissions-forms-subsection">
                         <h2 className="submissions-forms-header">
                             What would you like to submit?
                         </h2>
@@ -27,9 +29,9 @@ const SubmissionsFormsSection = () => {
                                 label="Submission type"
                             />
                         </div>
-                    </div>
+                    </section>
 
-                    <div className="submissions-forms-area">
+                    <section className="submissions-forms-subsection">
                         <h2 className="submissions-forms-header">
                             Upload artwork
                         </h2>
@@ -37,17 +39,37 @@ const SubmissionsFormsSection = () => {
                         <div>
 
                         </div>
-                    </div>
+                    </section>
 
-                    <div className="submissions-forms-area">
+                    <section className="submissions-forms-subsection">
                         <h2 className="submissions-forms-header">
-                            Title
+                            Description
                         </h2>
 
                         <div>
 
                         </div>
-                    </div>
+                    </section>
+
+                    <section className="submissions-forms-subsection">
+                        <h2 className="submissions-forms-header">
+                            Creation year
+                        </h2>
+
+                        <div>
+
+                        </div>
+                    </section>
+
+                    <section className="submissions-forms-subsection">
+                        <h2 className="submissions-forms-header">
+                            Authors
+                        </h2>
+
+                        <div>
+
+                        </div>
+                    </section>
                 </form>
             </div>
         </section>
