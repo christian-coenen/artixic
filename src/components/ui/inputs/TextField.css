@@ -1,0 +1,49 @@
+.text-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.text-field-counter {
+    color: var(--color-text-base-2);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-regular);
+    pointer-events: none;
+    position: relative;
+    text-align: right;
+}
+
+.text-field-control {
+    background: var(--color-background-control-default-0);
+    border: var(--border);
+    border-radius: var(--border-radius-0);
+    box-sizing: border-box;
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+    opacity: 1;
+    outline: none;
+    padding: 0.5rem;
+    transition: var(--transition-background);
+    width: 100%;
+}
+
+.text-field-control::placeholder {
+    color: var(--color-text-base-2);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+}
+
+.text-field-control:hover {
+    background: var(--color-background-control-hover-0);
+}
+
+.text-field-control:focus {
+    background: var(--color-background-control-active-0);
+}
