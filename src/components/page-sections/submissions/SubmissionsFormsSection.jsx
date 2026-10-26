@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Upload, Plus } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import SegmentedControl from '../../ui/SegmentedControl'
-import Button from '../../ui/Button'
+import ImageUpload from '../../ui/inputs/ImageUpload'
 import './SubmissionsFormsSection.css'
 
 const SUBMISSION_OPTIONS = [
@@ -9,7 +9,11 @@ const SUBMISSION_OPTIONS = [
     { label: 'Collection', value: 'collection' },
 ]
 
-const SubmissionsFormsSection = () => {
+const SubmissionsFormsSection = ({
+    imageFile,
+    onImageChange,
+    imageError,
+}) => {
     const [submissionType, setSubmissionType] = useState('artwork')
 
     return (
@@ -37,17 +41,11 @@ const SubmissionsFormsSection = () => {
                         </h2>
 
                         <div className="submissions-forms-upload">
-                            <Button
-                                layout="stacked"
-                                icon={<Upload size={100} strokeWidth={1.5} />}
-                                iconPosition="center"
-                                size="large"
-                                description={"JPEG, PNG or WebP \u00B7 Maximum 20 MB"}
-                                fullWidth
-                                padding="2.5rem"
-                            >
-                                Choose an image
-                            </Button>
+                            <ImageUpload
+                                file={imageFile}
+                                onFileChange={onImageChange}
+                                error={imageError}
+                            />
                         </div>
                     </section>
 

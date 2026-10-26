@@ -29,6 +29,8 @@
 
     --color-text-inverse-0: #fcfdff;
 
+    --color-text-error: #f04141;
+
     --color-text-link: var(--color-text-base-0);
 
     --border-width-0: 1px;
