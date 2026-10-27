@@ -32,6 +32,12 @@
     width: 100%;
 }
 
+.text-field-control--multiline {
+    overflow-y: auto;
+    resize: none;
+    scrollbar-gutter: stable;
+}
+
 .text-field-control::placeholder {
     color: var(--color-text-base-2);
     font-family: var(--font-family-base);

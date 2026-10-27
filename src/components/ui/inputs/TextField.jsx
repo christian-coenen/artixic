@@ -22,6 +22,7 @@ const TextField = ({
     const controlClassName = [
         'text-field-control',
         `text-field-control--${size}`,
+        multiline && 'text-field-control--multiline',
         className,
     ]
         .filter(Boolean)

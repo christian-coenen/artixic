@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Plus } from 'lucide-react'
 import SegmentedControl from '../../ui/SegmentedControl'
 import ImageUpload from '../../ui/inputs/ImageUpload'
+import TextField from '../../ui/inputs/TextField'
 import './SubmissionsFormsSection.css'
 
 const SUBMISSION_OPTIONS = [
@@ -15,6 +16,9 @@ const SubmissionsFormsSection = ({
     imageError,
 }) => {
     const [submissionType, setSubmissionType] = useState('artwork')
+    
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
 
     return (
         <section className="submissions-forms-section">
@@ -25,7 +29,7 @@ const SubmissionsFormsSection = ({
                             What would you like to submit?
                         </h2>
 
-                        <div className="submissions-forms-toggle">
+                        <div className="submissions-forms-control">
                             <SegmentedControl
                                 options={SUBMISSION_OPTIONS}
                                 value={submissionType}
@@ -40,7 +44,7 @@ const SubmissionsFormsSection = ({
                             Upload artwork
                         </h2>
 
-                        <div className="submissions-forms-upload">
+                        <div className="submissions-forms-control">
                             <ImageUpload
                                 file={imageFile}
                                 onFileChange={onImageChange}
@@ -54,18 +58,32 @@ const SubmissionsFormsSection = ({
                             Title
                         </h2>
 
-                        <div>
-
+                        <div className="submissions-forms-control">
+                            <TextField
+                                value={title}
+                                onChange={(event) => setTitle(event.target.value)}
+                                maxLength={200}
+                                size="large"
+                                placeholder="Enter the title of the artwork"
+                            />
                         </div>
                     </section>
 
                     <section className="submissions-forms-subsection">
                         <h2 className="submissions-forms-header">
-                            Description
+                            Description (optional)
                         </h2>
 
-                        <div>
-
+                        <div className="submissions-forms-control">
+                            <TextField
+                                value={description}
+                                onChange={(event) => setDescription(event.target.value)}
+                                maxLength={2000}
+                                size="large"
+                                multiline
+                                rows={8}
+                                placeholder="Enter the description of the artwork"
+                            />
                         </div>
                     </section>
 
