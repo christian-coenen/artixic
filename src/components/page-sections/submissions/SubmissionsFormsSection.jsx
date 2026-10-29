@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { Plus } from 'lucide-react'
+import { getYearOptions } from '../../../utils/getYearOptions'
 import SegmentedControl from '../../ui/SegmentedControl'
 import ImageUpload from '../../ui/inputs/ImageUpload'
 import TextField from '../../ui/inputs/TextField'
+import SearchableDropdown from '../../ui/inputs/SearchableDropdown'
 import './SubmissionsFormsSection.css'
 
 const SUBMISSION_OPTIONS = [
@@ -19,6 +21,8 @@ const SubmissionsFormsSection = ({
     
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
+    const [creationYear, setCreationYear] = useState('')
+    const yearOptions = getYearOptions()
 
     return (
         <section className="submissions-forms-section">
@@ -92,8 +96,15 @@ const SubmissionsFormsSection = ({
                             Creation year
                         </h2>
 
-                        <div>
-
+                        <div className="submissions-forms-control">
+                            <SearchableDropdown
+                                options={yearOptions}
+                                value={creationYear}
+                                onChange={setCreationYear}
+                                placeholder="Select a year"
+                                searchPlaceholder="Search years..."
+                                emptyMessage="No years found"
+                            />
                         </div>
                     </section>
 
