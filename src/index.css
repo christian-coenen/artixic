@@ -154,3 +154,9 @@ p {
     font-weight: var(--font-weight-regular);
     margin: 0;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
