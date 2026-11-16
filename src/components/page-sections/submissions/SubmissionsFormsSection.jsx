@@ -5,6 +5,7 @@ import SegmentedControl from '../../ui/SegmentedControl'
 import ImageUpload from '../../ui/inputs/ImageUpload'
 import TextField from '../../ui/inputs/TextField'
 import SearchableDropdown from '../../ui/inputs/SearchableDropdown'
+import RepeatableField from '../../ui/inputs/RepeatableField'
 import './SubmissionsFormsSection.css'
 
 const SUBMISSION_OPTIONS = [
@@ -23,6 +24,7 @@ const SubmissionsFormsSection = ({
     const [description, setDescription] = useState('')
     const [creationYear, setCreationYear] = useState('')
     const yearOptions = getYearOptions()
+    const [authors, setAuthors] = useState([''])
 
     return (
         <section className="submissions-forms-section">
@@ -65,7 +67,7 @@ const SubmissionsFormsSection = ({
                         <div className="submissions-forms-control">
                             <TextField
                                 value={title}
-                                onChange={(event) => setTitle(event.target.value)}
+                                onChange={(changeEvent) => setTitle(changeEvent.target.value)}
                                 maxLength={200}
                                 size="large"
                                 placeholder="Enter the title of the artwork"
@@ -81,7 +83,7 @@ const SubmissionsFormsSection = ({
                         <div className="submissions-forms-control">
                             <TextField
                                 value={description}
-                                onChange={(event) => setDescription(event.target.value)}
+                                onChange={(changeEvent) => setDescription(changeEvent.target.value)}
                                 maxLength={2000}
                                 size="large"
                                 multiline
@@ -95,6 +97,10 @@ const SubmissionsFormsSection = ({
                         <h2 className="submissions-forms-header">
                             Creation year
                         </h2>
+
+                        <p className="submissions-forms-body">
+                            Enter the year the artwork was created, not the year it was submitted to ARTIXIC.
+                        </p>
 
                         <div className="submissions-forms-control">
                             <SearchableDropdown
@@ -113,8 +119,25 @@ const SubmissionsFormsSection = ({
                             Authors
                         </h2>
 
-                        <div>
+                        <p  className="submissions-forms-body">
+                            Add up to 5 authors.
+                        </p>
 
+                        <div className="submissions-forms-control">
+                            <RepeatableField
+                                FieldComponent={TextField}
+                                values={authors}
+                                onChange={setAuthors}
+                                maxFields={5}
+                                minFields={1}
+                                addLabel="Add additional author"
+                                removeLabel="Remove author"
+                                getFieldProps={(index) => ({
+                                    required: true,
+                                    placeholder: `Author ${index + 1}`,
+                                    'aria-label': `Author ${index + 1}`,
+                                })}
+                            />
                         </div>
                     </section>
                 </form>

@@ -29,6 +29,14 @@
     margin: 0;
 }
 
+.submissions-forms-body {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+}
+
 .submissions-forms-control {
     margin-top: 0.5rem;
 }
