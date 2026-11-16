@@ -1,0 +1,57 @@
+.repeatable-field {
+    display: grid;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.repeatable-field-list {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.repeatable-field-item {
+    align-items: stretch;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.repeatable-field-item > :first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.repeatable-field-remove {
+    align-items: center;
+    aspect-ratio: 1;
+    background: var(--color-background-control-default-0);
+    border: none;
+    border-radius: var(--border-radius-0);
+    color: var(--color-text-base-1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: var(--transition-background);
+}
+
+.repeatable-field-remove:hover {
+    background: var(--color-background-control-hover-1);
+}
+
+.repeatable-field-remove:active {
+    background: var(--color-background-control-active-1);
+}
+
+.repeatable-field-remove:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+}
+
+.repeatable-field-add {
+    max-width: max-content;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .repeatable-field-remove {
+        transition: none;
+    }
+}
