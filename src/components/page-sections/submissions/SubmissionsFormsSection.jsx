@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Plus } from 'lucide-react'
 import { getYearOptions } from '../../../utils/getYearOptions'
 import SegmentedControl from '../../ui/SegmentedControl'
 import ImageUpload from '../../ui/inputs/ImageUpload'
@@ -19,12 +18,12 @@ const SubmissionsFormsSection = ({
     imageError,
 }) => {
     const [submissionType, setSubmissionType] = useState('artwork')
-    
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [creationYear, setCreationYear] = useState('')
     const yearOptions = getYearOptions()
     const [authors, setAuthors] = useState([''])
+    const [email, setEmail] = useState('')
 
     return (
         <section className="submissions-forms-section">
@@ -55,6 +54,7 @@ const SubmissionsFormsSection = ({
                                 file={imageFile}
                                 onFileChange={onImageChange}
                                 error={imageError}
+                                required
                             />
                         </div>
                     </section>
@@ -71,6 +71,7 @@ const SubmissionsFormsSection = ({
                                 maxLength={200}
                                 size="large"
                                 placeholder="Enter the title of the artwork"
+                                required
                             />
                         </div>
                     </section>
@@ -110,6 +111,7 @@ const SubmissionsFormsSection = ({
                                 placeholder="Select a year"
                                 searchPlaceholder="Search years..."
                                 emptyMessage="No years found"
+                                required
                             />
                         </div>
                     </section>
@@ -119,7 +121,7 @@ const SubmissionsFormsSection = ({
                             Authors
                         </h2>
 
-                        <p  className="submissions-forms-body">
+                        <p className="submissions-forms-body">
                             Add up to 5 authors.
                         </p>
 
@@ -137,6 +139,29 @@ const SubmissionsFormsSection = ({
                                     placeholder: `Author ${index + 1}`,
                                     'aria-label': `Author ${index + 1}`,
                                 })}
+                            />
+                        </div>
+                    </section>
+
+                    <section className="submissions-forms-subsection">
+                        <h2 className="submissions-forms-header">
+                            Email
+                        </h2>
+
+                        <p className="submissions-forms-body">
+                            Provide your email address so that we can contact you about your submission.
+                        </p>
+
+                        <div className="submissions-forms-control">
+                            <TextField
+                                type="email"
+                                value={email}
+                                onChange={(changeEvent) => setEmail(changeEvent.target.value)}
+                                size="large"
+                                placeholder="Enter your email address"
+                                required
+                                maxLength={254}
+                                autoComplete="email"
                             />
                         </div>
                     </section>
