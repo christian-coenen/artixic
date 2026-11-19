@@ -1,4 +1,5 @@
 import { useId } from 'react'
+import FormError from '../feedback/FormError'
 import './TextField.css'
 
 const TextField = ({
@@ -6,11 +7,13 @@ const TextField = ({
     value = '',
     onChange,
     maxLength,
+    showCharacterCount = false,
     size = 'medium',
     multiline = false,
     rows = 4,
     type = 'text',
     className = '',
+    error = '',
     ...props
 }) => {
     const generatedId = useId()
@@ -28,6 +31,10 @@ const TextField = ({
         .filter(Boolean)
         .join(' ')
 
+    const handleChange = (changeEvent) => {
+        onChange?.(changeEvent.currentTarget.value)
+    }
+
     return (
         <div
             className={[
@@ -42,15 +49,27 @@ const TextField = ({
                 id={fieldId}
                 className={controlClassName}
                 value={value}
-                onChange={onChange}
+                onChange={handleChange}
                 maxLength={maxLength}
+                aria-invalid={Boolean(error)}
+                aria-describedby={error ? `${fieldId}-error` : undefined}
                 {...(multiline ? { rows } : { type })}
             />
 
-            {Number.isInteger(maxLength) && (
-                <span className="text-field-counter">
-                    {characterCount}/{maxLength}
-                </span>
+            {showCharacterCount && Number.isInteger(maxLength) ? (
+                <div className="text-field-meta">
+                    {error && <FormError>{error}</FormError>}
+
+                    <span className="text-field-counter">
+                        {characterCount}/{maxLength}
+                    </span>
+                </div>
+            ) : (
+                error && (
+                    <FormError>
+                        {error}
+                    </FormError>
+                )
             )}
         </div>
     )

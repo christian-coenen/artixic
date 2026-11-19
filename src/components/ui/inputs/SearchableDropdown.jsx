@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { ChevronDown, Search, Check } from 'lucide-react'
+import FormError from '../feedback/FormError'
 import './SearchableDropdown.css'
 
 const SearchableDropdown = ({
@@ -11,10 +12,12 @@ const SearchableDropdown = ({
     searchPlaceholder = 'Search...',
     emptyMessage = 'No results found',
     className = '',
+    error = '',
 }) => {
     const generatedId = useId()
     const dropdownId = id ?? generatedId
     const menuId = `${dropdownId}-menu`
+    const errorId = `${dropdownId}-error`
 
     const rootRef = useRef(null)
     const triggerRef = useRef(null)
@@ -26,6 +29,7 @@ const SearchableDropdown = ({
     const selectedOption = options.find((option) => option.value === value)
 
     const normalizedQuery = query.trim().toLowerCase()
+
     const filteredOptions = options.filter((option) =>
         option.label.toLowerCase().includes(normalizedQuery),
     )
@@ -40,7 +44,6 @@ const SearchableDropdown = ({
 
         if (returnToTrigger) {
             triggerRef.current?.focus({ preventScroll: true })
-            triggerRef.current?.scrollIntoView({ block: 'nearest' })
         }
     }
 
@@ -60,7 +63,7 @@ const SearchableDropdown = ({
         triggerRef.current?.scrollIntoView({ block: 'start' })
 
         const handlePointerDown = (event) => {
-            if (!rootRef.current?.contains(event.target)) setIsOpen(false)
+            if (!rootRef.current?.contains(event.target)) close
         }
 
         document.addEventListener('pointerdown', handlePointerDown)
@@ -84,6 +87,8 @@ const SearchableDropdown = ({
                 className="searchable-dropdown-trigger"
                 aria-controls={menuId}
                 aria-expanded={isOpen}
+                aria-invalid={Boolean(error)}
+                aria-describedby={error ? errorId : undefined}
                 onClick={() => (isOpen ? close() : open())}
             >
                 <span
@@ -139,11 +144,11 @@ const SearchableDropdown = ({
                                     className={[
                                         'searchable-dropdown-option',
                                         isSelected &&
-                                            'searchable-dropdown-option--selected',
+                                        'searchable-dropdown-option--selected',
                                     ]
                                         .filter(Boolean)
                                         .join(' ')}
-                                    aria-current={isSelected || undefined}
+                                    aria-current={isSelected}
                                     onClick={() => handleSelect(option)}
                                 >
                                     <span>{option.label}</span>
@@ -165,6 +170,14 @@ const SearchableDropdown = ({
                     )}
                 </div>
             </div>
+
+            {error && (
+                <div className="searchable-dropdown-error">
+                    <FormError>
+                        {error}
+                    </FormError>
+                </div>
+            )}
         </div>
     )
 }

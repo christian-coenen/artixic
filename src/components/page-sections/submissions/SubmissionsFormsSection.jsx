@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import { getYearOptions } from '../../../utils/getYearOptions'
 import SegmentedControl from '../../ui/SegmentedControl'
 import ImageUpload from '../../ui/inputs/ImageUpload'
 import TextField from '../../ui/inputs/TextField'
 import SearchableDropdown from '../../ui/inputs/SearchableDropdown'
 import RepeatableField from '../../ui/inputs/RepeatableField'
+import Button from '../../ui/Button'
 import './SubmissionsFormsSection.css'
 
 const SUBMISSION_OPTIONS = [
@@ -13,22 +12,33 @@ const SUBMISSION_OPTIONS = [
 ]
 
 const SubmissionsFormsSection = ({
+    submissionType,
+    onSubmissionTypeChange,
     imageFile,
     onImageChange,
-    imageError,
+    title,
+    onTitleChange,
+    description,
+    onDescriptionChange,
+    yearOptions,
+    creationYear,
+    onCreationYearChange,
+    authors,
+    onAuthorsChange,
+    email,
+    onEmailChange,
+    errors,
+    onSubmit,
 }) => {
-    const [submissionType, setSubmissionType] = useState('artwork')
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
-    const [creationYear, setCreationYear] = useState('')
-    const yearOptions = getYearOptions()
-    const [authors, setAuthors] = useState([''])
-    const [email, setEmail] = useState('')
 
     return (
         <section className="submissions-forms-section">
             <div className="submissions-forms-inner">
-                <form className="submissions-forms-form">
+                <form
+                    className="submissions-forms-form"
+                    onSubmit={onSubmit}
+                    noValidate
+                >
                     <section className="submissions-forms-subsection">
                         <h2 className="submissions-forms-header">
                             What would you like to submit?
@@ -38,7 +48,7 @@ const SubmissionsFormsSection = ({
                             <SegmentedControl
                                 options={SUBMISSION_OPTIONS}
                                 value={submissionType}
-                                onChange={setSubmissionType}
+                                onChange={onSubmissionTypeChange}
                                 label="Submission type"
                             />
                         </div>
@@ -53,7 +63,7 @@ const SubmissionsFormsSection = ({
                             <ImageUpload
                                 file={imageFile}
                                 onFileChange={onImageChange}
-                                error={imageError}
+                                error={errors.image}
                                 required
                             />
                         </div>
@@ -67,8 +77,10 @@ const SubmissionsFormsSection = ({
                         <div className="submissions-forms-control">
                             <TextField
                                 value={title}
-                                onChange={(changeEvent) => setTitle(changeEvent.target.value)}
+                                onChange={onTitleChange}
                                 maxLength={200}
+                                showCharacterCount
+                                error={errors.title}
                                 size="large"
                                 placeholder="Enter the title of the artwork"
                                 required
@@ -84,8 +96,9 @@ const SubmissionsFormsSection = ({
                         <div className="submissions-forms-control">
                             <TextField
                                 value={description}
-                                onChange={(changeEvent) => setDescription(changeEvent.target.value)}
+                                onChange={onDescriptionChange}
                                 maxLength={2000}
+                                showCharacterCount
                                 size="large"
                                 multiline
                                 rows={8}
@@ -107,7 +120,8 @@ const SubmissionsFormsSection = ({
                             <SearchableDropdown
                                 options={yearOptions}
                                 value={creationYear}
-                                onChange={setCreationYear}
+                                onChange={onCreationYearChange}
+                                error={errors.creationYear}
                                 placeholder="Select a year"
                                 searchPlaceholder="Search years..."
                                 emptyMessage="No years found"
@@ -129,9 +143,10 @@ const SubmissionsFormsSection = ({
                             <RepeatableField
                                 FieldComponent={TextField}
                                 values={authors}
-                                onChange={setAuthors}
+                                onChange={onAuthorsChange}
                                 maxFields={5}
                                 minFields={1}
+                                error={errors.authors}
                                 addLabel="Add additional author"
                                 removeLabel="Remove author"
                                 getFieldProps={(index) => ({
@@ -156,7 +171,8 @@ const SubmissionsFormsSection = ({
                             <TextField
                                 type="email"
                                 value={email}
-                                onChange={(changeEvent) => setEmail(changeEvent.target.value)}
+                                onChange={onEmailChange}
+                                error={errors.email}
                                 size="large"
                                 placeholder="Enter your email address"
                                 required
@@ -165,6 +181,15 @@ const SubmissionsFormsSection = ({
                             />
                         </div>
                     </section>
+
+                    <div className="submissions-forms-submit">
+                        <Button
+                            type="submit"
+                            variant="filled"
+                        >
+                            Submit artwork
+                        </Button>
+                    </div>
                 </form>
             </div>
         </section>

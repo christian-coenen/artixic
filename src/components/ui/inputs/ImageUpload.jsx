@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
-import { Upload, CircleAlert } from 'lucide-react'
+import { Upload } from 'lucide-react'
 import Button from '../Button'
+import FormError from '../feedback/FormError'
 import './ImageUpload.css'
 
 const ImageUpload = ({
     file,
     onFileChange,
-    error,
     description = 'JPEG, PNG or WebP \u00B7 Maximum 20 MB',
+    error = '',
 }) => {
     const inputRef = useRef(null)
     const [previewUrl, setPreviewUrl] = useState(null)
@@ -70,14 +71,9 @@ const ImageUpload = ({
             </Button>
 
             {error && (
-                <p className="image-upload-error" role="alert">
-                    <CircleAlert
-                        className="image-upload-error-icon"
-                        size={20}
-                        aria-hidden="true"
-                    />
+                <FormError>
                     {error}
-                </p>
+                </FormError>
             )}
         </div>
     )

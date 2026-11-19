@@ -1,5 +1,6 @@
 import { Plus, Minus } from 'lucide-react'
 import Button from '../Button'
+import FormError from '../feedback/FormError'
 import './RepeatableField.css'
 
 const RepeatableField = ({
@@ -11,6 +12,7 @@ const RepeatableField = ({
     addLabel = 'Add another field',
     removeLabel = 'Remove field',
     getFieldProps,
+    error = '',
 }) => {
     const canRemove = values.length > minFields
 
@@ -75,6 +77,12 @@ const RepeatableField = ({
                 >
                     {addLabel}
                 </Button>
+            )}
+
+            {error && (
+                    <FormError>
+                        {error}
+                    </FormError>
             )}
         </div>
     )

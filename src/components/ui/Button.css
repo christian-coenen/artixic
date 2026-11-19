@@ -19,7 +19,6 @@
 }
 
 .button-label {
-    color: var(--color-text-base-1);
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-medium);
     margin: 0;
@@ -62,7 +61,7 @@
 .button-filled {
     background: var(--color-background-control-default-2);
     border: none;
-    color: #fcfdff;
+    color: var(--color-text-inverse-0);
 }
 
 .button-filled:hover {
