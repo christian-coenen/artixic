@@ -28,6 +28,7 @@ const SubmissionsFormsSection = ({
     email,
     onEmailChange,
     errors,
+    formRef,
     onSubmit,
 }) => {
 
@@ -35,6 +36,7 @@ const SubmissionsFormsSection = ({
         <section className="submissions-forms-section">
             <div className="submissions-forms-inner">
                 <form
+                    ref={formRef}
                     className="submissions-forms-form"
                     onSubmit={onSubmit}
                     noValidate

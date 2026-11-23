@@ -47,6 +47,9 @@ const ImageUpload = ({
             />
 
             <Button
+                type="button"
+                aria-invalid={Boolean(error)}
+                aria-describedby={error ? 'image-error' : undefined}
                 className="image-upload-button"
                 layout="stacked"
                 icon={

@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { getYearOptions } from '../../utils/getYearOptions'
 import VisitorLayout from '../../components/layout/VisitorLayout'
 import SubmissionsIntroSection from '../../components/page-sections/submissions/SubmissionsIntroSection'
@@ -24,6 +25,30 @@ const SubmissionsPage = () => {
     const [errors, setErrors] = useState({})
 
     const yearOptions = getYearOptions()
+
+    const formRef = useRef(null)
+    const shouldFocusError = useRef(false)
+
+    useEffect(() => {
+        if (!shouldFocusError.current) return
+
+        try {
+            const firstInvalidElement = formRef.current?.querySelector(
+                '[aria-invalid="true"]'
+            )
+
+            if (firstInvalidElement) {
+                firstInvalidElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                })
+
+                firstInvalidElement.focus({ preventScroll: true })
+            }
+        } finally {
+            shouldFocusError.current = false
+        }
+    }, [errors])
 
     const validateImage = (file) => {
         if (!file) {
@@ -94,10 +119,13 @@ const SubmissionsPage = () => {
     const handleSubmit = (submitEvent) => {
         submitEvent.preventDefault()
 
-        if (!validateForm()) return
+        if (!validateForm()) {
+            shouldFocusError.current = true
+            return
+        }
 
         const normalizedAuthors = authors.map((author) => author.trim())
-
+        const normalizedEmail = email.trim()
 
         // Submission processing logic.
     }
@@ -122,6 +150,7 @@ const SubmissionsPage = () => {
                 email={email}
                 onEmailChange={setEmail}
                 errors={errors}
+                formRef={formRef}
                 onSubmit={handleSubmit}
             />
         </VisitorLayout>
