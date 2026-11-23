@@ -63,7 +63,7 @@ const SearchableDropdown = ({
         triggerRef.current?.scrollIntoView({ block: 'start' })
 
         const handlePointerDown = (event) => {
-            if (!rootRef.current?.contains(event.target)) close
+            if (!rootRef.current?.contains(event.target)) close()
         }
 
         document.addEventListener('pointerdown', handlePointerDown)
