@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { getYearOptions } from '../../utils/getYearOptions'
+import { createSubmission } from '../../services/artworkSubmissions'
 import VisitorLayout from '../../components/layout/VisitorLayout'
 import SubmissionsIntroSection from '../../components/page-sections/submissions/SubmissionsIntroSection'
 import SubmissionsFormsSection from '../../components/page-sections/submissions/SubmissionsFormsSection'
@@ -22,7 +23,10 @@ const SubmissionsPage = () => {
     const [creationYear, setCreationYear] = useState('')
     const [authors, setAuthors] = useState([''])
     const [email, setEmail] = useState('')
-    const [errors, setErrors] = useState({})
+    const [validationErrors, setValidationErrors] = useState({})
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submissionSuccess, setSubmissionSuccess] = useState(false)
+    const [submissionError, setSubmissionError] = useState('')
 
     const yearOptions = getYearOptions()
 
@@ -48,7 +52,7 @@ const SubmissionsPage = () => {
         } finally {
             shouldFocusError.current = false
         }
-    }, [errors])
+    }, [validationErrors])
 
     const validateImage = (file) => {
         if (!file) {
@@ -73,29 +77,29 @@ const SubmissionsPage = () => {
         const error = file ? validateImage(file) : ''
 
         setImageFile(error ? null : file)
-        setErrors((previous) => ({
+        setValidationErrors((previous) => ({
             ...previous,
             image: error,
         }))
     }
 
     const validateForm = () => {
-        const nextErrors = {}
+        const nextvalidationErrors = {}
 
         const imageError = validateImage(imageFile)
 
         const normalizedEmail = email.trim()
 
         if (imageError) {
-            nextErrors.image = imageError
+            nextvalidationErrors.image = imageError
         }
 
         if (!title.trim()) {
-            nextErrors.title = 'Please enter a title.'
+            nextvalidationErrors.title = 'Please enter a title.'
         }
 
         if (!yearOptions.some((option) => option.value === creationYear)) {
-            nextErrors.creationYear = 'Please select a creation year.'
+            nextvalidationErrors.creationYear = 'Please select a creation year.'
         }
 
         if (
@@ -103,31 +107,56 @@ const SubmissionsPage = () => {
             authors.length > 5 ||
             authors.some((author) => !author.trim())
         ) {
-            nextErrors.authors = 'Please provide between 1 and 5 valid authors.'
+            nextvalidationErrors.authors = 'Please provide between 1 and 5 valid authors.'
         }
 
         if (!normalizedEmail) {
-            nextErrors.email = 'Please enter your email address.'
+            nextvalidationErrors.email = 'Please enter your email address.'
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
-            nextErrors.email = 'Please enter a valid email address.'
+            nextvalidationErrors.email = 'Please enter a valid email address.'
         }
-        setErrors(nextErrors)
+        setValidationErrors(nextvalidationErrors)
 
-        return Object.keys(nextErrors).length === 0
+        return Object.keys(nextvalidationErrors).length === 0
     }
 
-    const handleSubmit = (submitEvent) => {
+    const handleSubmit = async (submitEvent) => {
         submitEvent.preventDefault()
 
-        if (!validateForm()) {
+        if (isSubmitting) return
+        
+        const isValid = validateForm()
+
+        if (!isValid) {
             shouldFocusError.current = true
             return
         }
 
-        const normalizedAuthors = authors.map((author) => author.trim())
-        const normalizedEmail = email.trim()
+        setIsSubmitting(true)
+        setSubmissionError('')
+        setSubmissionSuccess(false)
 
-        // Submission processing logic.
+        try {
+            const submissionData = {
+                imageFile,
+                title: title.trim(),
+                description: description.trim() || null,
+                year: Number(creationYear),
+                authors: authors.map((author) => author.trim()),
+                email: email.trim(),
+            }
+
+            await createSubmission(submissionData)
+
+            setSubmissionSuccess(true)
+        } catch (error) {
+            console.error('Artwork submission failed:', error)
+            setSubmissionError(
+                'Your submission could not be completed. Please try again.'
+            )
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
@@ -149,7 +178,7 @@ const SubmissionsPage = () => {
                 onAuthorsChange={setAuthors}
                 email={email}
                 onEmailChange={setEmail}
-                errors={errors}
+                validationErrors={validationErrors}
                 formRef={formRef}
                 onSubmit={handleSubmit}
             />

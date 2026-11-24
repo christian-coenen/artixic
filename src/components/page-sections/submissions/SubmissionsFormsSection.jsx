@@ -27,7 +27,7 @@ const SubmissionsFormsSection = ({
     onAuthorsChange,
     email,
     onEmailChange,
-    errors,
+    validationErrors,
     formRef,
     onSubmit,
 }) => {
@@ -65,7 +65,7 @@ const SubmissionsFormsSection = ({
                             <ImageUpload
                                 file={imageFile}
                                 onFileChange={onImageChange}
-                                error={errors.image}
+                                error={validationErrors.image}
                                 required
                             />
                         </div>
@@ -82,7 +82,7 @@ const SubmissionsFormsSection = ({
                                 onChange={onTitleChange}
                                 maxLength={200}
                                 showCharacterCount
-                                error={errors.title}
+                                error={validationErrors.title}
                                 size="large"
                                 placeholder="Enter the title of the artwork"
                                 required
@@ -123,7 +123,7 @@ const SubmissionsFormsSection = ({
                                 options={yearOptions}
                                 value={creationYear}
                                 onChange={onCreationYearChange}
-                                error={errors.creationYear}
+                                error={validationErrors.creationYear}
                                 placeholder="Select a year"
                                 searchPlaceholder="Search years..."
                                 emptyMessage="No years found"
@@ -148,7 +148,7 @@ const SubmissionsFormsSection = ({
                                 onChange={onAuthorsChange}
                                 maxFields={5}
                                 minFields={1}
-                                error={errors.authors}
+                                error={validationErrors.authors}
                                 addLabel="Add additional author"
                                 removeLabel="Remove author"
                                 getFieldProps={(index) => ({
@@ -174,7 +174,7 @@ const SubmissionsFormsSection = ({
                                 type="email"
                                 value={email}
                                 onChange={onEmailChange}
-                                error={errors.email}
+                                error={validationErrors.email}
                                 size="large"
                                 placeholder="Enter your email address"
                                 required
