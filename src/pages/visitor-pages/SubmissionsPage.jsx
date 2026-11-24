@@ -4,6 +4,8 @@ import { createSubmission } from '../../services/artworkSubmissions'
 import VisitorLayout from '../../components/layout/VisitorLayout'
 import SubmissionsIntroSection from '../../components/page-sections/submissions/SubmissionsIntroSection'
 import SubmissionsFormsSection from '../../components/page-sections/submissions/SubmissionsFormsSection'
+import SubmissionsConfirmationSection from '../../components/page-sections/submissions/SubmissionsConfirmationSection'
+import SubmissionsNextStepsSection from '../../components/page-sections/submissions/SubmissionsNextStepsSection'
 
 const MAX_IMAGE_SIZE = 20 * 1024 * 1024
 
@@ -124,7 +126,7 @@ const SubmissionsPage = () => {
         submitEvent.preventDefault()
 
         if (isSubmitting) return
-        
+
         const isValid = validateForm()
 
         if (!isValid) {
@@ -159,29 +161,55 @@ const SubmissionsPage = () => {
         }
     }
 
+    const handleSubmitAnother = () => {
+        setSubmissionSuccess(false)
+        setSubmissionError('')
+        setValidationErrors({})
+        setSubmissionType('artwork')
+        setImageFile(null)
+        setTitle('')
+        setDescription('')
+        setCreationYear('')
+        setAuthors([''])
+        setEmail('')
+    }
+
     return (
         <VisitorLayout>
-            <SubmissionsIntroSection />
-            <SubmissionsFormsSection
-                submissionType={submissionType}
-                onSubmissionTypeChange={setSubmissionType}
-                imageFile={imageFile}
-                onImageChange={handleImageChange}
-                title={title}
-                onTitleChange={setTitle}
-                description={description}
-                onDescriptionChange={setDescription}
-                yearOptions={yearOptions}
-                creationYear={creationYear}
-                onCreationYearChange={setCreationYear}
-                authors={authors}
-                onAuthorsChange={setAuthors}
-                email={email}
-                onEmailChange={setEmail}
-                validationErrors={validationErrors}
-                formRef={formRef}
-                onSubmit={handleSubmit}
-            />
+            {!submissionSuccess ? (
+                <>
+                    <SubmissionsIntroSection />
+                    <SubmissionsFormsSection
+                        submissionType={submissionType}
+                        onSubmissionTypeChange={setSubmissionType}
+                        imageFile={imageFile}
+                        onImageChange={handleImageChange}
+                        title={title}
+                        onTitleChange={setTitle}
+                        description={description}
+                        onDescriptionChange={setDescription}
+                        yearOptions={yearOptions}
+                        creationYear={creationYear}
+                        onCreationYearChange={setCreationYear}
+                        authors={authors}
+                        onAuthorsChange={setAuthors}
+                        email={email}
+                        onEmailChange={setEmail}
+                        validationErrors={validationErrors}
+                        formRef={formRef}
+                        onSubmit={handleSubmit}
+                        submissionError={submissionError}
+                    />
+                </>
+            ) : (
+                <>
+                    <SubmissionsConfirmationSection />
+                    <SubmissionsNextStepsSection 
+                        onSubmitAnother={handleSubmitAnother}
+                    />
+                </>
+            )}
+
         </VisitorLayout>
     )
 }

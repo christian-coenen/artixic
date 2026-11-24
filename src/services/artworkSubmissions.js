@@ -1,7 +1,6 @@
 import { supabase } from '../lib/supabaseClient'
 
 const STORAGE_BUCKET = 'media-submissions'
-const PENDING_STATUS_KEY = 'pending'
 
 export const createSubmission = async (submissionData) => {
     const {
@@ -12,16 +11,6 @@ export const createSubmission = async (submissionData) => {
         description,
         email,
     } = submissionData
-
-    const { data: status, error: statusError } = await supabase
-        .from('table_statuses')
-        .select('status_id')
-        .eq('key', PENDING_STATUS_KEY)
-        .single()
-
-    if (statusError) {
-        throw statusError
-    }
 
     const fileExtension = imageFile.name.split('.').pop().toLowerCase()
     const imagePath = `${crypto.randomUUID()}.${fileExtension}`
@@ -46,7 +35,6 @@ export const createSubmission = async (submissionData) => {
             description,
             image_path: imagePath,
             email,
-            status_id: status.status_id,
         })
 
     if (insertError) {

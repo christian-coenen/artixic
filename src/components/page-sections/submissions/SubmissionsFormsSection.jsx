@@ -4,6 +4,7 @@ import TextField from '../../ui/inputs/TextField'
 import SearchableDropdown from '../../ui/inputs/SearchableDropdown'
 import RepeatableField from '../../ui/inputs/RepeatableField'
 import Button from '../../ui/Button'
+import FormError from '../../ui/feedback/FormError'
 import './SubmissionsFormsSection.css'
 
 const SUBMISSION_OPTIONS = [
@@ -30,6 +31,7 @@ const SubmissionsFormsSection = ({
     validationErrors,
     formRef,
     onSubmit,
+    submissionError,
 }) => {
 
     return (
@@ -191,6 +193,14 @@ const SubmissionsFormsSection = ({
                         >
                             Submit artwork
                         </Button>
+
+                        {submissionError && (
+                            <div className="submissions-forms-submit-error">
+                                <FormError>
+                                    {submissionError}
+                                </FormError>
+                            </div>
+                        )}
                     </div>
                 </form>
             </div>

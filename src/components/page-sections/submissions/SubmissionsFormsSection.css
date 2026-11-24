@@ -44,3 +44,7 @@
 .submissions-forms-submit {
     margin-top: 2rem;
 }
+
+.submissions-forms-submit-error {
+    margin-top: 0.5rem;
+}
