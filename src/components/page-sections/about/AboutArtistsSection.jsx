@@ -6,7 +6,7 @@ const AboutArtistsSection = () => {
             <div className="about-artists-inner">
                 <p className="about-artists-eyebrow">Artists</p>
 
-                <h2 className="about-artists-heading">
+                <h2 className="about-artists-header">
                     A place for artists to be seen
                 </h2>
 

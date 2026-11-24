@@ -16,6 +16,10 @@ const navigationLinks = [
         label: 'About',
         to: '/about',
     },
+    {
+        label: 'Submissions',
+        to: '/submissions'
+    }
 ]
 
 export default navigationLinks

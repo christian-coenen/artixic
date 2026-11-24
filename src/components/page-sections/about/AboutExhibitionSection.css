@@ -19,7 +19,7 @@
     text-transform: uppercase;
 }
 
-.about-exhibition-heading {
+.about-exhibition-header {
     color: var(--color-text-base-0);
     font-family: var(--font-family-base);
     font-size: var(--font-size-1);

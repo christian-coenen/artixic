@@ -55,6 +55,7 @@
 
 .drawer-navigation-close-button {
     align-items: center;
+    background: none;
     border: none;
     border-radius: var(--border-radius-0);
     cursor: pointer;
@@ -129,7 +130,7 @@
     right: 0;
 }
 
-@media (min-width: 881px) {
+@media (min-width: 1041px) {
     .drawer-navigation {
         display: none;
     }

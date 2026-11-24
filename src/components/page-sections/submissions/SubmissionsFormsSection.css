@@ -1,0 +1,50 @@
+.submissions-forms-section {
+    background: var(--color-surface-1);
+}
+
+.submissions-forms-inner {
+    margin: 0 auto;
+    max-width: var(--max-width-content);
+    padding: 0 var(--spacing-layout) var(--spacing-layout);
+    position: relative;
+    width: 100%;
+}
+
+.submissions-forms-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.submissions-forms-subsection {
+    margin-top: 2rem;
+}
+
+.submissions-forms-header {
+    color: var(--color-text-base-0);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+}
+
+.submissions-forms-body {
+    color: var(--color-text-base-1);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+}
+
+.submissions-forms-control {
+    margin-top: 0.5rem;
+}
+
+.submissions-forms-submit {
+    margin-top: 2rem;
+}
+
+.submissions-forms-submit-error {
+    margin-top: 0.5rem;
+}

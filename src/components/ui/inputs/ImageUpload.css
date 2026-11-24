@@ -1,0 +1,14 @@
+.image-upload  {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.image-upload-preview {
+    aspect-ratio: 3 / 2;
+    display: block;
+    max-width: 20rem;
+    object-fit: contain;
+    width: 100%;
+}

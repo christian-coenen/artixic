@@ -1,0 +1,17 @@
+.form-error {
+    align-items: center;
+    color: var(--color-text-error);
+    display: block;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-regular);
+    margin: 0;
+}
+
+.form-error-icon {
+    color: var(--color-text-error);
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-inline-end: 0.5rem;
+    vertical-align: middle;
+}

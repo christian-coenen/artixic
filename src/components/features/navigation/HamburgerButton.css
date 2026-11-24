@@ -1,5 +1,6 @@
 .hamburger-button {
     align-items: center;
+    background: none;
     border: none;
     border-radius: var(--border-radius-0);
     cursor: pointer;
