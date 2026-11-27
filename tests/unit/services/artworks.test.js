@@ -28,7 +28,7 @@ import {
     getArtworksBySlug,
     getFeaturedArtworks,
     getArtworksByCollectionId,
-    getArtworkImageUrl,
+    getArtworkImagePath,
 } from '../../../src/services/artworks'
 
 const mockArtworks = [
@@ -200,15 +200,15 @@ describe('Artwork services', () => {
         })
     })
 
-    describe('getArtworkImageUrl', () => {
+    describe('getArtworkImagePath', () => {
         it('should return the provided image path', () => {
             const imagePath = 'artworks/image-one.jpg'
 
-            expect(getArtworkImageUrl(imagePath)).toBe(imagePath)
+            expect(getArtworkImagePath(imagePath)).toBe(imagePath)
         })
 
         it('should return null when the image path is null', () => {
-            expect(getArtworkImageUrl(null)).toBe(null)
+            expect(getArtworkImagePath(null)).toBe(null)
         })
     })
 })

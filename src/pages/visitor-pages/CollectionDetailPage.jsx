@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getCollectionBySlug } from '../../services/collections'
 import {
     getArtworksByCollectionId,
-    getArtworkImageUrl,
+    getArtworkImagePath,
 } from '../../services/artworks'
 import VisitorLayout from '../../components/layout/VisitorLayout'
 import CollectionDetailCoverSection from '../../components/page-sections/collection-detail/CollectionDetailCoverSection'
@@ -49,7 +49,7 @@ const CollectionDetailPage = () => {
             <CollectionDetailCoverSection
                 collection={collection}
                 artworks={artworks}
-                getImageUrl={getArtworkImageUrl}
+                getImageUrl={getArtworkImagePath}
             />
             <CollectionDetailGridSection artworks={artworks} />
         </VisitorLayout>

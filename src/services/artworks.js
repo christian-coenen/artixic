@@ -56,4 +56,4 @@ export const getArtworksByCollectionId = async (collectionId, limit = 5) => {
     return data
 }
 
-export const getArtworkImageUrl = (imagePath) => imagePath
+export const getArtworkImagePath = (imagePath) => imagePath

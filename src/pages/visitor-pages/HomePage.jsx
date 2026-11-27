@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import {
     getFeaturedArtworks,
-    getArtworkImageUrl,
+    getArtworkImagePath,
 } from '../../services/artworks'
 import { getCollectionsWithPreviewArtworks } from '../../services/collections'
 import VisitorLayout from '../../components/layout/VisitorLayout'
@@ -41,7 +41,7 @@ const HomePage = () => {
             <LatestCollectionSection
                 artworks={artworks}
                 collections={collections}
-                getImageUrl={getArtworkImageUrl}
+                getImageUrl={getArtworkImagePath}
             />
         </VisitorLayout>
     )
