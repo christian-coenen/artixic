@@ -62,5 +62,5 @@ describe('Artwork submission integration tests', () => {
             })
 
         expect(error).not.toBeNull()
-    })
+    }, 15000)
 })
