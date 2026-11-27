@@ -86,22 +86,22 @@ const SubmissionsPage = () => {
     }
 
     const validateForm = () => {
-        const nextvalidationErrors = {}
+        const nextValidationErrors = {}
 
         const imageError = validateImage(imageFile)
 
         const normalizedEmail = email.trim()
 
         if (imageError) {
-            nextvalidationErrors.image = imageError
+            nextValidationErrors.image = imageError
         }
 
         if (!title.trim()) {
-            nextvalidationErrors.title = 'Please enter a title.'
+            nextValidationErrors.title = 'Please enter a title.'
         }
 
         if (!yearOptions.some((option) => option.value === creationYear)) {
-            nextvalidationErrors.creationYear = 'Please select a creation year.'
+            nextValidationErrors.creationYear = 'Please select a creation year.'
         }
 
         if (
@@ -109,17 +109,17 @@ const SubmissionsPage = () => {
             authors.length > 5 ||
             authors.some((author) => !author.trim())
         ) {
-            nextvalidationErrors.authors = 'Please provide between 1 and 5 valid authors.'
+            nextValidationErrors.authors = 'Please provide between 1 and 5 valid authors.'
         }
 
         if (!normalizedEmail) {
-            nextvalidationErrors.email = 'Please enter your email address.'
+            nextValidationErrors.email = 'Please enter your email address.'
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
-            nextvalidationErrors.email = 'Please enter a valid email address.'
+            nextValidationErrors.email = 'Please enter a valid email address.'
         }
-        setValidationErrors(nextvalidationErrors)
+        setValidationErrors(nextValidationErrors)
 
-        return Object.keys(nextvalidationErrors).length === 0
+        return Object.keys(nextValidationErrors).length === 0
     }
 
     const handleSubmit = async (submitEvent) => {
