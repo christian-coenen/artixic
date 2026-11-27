@@ -39,6 +39,7 @@ const SearchableDropdown = ({
         setIsOpen(true)
     }
 
+    // Restore focus to the trigger when the menu is closed.
     const close = (returnToTrigger = false) => {
         setIsOpen(false)
 
@@ -62,6 +63,7 @@ const SearchableDropdown = ({
         searchRef.current?.focus({ preventScroll: true })
         triggerRef.current?.scrollIntoView({ block: 'start' })
 
+        // Close the dropdown when the user clicks outside the component.
         const handlePointerDown = (event) => {
             if (!rootRef.current?.contains(event.target)) close()
         }
